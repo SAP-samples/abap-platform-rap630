@@ -1,0 +1,5 @@
+@AbapCatalog.extensibility.extensible: true
+@ObjectModel.leadingEntity.name: 'ZRAP630C_ShopTP_SOL'
+define service ZRAP630UI_Shop_SOL {
+  expose ZRAP630C_SHOPTP_SOL as Shop;
+}

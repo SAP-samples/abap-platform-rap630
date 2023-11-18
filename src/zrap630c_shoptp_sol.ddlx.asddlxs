@@ -1,0 +1,134 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'Shop', 
+    typeNamePlural: 'Shops', 
+    title: {
+      type: #STANDARD, 
+      label: 'Shop', 
+      value: 'OrderID'
+    }
+  }, 
+  presentationVariant: [ {
+    sortOrder: [ {
+      by: 'OrderID', 
+      direction: #DESC
+    } ], 
+    visualizations: [ {
+      type: #AS_LINEITEM
+    } ]
+  } ]
+}
+annotate view ZRAP630C_ShopTP_SOL with
+{
+  @UI.facet: [ {
+    id: 'idCollection', 
+    type: #COLLECTION, 
+    label: 'Shop', 
+    position: 10 
+  }, 
+  {
+    id: 'idIdentification', 
+    parentId: 'idCollection', 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'General Information', 
+    position: 10 
+  } ]
+  @UI.hidden: true
+  OrderUUID;
+  
+  @UI.lineItem: [ {
+    position: 20 , 
+    importance: #HIGH, 
+    label: 'OrderID'
+  } ]
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'OrderID'
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  OrderID;
+  
+  @UI.lineItem: [ {
+    position: 30 , 
+    importance: #HIGH, 
+    label: 'OrderedItem'
+  } ]
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'OrderedItem'
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+  OrderedItem;
+  
+  @UI.selectionField: [ {
+    position: 40 
+  } ]
+  CurrencyCode;
+  
+  @UI.lineItem: [ {
+    position: 50 , 
+    importance: #HIGH, 
+    label: 'OrderItemPrice'
+  } ]
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'OrderItemPrice'
+  } ]
+  OrderItemPrice;
+  
+  @UI.lineItem: [ {
+    position: 60 , 
+    importance: #HIGH, 
+    label: 'DeliveryDate'
+  } ]
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'DeliveryDate'
+  } ]
+  DeliveryDate;
+  
+  @UI.lineItem: [ {
+    position: 70 , 
+    importance: #HIGH, 
+    label: 'OverallStatus'
+  } ]
+  @UI.identification: [ {
+    position: 70 , 
+    label: 'OverallStatus'
+  } ]
+  OverallStatus;
+  
+  @UI.lineItem: [ {
+    position: 80 , 
+    importance: #HIGH, 
+    label: 'Notes'
+  } ]
+  @UI.identification: [ {
+    position: 80 , 
+    label: 'Notes'
+  } ]
+  Notes;
+  
+  @UI.hidden: true
+  LastChangedAt;
+  
+  @UI.hidden: true
+  CreatedBy;
+  
+  @UI.hidden: true
+  CreatedAt;
+  
+  @UI.hidden: true
+  LocalLastChangedBy;
+  
+  @UI.hidden: true
+  LastChangedBy;
+  
+  @UI.hidden: true
+  LocalLastChangedAt;
+}
