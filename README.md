@@ -78,7 +78,7 @@ The package ZRAP630_SOL that contains the solution of this workshop can be downl
 <details>
   <summary>Click to expand download and installation steps.</summary>
    
-1. Create a package **'ZRAP630_SOL'**.
+1. Create a package **'ZRAP630_SOL'** with **'ZLOCAL'** as the superpackage.  
 2. Link this package with the URL of the RAP630 GitHub repository `https://github.com/SAP-samples/abap-platform-rap630`.
 3. Use the branch `main`.
 4. Pull changes.
