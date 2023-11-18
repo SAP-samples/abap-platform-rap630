@@ -75,12 +75,16 @@ The package ZRAP630_SOL that contains the solution of this workshop can be downl
 > Please note that this package has already been installed in the SAP BTP, ABAP Environment Trial systems !   
 > So there is not need to install it on an ABAP Environment trial system.   
 
+<details>
+  <summary>Click to expand download and installation steps.</summary>
+
 1. Create a package **'ZRAP630_SOL'**.
 2. Link this package with the URL of the RAP630 GitHub repository `https://github.com/SAP-samples/abap-platform-rap630`.
 3. Use the branch `main`.
 4. Pull changes.
 5. Use mass activation to activate the objects that have been imported in step 3.
 6. Publish the service binding `ZRAP630UI_SHOP_O4_SOL`.
+</details>
 
 ## Known Issues
 <!-- You may simply state "No known issues. -->
