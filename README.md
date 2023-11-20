@@ -37,9 +37,15 @@ The requirements to follow the exercises in this repository are:
 - You have installed the latest version of the ADT tools    
 - You have a user in a _SAP BTP, ABAP Environment_ system:  
 
-   > In a hand-on workshop conducted by SAP either a dedicated demo system will be provided to you, or
-   > you will create a user in one of the shared _SAP BTP, ABAP Environment Trial Systems_
+   > In a hand-on workshop at SAP TechEd or any other event a dedicated demo system might be provided,
+   > in this case the service key and user credentials will be provided to you by the trainer of the workshop.   
+   
+   > If you are following this script on your own or as part of a TechEd jump start session
+   > you will have to create a user in one of the shared _SAP BTP, ABAP Environment Trial Systems_
    > as described in our [Getting Started](exercises/ex0/) section.   
+
+   > If you want to conduct this workshop in your own SAP BTP, ABAP Environment system or your own SAP S/4HANA, ABAP Environment system,
+   > you first have to install the [openSource RAP Generator](https://github.com/SAP-samples/cloud-abap-rap).  
 
 ## Slides
 [Presentation](https://github.com/SAP-samples/teched2023-DT182v/blob/5468676ccceadbda6e9b16432f12194a7de3eb39/slides/AD182v%40SAP_TechEd_2023_final_RAP_Extensibility_JS.pdf) 
