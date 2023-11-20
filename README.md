@@ -19,12 +19,12 @@ Please edit this file as it is the primary description file for your project. Yo
 
 ## Description
 
-This repository contains the material for the SAP TechEd 2023 session called _DT182v - Use ABAP Cloud for developer extensibility_.  
+This repository contains the material for the RAP hands-on workshop called _RAP630 - Use ABAP Cloud for developer extensibility_.  
 
 Developer extensibility as defined by SAP basically encompasses two activities 
 
 1. Develop custom code to implement your own business logic. Here you can make use of existing API's from SAP that have been released for that purpose.
-2. Extend an existing RAP Business Object delivered by SAP so that additional business functionality is added. Such an extensible RAP business object will usually reside in another software components or it is an existing SAP delivered RAP BO that is extensible. Both can be optimized and their functionality can be adapted to your specific business requirements.
+2. Extend an existing RAP Business Object so that additional business functionality is added. Such an extensible RAP business object will usually reside in another software components or it is an existing extensible RAP BO that has been delivered by SAP or a SAP partner. By extending the funcitionality of an existing RAP Business object its functionality can be adapted to your specific business requirements.
 
 ## Overview
 
@@ -35,9 +35,11 @@ This session introduces attendees to the ABAP Cloud programming model and how th
 The requirements to follow the exercises in this repository are:
 
 - You have installed the latest version of the ADT tools    
-- You have created a user in one of the shared SAP BTP, ABAP Environment Trial Systems
+- You have a user in a _SAP BTP, ABAP Environment_ system:  
 
-as described in our [Getting Started](exercises/ex0/) section.   
+   > In a hand-on workshop conducted by SAP either a dedicated demo system will be provided to you, or
+   > you will create a user in one of the shared _SAP BTP, ABAP Environment Trial Systems_
+   > as described in our [Getting Started](exercises/ex0/) section.   
 
 ## Slides
 [Presentation](https://github.com/SAP-samples/teched2023-DT182v/blob/5468676ccceadbda6e9b16432f12194a7de3eb39/slides/AD182v%40SAP_TechEd_2023_final_RAP_Extensibility_JS.pdf) 
