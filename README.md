@@ -78,13 +78,15 @@ https://help.sap.com/docs/SAP_S4HANA_CLOUD/6aa39f1ac05441e5a23f484f31e477e7/1b34
 
 ## Download and Installation
 
-The package ZRAP630_SOL that contains the solution of this workshop can be downloaded via abapGIT into an *SAP BTP, ABAP Environment* system or into the *SAP S/4HANA Cloud, ABAP environment* system.
+The packages **ZRAP630_SOL** and **ZRAP630_SOL_EXT** that contain the solutions of this workshop can be downloaded via abapGIT into an *SAP BTP, ABAP Environment* system or into the *SAP S/4HANA Cloud, ABAP environment* system.
 
-> Please note that this package has already been installed in the SAP BTP, ABAP Environment Trial systems !   
-> So there is no need to install it on an ABAP Environment trial system.   
+> Please note that these packages have already been installed in the SAP BTP, ABAP Environment Trial systems !   
+> So there is no need to install them on an ABAP Environment trial system.   
 
 <details>
   <summary>Click to expand download and installation steps.</summary>
+
+  The steps to download and install the package of the base RAP business object can be found here:   
    
 1. Create a package **'ZRAP630_SOL'** with **'ZLOCAL'** as the superpackage.  
 2. Link this package with the URL of the RAP630 GitHub repository `https://github.com/SAP-samples/abap-platform-rap630`.
@@ -92,6 +94,12 @@ The package ZRAP630_SOL that contains the solution of this workshop can be downl
 4. Pull changes.
 5. Use mass activation to activate the objects that have been imported in step 3.
 6. Publish the service binding `ZRAP630UI_SHOP_O4_SOL`.
+
+   After you have performed the aforementioned steps you can continue to download the solution package of the extension project **ZRAP630_SOL_EXT**.
+
+   Since these are stored for technical reasons in another Github repository **abap-platform-rap630-ext** you have to
+   to download the source from that repository 'https://github.com/SAP-samples/abap-platform-rap630-ext'.
+   
    
 </details>
 
