@@ -4,7 +4,7 @@
 
 ## Introduction
 
-In this exercise, you will search for a released RAP business object to create a bank. For this we will *Released Objects* part of the *Project Explorer* in ADT.
+In this exercise, you will search for a released RAP business object to create a bank. For this we will use the *Released Objects* part of the *Project Explorer* in ADT.
 
 We will continue to create a simple class to investigate 
 
@@ -100,8 +100,11 @@ We will then use this class to build a test class to call the released API **I_B
       - Line 48: Valid access to CDS view `I_Bank_2`. 
              
 ![package](images/01_040_rap630.png). 
+
+
+
       
-   6. The effect of the release state **Not to Be Released** in combination with a successor is illustrated below for the table `BNKA`, which was replaced by the CDS view `I_BANK_2`. When you open an object such as `BNKA` for which a success is maintained you see this information also in the **Properties** in ADT where you have the option to conveniently navigate to the successor object.   
+  6. The effect of the release state **Not to Be Released** in combination with a successor is illustrated below for the table `BNKA`, which was replaced by the CDS view `I_BANK_2`. When you open an object such as `BNKA` for which a success is maintained you see this information also in the **Properties** in ADT where you have the option to conveniently navigate to the successor object.   
    
    ![package](images/01_050_rap630.png). 
  
