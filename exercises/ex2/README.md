@@ -64,7 +64,7 @@ Since extending a RAP BO in parallel by several developers can cause severe prob
 
    ![BDEF Extension](images/ex2_01_060_RAP630.png)    
 
-8. Add the following code to the 
+8. Add the following code to the local class `lhc_shop` which implements the validation. 
 
 <pre>   
 CLASS lhc_shop DEFINITION INHERITING FROM cl_abap_behavior_handler.   
