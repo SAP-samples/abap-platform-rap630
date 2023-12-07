@@ -341,12 +341,12 @@ Description: Extension for P-CDS view
   
 #### Extension for I-CDS view  
 
-Name: `ZRAP630I_Ext_Shop_D_###`   
+Name: `ZRAP630I_Ext_ShopTP_###`   
 Package: `ZRAP630_###_EXT`  
 Description: Extension for interface view
   
 <pre>
-extend view entity ZRAP630I_Shop_D_### with {  
+extend view entity ZRAP630I_ShopTP_### with {  
 Shop.zz_feedback_zaa as zz_feedback_zaa 
 }
 </pre>
