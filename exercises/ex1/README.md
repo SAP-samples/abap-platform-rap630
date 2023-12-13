@@ -135,7 +135,7 @@ The documentation for a released RAP business object can be found in so called *
 
   ![KTD](images/02_30_rap630.png) 
 
-  3. When you have opened the **Knowledge Transfer Document** you should change from the **Source** tab to the more appealing visualization of the **Preview** tab.  
+  3. When you have opened the **Knowledge Transfer Document** you should change from the **Source** tab to the more appealing visualization of the **Output** tab.  
 
   ![KTD](images/02_40_rap630.gif)  
 
@@ -257,14 +257,16 @@ The coding leverages the `response` parameter of EML statements that is used to 
      ENDMETHOD.
      </pre>   
 
-  3. Run the test class by pressing **F9**.  
+  3. Activate your changes by pressing **Ctrl+F3**
+
+  4. Run the test class by pressing **F9**.  
 
      You will notice that an error message is thrown. Namely `error You are not authorized to create bank data for country/region CZ.` 
      Consequently also no new data is found. 
 
      ![test class](images/04_10_ZRAP630.png)      
      
-  4. Adding **PRIVILEGED** to the EML call
+  5. Adding **PRIVILEGED** to the EML call
 
      We will now check the behavior definition of the Bank RAP business object. To do so use Ctrl+Shift+A to open the behavior definition `R_BankTP`.
      
