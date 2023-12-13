@@ -181,7 +181,7 @@ The coding leverages the `response` parameter of EML statements that is used to 
      METHOD if_oo_adt_classrun~main.
      
       DATA create_bank TYPE STRUCTURE FOR CREATE i_banktp.
-      DATA bank_id_number TYPE i_banktp-BankInternalID VALUE '8888'.
+      DATA bank_id_number TYPE i_banktp-BankInternalID VALUE '8###'.
 
       create_bank = VALUE #( bankcountry = 'CZ'
                            bankinternalid = bank_id_number
