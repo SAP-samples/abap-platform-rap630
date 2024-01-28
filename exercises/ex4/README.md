@@ -1,3 +1,5 @@
+[Home - RAP630](../../../../#exercises)
+
 # Exercise 2.3 - Extend the business object with an action 
 
 After having added a field we will add an action to the base RAP BO. This action will be used to update comments. We will make the new field read-only 
