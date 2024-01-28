@@ -1,4 +1,4 @@
-# Exercise 2 - Behavior extension
+# Exercise 2.1 - Behavior extension
 
 In this exercise, we will extend the behavior of an extensible RAP BO. That means we will add a validation, a determination and side-effects to the behavior of the RAP BO by using an extenstion.   
 
@@ -6,7 +6,7 @@ Since extending a RAP BO in parallel by several developers can cause severe prob
 
 ![BDEF Extension](images/ex2_01_overview_RAP630.png)
 
-## Exercise 2.1 Extend the behavior definition with a validation
+## Exercise 2.1.1 Extend the behavior definition with a validation
 
 >  After completing these steps you will have created a validation to check the delivery date.  
 
@@ -121,7 +121,7 @@ ENDCLASS.
 
 </details>
 
-## Exercise 2.2 Extend the behavior definition with an determination
+## Exercise 2.1.2 Extend the behavior definition with an determination
 
 In a second step we will now add a determination `ZZ_setOverallStatus` to the behavior defintion extension. This shall be executed in case the content of the field `OrderedItem` is changed by the user.   
 
@@ -223,7 +223,7 @@ In a second step we will now add a determination `ZZ_setOverallStatus` to the be
 > You will notice that the data is updated, but the changes in the data (the price) are not automatically reflected there. 
 > This we will change in the following step of our excerise.
 
-## Exercise 2.3 Extend the behavior with side effects
+## Exercise 2.1.3 Extend the behavior with side effects
 
 In this exercise we will show how side effect can be added to an extensible base RAP business object by using a BDEF Extension.
 
