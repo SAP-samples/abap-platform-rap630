@@ -257,7 +257,7 @@ For the remaining CDS views we will only provide the code snippets.
 <details>
   <summary>🔵 Click to expand!</summary>
 
-### Exercise 2.2.2.3 - Extend the extenstion include view 
+### Extend the extenstion include view 
 
 First we have to extend our extension include view `ZRAP630E_Shop_###` since the R-view reads from this view .
   
@@ -295,10 +295,14 @@ First we have to extend our extension include view `ZRAP630E_Shop_###` since the
   
 ![CDS view extenstion](images/ex3_extension_for_ext_include_030.png)
   
+</details>
 
-### Exercise 2.2.3.4 - Extend the remaining CDS views 
+### Extend the remaining CDS views 
   
 You have now to extend the remaining 4 CDS views in the following order with the following code snippets as we have done this for the extension include view in Exercise 3.5.   
+
+<details>
+  <summary>🔵 Click to expand!</summary>
 
 #### Extension for R-CDS view
 
@@ -365,9 +369,16 @@ Shop.zz_feedback_zaa as zz_feedback_zaa
 </pre>
   
   
-### Exercise 2.2.2.5 - Test the field extensibility
+</details>
+
+</details>
+
+### Exercise 2.2.3 - Test the field extensibility
 
 After having extended all the objects in the hiearchy of your base RAP business object you can now leverage the additional field in the UI.
+
+<details>
+  <summary>🔵 Click to expand!</summary>
 
 1. Open the Service Binding of the extensible RAP business object and double-click on the entity**Shop**.   
   
@@ -383,18 +394,15 @@ After having extended all the objects in the hiearchy of your base RAP business 
   
   
   > When no field is visible you should check the extension of your projection view `ZRAP630C_EXT_SHOPTP_###` and check the UI annotations.   
-  
-  
-</details>
 
 </details>
-  
+
 ## Summary
 
 You have now added a single editable field to your extensible RAP business object.   
 In the next execise we will show how to add an action. 
 
-Continue to - [Exercise 4 - Add an action ](../ex4/README.md)
+Continue to - [Exercise 2.3 - Add an action ](../ex4/README.md)
 
 
 
