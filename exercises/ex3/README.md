@@ -1,3 +1,5 @@
+[Home - RAP630](../../../../#exercises)  
+
 # Exercise 2.2 - Extend the CDS data model of the extensible RAP base business object  
 
 In the preceeding exercise we have extended the _behavior_ of the based RAP BO by adding a determination, a validation and a side effect. 
