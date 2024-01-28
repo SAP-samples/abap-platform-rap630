@@ -2,20 +2,6 @@
 
 # RAP630 - Use ABAP Cloud for developer extensibility
 https://github.com/SAP-samples/abap-platform-rap630/tree/main
-<!--- Register repository https://api.reuse.software/register, then add REUSE badge:
-
-1. The LICENSE file:
-In most cases, the license for SAP sample projects is `Apache 2.0`.
-
-2. The .reuse/dep5 file: 
-The [Reuse Tool](https://reuse.software/) must be used for your samples project. You can find the .reuse/dep5 in the project initial. Please replace the parts inside the single angle quotation marks < > by the specific information for your repository.
-
-3. The README.md file (this file):
-Please edit this file as it is the primary description file for your project. You can find some placeholder titles for sections below.
-
-
-[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/REPO-NAME)](https://api.reuse.software/info/github.com/SAP-samples/REPO-NAME)
--->
 
 ## Description
 
@@ -23,53 +9,64 @@ This repository contains the material for the RAP hands-on workshop called _RAP6
 
 Developer extensibility as defined by SAP basically encompasses two activities 
 
-1. Develop custom code to implement your own business logic. Here you can make use of existing API's from SAP that have been released for that purpose.
-2. Extend an existing RAP Business Object so that additional business functionality is added. Such an extensible RAP business object will usually reside in another software components or it is an existing extensible RAP BO that has been delivered by SAP or a SAP partner. By extending the funcitionality of an existing RAP Business object its functionality can be adapted to your specific business requirements.
+1. Develop custom code to implement your own business logic.   
+   Here you can make use of existing API's from SAP that have been released for that purpose.
+   
+3. Extend an existing RAP Business Object so that additional business functionality is added.
+
+   Such an extensible RAP business object will usually reside in another software components or it is an existing extensible RAP BO that has been delivered by SAP or a SAP partner.  
+   By extending the funcitionality of an existing RAP Business object its functionality can be adapted to your specific business requirements.
 
 ## Overview
 
 This session introduces attendees to the ABAP Cloud programming model and how this can be leveraged to build extensions (own code) in SAP S/4HANA BTP, ABAP Environment or how you can extend an existing RAP Business Object using the ABAP Cloud programming model.   
 
-## Requirements
+## 📋Requirements for attending this workshop 
+[^Top of page](#)
+
+> You need the latest version of the ABAP Development Tools for Eclipse (ADT) on your laptop or PC as well as the access to an appropriate ABAP system* to carry out the practical exercises of this workshop.
+>
+> (*) The supported ABAP systems are SAP BTP ABAP Environment, SAP S/4HANA Cloud, Public Edition or release 2023 (or higher) of SAP S/4HANA and SAP S/4HANA Cloud, Private Edition.
+> The [openSource RAP Generator](https://github.com/SAP-samples/cloud-abap-rap) must be imported into the relevant system - e.g. SAP BTP ABAP Environment Trial.
+
+<details>
+  <summary>Click to expand!</summary>
 
 The requirements to follow the exercises in this repository are:
+1. [Install the latest Eclipse platform and the latest ABAP Development Tools (ADT) plugin](https://developers.sap.com/tutorials/abap-install-adt.html)
+2. [Create an user on the SAP BTP, ABAP environment Trial](https://developers.sap.com/tutorials/abap-environment-trial-onboarding.html) (_Read exception below_)
+3. [Create an ABAP Cloud Project](https://developers.sap.com/tutorials/abap-environment-create-abap-cloud-project.html)
 
-- You have installed the latest version of the ADT tools    
-- You have a user in a _SAP BTP, ABAP Environment_ system:  
+>> ⚠ **Exception regarding SAP-led events such as "ABAP Developer Day" and "SAP CodeJam"**:   
+>> → A dedicated ABAP system with pre-generated packages for the hands-on workshop participants will be provided.   
+>> → Access to the system details for this on-site workshop will be provided by the instructors during the session.    
+</details>
 
-   > In a hand-on workshop at SAP TechEd or any other event a dedicated demo system might be provided,
-   > in this case the service key and user credentials will be provided to you by the trainer of the workshop.   
-   
-   > If you are following this script on your own or as part of a TechEd jump start session
-   > you will have to create a user in one of the shared _SAP BTP, ABAP Environment Trial Systems_
-   > as described in our [Getting Started](exercises/ex0/) section.   
-
-   > If you want to conduct this workshop in your own SAP BTP, ABAP Environment system or your own SAP S/4HANA, ABAP Environment system,
-   > you first have to install the [openSource RAP Generator](https://github.com/SAP-samples/cloud-abap-rap).  
 
 ## Slides
 [Presentation](https://github.com/SAP-samples/teched2023-DT182v/blob/5468676ccceadbda6e9b16432f12194a7de3eb39/slides/AD182v%40SAP_TechEd_2023_final_RAP_Extensibility_JS.pdf) 
 
-## Exercises
+## 🛠 Exercises
+[^Top of page](#)
 
 In the _Getting Started_ section we describe how you get a user in the ABAP Environment of SAP BTP Trial which you will have to use to perform the exercises in this session. After you have created this trial user you will will an ABAP Cloud project to connect or your trial instance. Here you will generate an extensible managed Business Object (BO) with one entity _Shop_ with generic transactional behavior - i.e. CRUD: Create, Read, Update, and Delete. For your convenience, the class **`ZDMO_GEN_RAP630_SINGLE`** is provided to you to generate the package  **`ZRAP630_###`** alongside with the aforementioned RAP business object after execution.
 
 In _Exercise 1_ you will learn how to leverage the released RAP BO `I_BankTP` . 
 
-In _Exercise 2_ you will _extend the behavior_ of the base RAP business object that has been generated at the end of the Getting Started section. You will learn how extend the behavior of the base RAP BEO by validations, determinations and side effects. 
+In _Exercise 2.1_ you will _extend the behavior_ of the base RAP business object that has been generated at the end of the Getting Started section. You will learn how extend the behavior of the base RAP BEO by validations, determinations and side effects. 
 
-In _Exercise 3_ you will then continue to _extend the data model_ with additional fields. This requires you to perform several steps and you have to create quite a lot of repository objects. (There is a plan to provide a Generator for that.)  
+In _Exercise 2.2_ you will then continue to _extend the data model_ with additional fields. This requires you to perform several steps and you have to create quite a lot of repository objects. (There is a plan to provide a Generator for that.)  
 
-In _Exercise 4_ you will continue to _extend the behavior_ of the base RAP business object by adding an action. Since actions can only added via an extension to fields that have been added via an extension as well, adding an action via an extension must be performed after Exercise 3.   
-
+In _Exercise 2.3_ you will continue to _extend the behavior_ of the base RAP business object by adding an action. Since actions can only added via an extension to fields that have been added via an extension as well, adding an action via an extension must be performed after Exercise 2.2.   
 
 So let us start and have a look at the _Getting Started_ section.
 
 - [Getting Started](exercises/ex0/)
 - [Exercise 1 - Consume a released RAP BO](exercises/ex1/)
-- [Exercise 2 - Extend the behavior (determinations, validations, side-effects)](exercises/ex2/)
-- [Exercise 3 - Extend the data model (add additional fields)](exercises/ex3/)
-- [Exercise 4 - Extend the behavior (add an action)](exercises/ex4/)
+- Exercies 2 - Extend a RAP Business object
+  - [Exercise 2.1 - Extend the behavior (determinations, validations, side-effects)](exercises/ex2/)
+  - [Exercise 2.2 - Extend the data model (add additional fields)](exercises/ex3/)
+  - [Exercise 2.3 - Extend the behavior (add an action)](exercises/ex4/)
 
 ## Online Help
 
