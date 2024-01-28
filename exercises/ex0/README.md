@@ -1,3 +1,5 @@
+[Home - RAP630](../../README.md)
+
 # Getting started
 
 In this exercise, you will start a helper class that will generate several artefacts needed for the remaining exercises.
