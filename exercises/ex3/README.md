@@ -1,4 +1,4 @@
-# Exercise 3 - Extend the CDS data model of the extensible RAP base business object  
+# Exercise 2.2 - Extend the CDS data model of the extensible RAP base business object  
 
 In the preceeding exercise we have extended the _behavior_ of the based RAP BO by adding a determination, a validation and a side effect. 
 
@@ -8,7 +8,7 @@ Compared to the activities for adding additional behavior this is a larger amoun
 
 ![Overview](images/ex3_01_overview_RAP630.png)
 
-## Exercise 3.1 - Check (and adapt) the CDS data model (of the extensible base RAP BO)
+## Exercise 2.2.1 - Check (and adapt) the CDS data model (of the extensible base RAP BO)
 
 In order to extend the data model of a RAP BO the base RAP BO must be enabled to support extensibility as described in the Online Help.  
 [RAP Extensibility-Enablement](https://help.sap.com/docs/abap-cloud/abap-rap/rap-extensibility-enablement)
@@ -26,7 +26,7 @@ Unfortunately it was not possible to generate all required annotations (this is 
 <details>
   <summary>🔵 Click to expand!</summary>
 
-### Adaption 3.1.1 - Adapt include structure of the RAP base object
+### Adaption 2.2.1.1 - Adapt include structure of the RAP base object
 
 We will start with adapting the generated include structure. 
 
@@ -76,7 +76,7 @@ We will start with adapting the generated include structure.
 
  </details>  
   
-  ### Exercise 3.1.2 - Adapt the database table `zrap630_ashop###` of the RAP base BO
+  ### Exercise 2.2.1.2 - Adapt the database table `zrap630_ashop###` of the RAP base BO
 
 We now have to adapt the table of the generated RAP Business BO. This is again because the XCO libraries currently do not yet allow to set this annotations. 
 Since we have already extended the IncludeStructure we also get error messages that provide a hint that the current table settings to not fit anymore.  
@@ -128,7 +128,7 @@ define table zrap630_ashop### {
 
 </details>
 
-### Exercise 3.1.3 Adapt the draft table
+### Exercise 2.2.1.3 Adapt the draft table
 
 Perform the same change for the draft table `zrap630sh00d_###` and change the enhancement category to the value `extensible_any`. 
 
@@ -199,7 +199,7 @@ Order of extension | Repository object name | Name           | Comment
 <details>
   <summary>🔵 Click to expand!</summary>
 
-### Exercise 3.2.1 - Extend the extension include with an append structure - Add a field
+### Exercise 2.2.2.1 - Extend the extension include with an append structure - Add a field
 
 We start the extension of the base RAP BO by adding field to the _extension include structure_ by creating an _append structure_ .
 
@@ -248,7 +248,7 @@ We start the extension of the base RAP BO by adding field to the _extension incl
  
 </details>
 
-### Excercise 3.5 - Extend the CDS views 
+### Excercise 2.2.3 - Extend the CDS views 
 
 In the following we will explain how to extend the remaining 5 CDS view entities. Since the process (the wizard) is the same for each CDS view entity we will only show screen shots for doing this for the first CDS view that has to be extended, which is the extension of the _Extension Include View_ `ZRAP630E_Shop_###`.  
 
@@ -257,7 +257,7 @@ For the remaining CDS views we will only provide the code snippets.
 <details>
   <summary>🔵 Click to expand!</summary>
 
-### Exercise 3.5 - Extend the extenstion include view 
+### Exercise 2.2.4 - Extend the extenstion include view 
 
 First we have to extend our extension include view `ZRAP630E_Shop_###` since the R-view reads from this view .
   
@@ -296,7 +296,7 @@ First we have to extend our extension include view `ZRAP630E_Shop_###` since the
 ![CDS view extenstion](images/ex3_extension_for_ext_include_030.png)
   
 
-### Exercise 3.6 - Extend the remaining CDS views 
+### Exercise 2.2.5 - Extend the remaining CDS views 
   
 You have now to extend the remaining 4 CDS views in the following order with the following code snippets as we have done this for the extension include view in Exercise 3.5.   
 
@@ -365,7 +365,7 @@ Shop.zz_feedback_zaa as zz_feedback_zaa
 </pre>
   
   
-### Exercise 3.10 - Test the field extensibility
+### Exercise 2.2.6 - Test the field extensibility
 
 After having extended all the objects in the hiearchy of your base RAP business object you can now leverage the additional field in the UI.
 
