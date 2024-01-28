@@ -50,7 +50,9 @@ The requirements to follow the exercises in this repository are:
 ## 🛠 Exercises
 [^Top of page](#)
 
-In the _Getting Started_ section you will generate an extensible managed Business Object (BO) with one entity _Shop_ with generic transactional behavior - i.e. CRUD: Create, Read, Update, and Delete. 
+In the _Getting Started_ section you will generate 
+- two exercise packages and
+- an extensible managed Business Object (BO) with one entity _Shop_ with generic transactional behavior - i.e. CRUD: Create, Read, Update, and Delete. 
 
 In _Exercise 1_ you will learn how to leverage the released RAP BO `I_BankTP` in your own code. 
 
