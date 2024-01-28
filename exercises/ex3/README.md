@@ -178,7 +178,7 @@ Since now the underlying base objects (active table, draft table and include str
 
 </details>
 
-## Excercise 3.2 - Extend the data structure
+## Excercise 2.2.2 - Extend the data structure
 
 As shown in the schematic view above we have to extend the following objects of our extensible base BO.
 
@@ -248,7 +248,7 @@ We start the extension of the base RAP BO by adding field to the _extension incl
  
 </details>
 
-### Excercise 2.2.3 - Extend the CDS views 
+### Excercise 2.2.2.2 - Extend the CDS views 
 
 In the following we will explain how to extend the remaining 5 CDS view entities. Since the process (the wizard) is the same for each CDS view entity we will only show screen shots for doing this for the first CDS view that has to be extended, which is the extension of the _Extension Include View_ `ZRAP630E_Shop_###`.  
 
@@ -257,7 +257,7 @@ For the remaining CDS views we will only provide the code snippets.
 <details>
   <summary>🔵 Click to expand!</summary>
 
-### Exercise 2.2.4 - Extend the extenstion include view 
+### Exercise 2.2.2.3 - Extend the extenstion include view 
 
 First we have to extend our extension include view `ZRAP630E_Shop_###` since the R-view reads from this view .
   
@@ -296,7 +296,7 @@ First we have to extend our extension include view `ZRAP630E_Shop_###` since the
 ![CDS view extenstion](images/ex3_extension_for_ext_include_030.png)
   
 
-### Exercise 2.2.5 - Extend the remaining CDS views 
+### Exercise 2.2.3.4 - Extend the remaining CDS views 
   
 You have now to extend the remaining 4 CDS views in the following order with the following code snippets as we have done this for the extension include view in Exercise 3.5.   
 
@@ -365,7 +365,7 @@ Shop.zz_feedback_zaa as zz_feedback_zaa
 </pre>
   
   
-### Exercise 2.2.6 - Test the field extensibility
+### Exercise 2.2.2.5 - Test the field extensibility
 
 After having extended all the objects in the hiearchy of your base RAP business object you can now leverage the additional field in the UI.
 
