@@ -1,4 +1,4 @@
-# Exercise 4 - Extend the business object with an action 
+# Exercise 2.3 - Extend the business object with an action 
 
 After having added a field we will add an action to the base RAP BO. This action will be used to update comments. We will make the new field read-only 
 and add the required extensions to the 
@@ -6,7 +6,7 @@ and add the required extensions to the
 - Projection BDEF (add a use statement)
 - Projection view (add UI annotations to make the button of the action visible)
 
-### Exercise 4.1 Create an abstract entity
+### Exercise 2.3.1 Create an abstract entity
 
 We want to provide the feedback for an order as a parameter of an action that will be added as an extenstion.
 Parameters are passed to the action using abstract entites.
@@ -30,7 +30,7 @@ define abstract entity ZRAP630_A_Feedback_###
 
 7. Activate your changes   
 
-### Exercise 4.2 Extend the behavior definition 
+### Exercise 2.3.2 Extend the behavior definition 
 
 Now we can define the action with the parameter that has just been created.  
 
@@ -70,7 +70,7 @@ extend behavior for Shop
 
  ![Provide feedback via an action](images/ex4_implement_action_010.png)
 
-### Exercise 4.3. - Implement the method for the action in the behvior implementation class
+### Exercise 2.3.3. - Implement the method for the action in the behvior implementation class
 
 1. Open the local class of the behavior implementation class.
 
@@ -102,7 +102,7 @@ METHOD ZZ_ProvideFeedback.
 
 
 
-### Exercise 4.4 - Extend the projection BDEF
+### Exercise 2.3.4 - Extend the projection BDEF
 
 In order to make the action visible an appropriate `use action` statement has to added to the projection level of the BDEF of the extensible root BO.
 
@@ -131,7 +131,7 @@ use action ZZ_ProvideFeedback;
 }
 </pre>
 
-### Exercise 4.5 - Add UI annotation
+### Exercise 2.3.5 - Add UI annotation
 
 UI annotations have to be added to make the action button visible. This is done in the C-View Extension `ZRAP630C_EXT_SHOPTP_###`.   
 
