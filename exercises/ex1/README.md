@@ -44,138 +44,22 @@ We will then use this class to build a test class to call the released API **I_B
       ![package](images/01_020_rap630.png). 
 
    4. Select or create a transport request, and click **Finish** to create the class.
-   
-   5. Copy the code snippet provided below and add it in the implementation section of the methode `main`. 
- 
-      > **Hint**: Hover the code snippet and choose the _Copy raw contents_ icon ![copy_raw_content](../../images/copyrawcontents.png) appearing in the upper-right corner to copy it. 
-      
- <pre lang="ABAP">
-   METHOD if_oo_adt_classrun~main.
-    CALL FUNCTION 'POPUP_TO_CONFIRM'.
 
-    SELECT SINGLE * FROM bnka WHERE banks = 'DE' INTO @DATA(bank_info).
-
-    DATA bank_address  TYPE bapi1011_address.
-    DATA bank_ctry  TYPE banks  .
-
-    CALL FUNCTION 'BAPI_BANK_CREATE'
-      EXPORTING
-        bank_ctry    = bank_ctry
-*       bank_key     =
-        bank_address = bank_address
-*       bank_method  =
-*       bank_formatting              =
-*       bank_address1                =
-*       i_xupdate    = 'X'
-*       i_check_before_save          =
-*       bank_iban_rule               =
-*       bank_b2b_supported           =
-*       bank_cor1_supported          =
-*       bank_r_transaction_supported =
-*       bank_internal_bank           =
-*       i_no_overwrite               =
-*  IMPORTING
-*       return       =
-*       bankcountry  =
-*       bankkey      =
-      .
-
-    SELECT * FROM I_Bank_2
-    WHERE BankCountry = 'DE'
-    INTO TABLE @DATA(bank_data_from_bnka).
-
-  ENDMETHOD.
- </pre>
-
-      The ABAP class `zcl_test_abap_cloud_###` in the screenshot underneath uses the ABAP Cloud development model (ABAP language version “ABAP for Cloud development”). The class cannot be compiled because of several ABAP statements containing syntax-errors:
-
-      - Line 19: The SAP function module `POPUP_TO_CONFIRM` is used in the classic Dynpro/SAP GUI world and is no public SAP API in the ABAP Cloud development model.  
-  
-      - Line 21: Direct access to SAP table `BNKA` is also not allowed. Here (in Steampunk) the devloper already gets a hint to use the public CDS view `I_BANK_2` instead.
-  
-      - Line 22, 23: Use of the SAP structure `bapi1011_address` and the data element `banks` are also not allowed. 
- 
-      - Line 26: The use of the SAP function module `BAPI_BANK_CREATE` is also forbidden in the ABAP Cloud development model, but for this function module a successor is available, namely the Behavior Definition `I_BANKTP`.   
-          
-      - Line 48: Valid access to CDS view `I_Bank_2`. 
-             
-![package](images/01_040_rap630.png). 
-
-
-
-      
-  6. The effect of the release state **Not to Be Released** in combination with a successor is illustrated below for the table `BNKA`, which was replaced by the CDS view `I_BANK_2`. When you open an object such as `BNKA` for which a success is maintained you see this information also in the **Properties** in ADT where you have the option to conveniently navigate to the successor object.   
-   
-   ![package](images/01_050_rap630.png). 
- 
-  6. In order to activate your class you have to comment out the forbidden statements. 
-  
-  7. What you can do if the use of an object is not permitted but now successor has been maintained in the current release is described in the following exercise. 
-
-</details>
-
-
- 
-
- ## Exercise 1.2: Check the documentation for I_BankTP
- 
-[^Top of page](#)
-
-The documentation for a released RAP business object can be found in so called **Knowledge Transfer Documents** which have the same name as the business object (released API) it describes.     
-
- <details>
-  <summary>Click to expand!</summary>
-
-  1. You can find the **Knowledge Transfer Document** of a realeased API in the folder **Documentation** underneath the business object in the Project Explorer.
-  It can also be opened from within the source code editor of your behavior definition. Here you find the link at the top of the source code of the behavior definition.
-
-  ![KTD](images/02_20_rap630.png) 
-
-  2. The **Knowledge Transfer Document** can also be opened directly via the **Open Development Object** dialogu that can be opened via the menu or via the short cut **Ctrl+Shift+A**.  
-
-  ![KTD](images/02_30_rap630.png) 
-
-  3. When you have opened the **Knowledge Transfer Document** you should change from the **Source** tab to the more appealing visualization of the **Output** tab.  
-
-  ![KTD](images/02_40_rap630.gif)  
-
-  4. The **Knowledge Transfer Document** provides you with code snippets that help you to write code to perform the operation (e.g. *create* as shown below) or an action which is supported by this business object.  
-
-  ![KTD](images/02_50_rap630.png)     
-
-
-We will use these code templates to create a test class that calls the API **I_BankTP** in order to create purchase requisitions in the following Excercise.
-
-We will reuse this code in the implementation of the behavior definition class of our sample RAP business object **OnlineShop**. 
-
- </details> 
-
-
-
-## Exercise 1.3: Implement a test class to call I_BankTP
-[^Top of page](#)
-
-In the preceeding exercise you have learned how to access the documentation of a released RAP business object.  
-
-We will use this code to implement a test class that calls the API **I_BankTP** and that implements the interface **if_oo_adt_classrun** so we can start with basic tests by simply starting the `if_oo_adt_classrun~main( )` method of our test class by pressing **F9**.
-
-The coding leverages the `response` parameter of EML statements that is used to specify response parameters for ABAP EML statements to get information on the following: 
-
-- Failures, i. e. operations that could not get processed (FAILED failed_resp)   
-- Key mapping information (MAPPED mapped_resp)   
-- Returned error messages (REPORTED reported_resp)
-
- <details>
-  <summary>Click to expand!</summary>
-
-  1. Open the test class **zcl_test_abap_cloud_###** that you have created before by pressing **Ctrl+Shift+A**.    
+  5. Open the test class **zcl_test_abap_cloud_###** that you have created before by pressing **Ctrl+Shift+A**.    
 
      ![test class](images/03_10_RAP630.png)  
 
-  2. Replace the code in the `if_oo_adt_classrun~main( )` method with the following code snippet.    
- 
+  6. Replace the code in the `if_oo_adt_classrun~main( )` method with the following code snippet.
+     
      > Tip
      > You have to replace the value for **'####'** with a string that only contains numbers.   
+
+     > Coding explained:  
+     > The coding leverages the `response` parameter of EML statements that is used to specify response parameters for ABAP EML statements
+     > to get information on the following:  
+     > - Failures, i. e. operations that could not get processed (FAILED failed_resp)   
+     > - Key mapping information (MAPPED mapped_resp)   
+     > - Returned error messages (REPORTED reported_resp)   
   
      <pre lang="ABAP">  
      METHOD if_oo_adt_classrun~main.
@@ -257,16 +141,16 @@ The coding leverages the `response` parameter of EML statements that is used to 
      ENDMETHOD.
      </pre>   
 
-  3. Activate your changes by pressing **Ctrl+F3**
+  7. Activate your changes by pressing **Ctrl+F3**
 
-  4. Run the test class by pressing **F9**.  
+  8. Run the test class by pressing **F9**.  
 
      You will notice that an error message is thrown. Namely `error You are not authorized to create bank data for country/region CZ.` 
      Consequently also no new data is found. 
 
      ![test class](images/04_10_ZRAP630.png)      
      
-  5. Adding **PRIVILEGED** to the EML call
+  9. Adding **PRIVILEGED** to the EML call
 
      We will now check the behavior definition of the Bank RAP business object. To do so use Ctrl+Shift+A to open the behavior definition `R_BankTP`.
      
@@ -291,7 +175,7 @@ The coding leverages the `response` parameter of EML statements that is used to 
      
      ![PRIVILEGED 1](images/06_010_RAP630.png)  
      
-  5. Adding **WITH PRIVILEGED ACCESS** to the ABAP SQL statement
+ 10. Adding **WITH PRIVILEGED ACCESS** to the ABAP SQL statement
   
      Similar to enforce skipping the authorization checks when creating a new bank it is also possible to enforce skipping of the authorization check that is imposed by the underlying DCL which performs a check on the authorization object `F_BNKA_MAO` and the field `BBANKS` for displaying data.  
      
@@ -315,7 +199,7 @@ The coding leverages the `response` parameter of EML statements that is used to 
      ![PRIVILEGED 1](images/06_040_RAP640.png)   
      
   
-  4. Other potential problems
+  11. Other potential problems
   
      The I_BankTP RAP BO checks whether the provided switft code fits to the ISO code of the region. 
   
@@ -325,6 +209,118 @@ The coding leverages the `response` parameter of EML statements that is used to 
 
      - `error Bank CZ 8888 already exists.`
   
+
+ ## Exercise 1.2: Check the documentation for I_BankTP
+ 
+[^Top of page](#)
+
+The documentation for a released RAP business object can be found in so called **Knowledge Transfer Documents** which have the same name as the business object (released API) it describes.     
+
+ <details>
+  <summary>Click to expand!</summary>
+
+  1. You can find the **Knowledge Transfer Document** of a realeased API in the folder **Documentation** underneath the business object in the Project Explorer.
+  It can also be opened from within the source code editor of your behavior definition. Here you find the link at the top of the source code of the behavior definition.
+
+  ![KTD](images/02_20_rap630.png) 
+
+  2. The **Knowledge Transfer Document** can also be opened directly via the **Open Development Object** dialogu that can be opened via the menu or via the short cut **Ctrl+Shift+A**.  
+
+  ![KTD](images/02_30_rap630.png) 
+
+  3. When you have opened the **Knowledge Transfer Document** you should change from the **Source** tab to the more appealing visualization of the **Output** tab.  
+
+  ![KTD](images/02_40_rap630.gif)  
+
+  4. The **Knowledge Transfer Document** provides you with code snippets that help you to write code to perform the operation (e.g. *create* as shown below) or an action which is supported by this business object.  
+
+  ![KTD](images/02_50_rap630.png)     
+
+
+We will use these code templates to create a test class that calls the API **I_BankTP** in order to create purchase requisitions in the following Excercise.
+
+We will reuse this code in the implementation of the behavior definition class of our sample RAP business object **OnlineShop**. 
+
+ </details> 
+
+
+
+## Exercise 1.3: Implement a test class to call I_BankTP
+[^Top of page](#)
+
+<---
+
+   5. Copy the code snippet provided below and add it in the implementation section of the methode `main`. 
+ 
+      > **Hint**: Hover the code snippet and choose the _Copy raw contents_ icon ![copy_raw_content](../../images/copyrawcontents.png) appearing in the upper-right corner to copy it. 
+      
+ <pre lang="ABAP">
+   METHOD if_oo_adt_classrun~main.
+    CALL FUNCTION 'POPUP_TO_CONFIRM'.
+
+    SELECT SINGLE * FROM bnka WHERE banks = 'DE' INTO @DATA(bank_info).
+
+    DATA bank_address  TYPE bapi1011_address.
+    DATA bank_ctry  TYPE banks  .
+
+    CALL FUNCTION 'BAPI_BANK_CREATE'
+      EXPORTING
+        bank_ctry    = bank_ctry
+*       bank_key     =
+        bank_address = bank_address
+*       bank_method  =
+*       bank_formatting              =
+*       bank_address1                =
+*       i_xupdate    = 'X'
+*       i_check_before_save          =
+*       bank_iban_rule               =
+*       bank_b2b_supported           =
+*       bank_cor1_supported          =
+*       bank_r_transaction_supported =
+*       bank_internal_bank           =
+*       i_no_overwrite               =
+*  IMPORTING
+*       return       =
+*       bankcountry  =
+*       bankkey      =
+      .
+
+    SELECT * FROM I_Bank_2
+    WHERE BankCountry = 'DE'
+    INTO TABLE @DATA(bank_data_from_bnka).
+
+  ENDMETHOD.
+ </pre>
+
+      The ABAP class `zcl_test_abap_cloud_###` in the screenshot underneath uses the ABAP Cloud development model (ABAP language version “ABAP for Cloud development”). The class cannot be compiled because of several ABAP statements containing syntax-errors:
+
+      - Line 19: The SAP function module `POPUP_TO_CONFIRM` is used in the classic Dynpro/SAP GUI world and is no public SAP API in the ABAP Cloud development model.  
+  
+      - Line 21: Direct access to SAP table `BNKA` is also not allowed. Here (in Steampunk) the devloper already gets a hint to use the public CDS view `I_BANK_2` instead.
+  
+      - Line 22, 23: Use of the SAP structure `bapi1011_address` and the data element `banks` are also not allowed. 
+ 
+      - Line 26: The use of the SAP function module `BAPI_BANK_CREATE` is also forbidden in the ABAP Cloud development model, but for this function module a successor is available, namely the Behavior Definition `I_BANKTP`.   
+          
+      - Line 48: Valid access to CDS view `I_Bank_2`. 
+             
+![package](images/01_040_rap630.png). 
+
+
+
+      
+  6. The effect of the release state **Not to Be Released** in combination with a successor is illustrated below for the table `BNKA`, which was replaced by the CDS view `I_BANK_2`. When you open an object such as `BNKA` for which a success is maintained you see this information also in the **Properties** in ADT where you have the option to conveniently navigate to the successor object.   
+   
+   ![package](images/01_050_rap630.png). 
+ 
+  6. In order to activate your class you have to comment out the forbidden statements. 
+  
+  7. What you can do if the use of an object is not permitted but now successor has been maintained in the current release is described in the following exercise. 
+
+</details>
+
+--->
+
         
 
  </details> 
