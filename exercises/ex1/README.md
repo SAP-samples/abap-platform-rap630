@@ -254,9 +254,11 @@ These code templates have been used to create the test class that calls the API 
 ## Exercise 1.3: Find the released RAP BO I_BankTP as a successor I_BankTP
 [^Top of page](#)
 
-<!---
+  1. Open the test class **`zcl_test_abap_cloud_###`** that you have created in **Exercise 1.1.**.
 
-   5. Copy the code snippet provided below and add it in the implementation section of the methode `main`. 
+  2. Copy the code snippet provided below and add it add the and in the implementation section of the methode `main`. 
+ 
+     > **Hint**: Hover the code snippet and choose the _Copy raw contents_ icon ![copy_raw_content](../../images/copyrawcontents.png) appearing in the upper-right corner to copy it. 
  
  
       
@@ -295,32 +297,28 @@ SELECT * FROM BNKA WHERE banfn = '0010001516' INTO TABLE @DATA(purchase_req_data
   ENDMETHOD.
  </pre>
 
-      The ABAP class `zcl_test_abap_cloud_###` in the screenshot underneath uses the ABAP Cloud development model (ABAP language version “ABAP for Cloud development”). The class cannot be compiled because of several ABAP statements containing syntax-errors:
+    Since your class **`zcl_test_abap_cloud_###`** uses the ABAP Cloud development model (ABAP language version “ABAP for Cloud development”). 
+    the source code now cannot be compiled anymore because of several ABAP statements containing syntax-errors:
   
       - Line 21: Direct access to SAP table `BNKA` is also not allowed. Here (in Steampunk) the devloper already gets a hint to use the public CDS view `I_BANK_2` instead.
   
       - Line 22, 23: Use of the SAP structure `bapi1011_address` and the data element `banks` are also not allowed. 
  
-      - Line 26: The use of the SAP function module `BAPI_BANK_CREATE` is also forbidden in the ABAP Cloud development model, but for this function module a successor is available, namely the Behavior Definition `I_BANKTP`.   
-          
-      - Line 48: Valid access to CDS view `I_Bank_2`. 
+      - Line 26: The use of the SAP function module `BAPI_BANK_CREATE` is also forbidden in the ABAP Cloud development model, but for this function module a successor is available, namely the Behavior Definition `I_BANKTP`.           
+
              
-![package](images/01_040_rap630.png). 
-
-
-
+     ![package](images/01_040_rap630.png). 
       
-  6. The effect of the release state **Not to Be Released** in combination with a successor is illustrated below for the table `BNKA`, which was replaced by the CDS view `I_BANK_2`. When you open an object such as `BNKA` for which a success is maintained you see this information also in the **Properties** in ADT where you have the option to conveniently navigate to the successor object.   
+  3. The effect of the release state **Not to Be Released** in combination with a successor is illustrated below for the table `BNKA`, which was replaced by the CDS view `I_BANK_2`. When you open an object such as `BNKA` for which a success is maintained you see this information also in the **Properties** in ADT where you have the option to conveniently navigate to the successor object.   
    
-   ![package](images/01_050_rap630.png). 
+     ![package](images/01_050_rap630.png). 
  
-  6. In order to activate your class you have to comment out the forbidden statements. 
-  
-  7. What you can do if the use of an object is not permitted but now successor has been maintained in the current release is described in the following exercise. 
+  5. In order to activate your class again you would have to comment out or remove the forbidden statements. 
+ 
 
 </details>
 
----!>
+
 
         
 
@@ -340,8 +338,7 @@ have learned about how to use the released API **I_BankTP** in *ABAP Cloud* you 
 ## Further Reading
 [^Top of page](#)
 
-<details>
-  <summary>Click to expand!</summary>
+
 
 ### No Information in your system ? --> Find information about Released API's in GitHub
 
@@ -349,12 +346,12 @@ While developing an ABAP Application for _S/4HANA on premise_ or _S/4HANA privat
  
 But the error message does not provide a hint which API or object to use instead. The reason is that the successor information in on premise system does not contain the latest updates such as in SAP S/4HANA Cloud, ABAP Environment system or SAP BTP, ABAP Environment.   
 
+<details>
+  <summary>Click to expand!</summary>
+
 An example would be the table `BNK2`.  
 
  You as a developer nevertheless want to find out which objects to use intstead and to check their documentation.   
-
-
-
  
   1. Check out the GitHub repository. 
   
