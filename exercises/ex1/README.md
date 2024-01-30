@@ -21,7 +21,7 @@ We will then use this class to build a test class to call the released API **I_B
 >
 > ![GroupID](images/00_010_RAP630.png)
 
-## Exercise 1.1: Create a class to test ABAP Cloud governance
+## Exercise 1.1: Use a released RAP BO in a custom application
 [^Top of page](#)
 
 > Create a class ![class](images/adt_class.png) in the extension package `ZRAP630_###_EXT` to test the effects of using the language version *ABAP for Cloud Development*.   
@@ -217,7 +217,7 @@ We will then use this class to build a test class to call the released API **I_B
   
  </details>  
  
- ## Exercise 1.2: Check the documentation for I_BankTP
+ ## Exercise 1.2: Examine the documentation of the released RAP BO I_BankTP
  
 [^Top of page](#)
 
@@ -252,21 +252,20 @@ We will reuse this code in the implementation of the behavior definition class o
 
 
 
-## Exercise 1.3: Implement a test class to call I_BankTP
+## Exercise 1.3: Find the released RAP BO I_BankTP as a successor I_BankTP
 [^Top of page](#)
 
 <---
 
    5. Copy the code snippet provided below and add it in the implementation section of the methode `main`. 
  
-      > **Hint**: Hover the code snippet and choose the _Copy raw contents_ icon ![copy_raw_content](../../images/copyrawcontents.png) appearing in the upper-right corner to copy it. 
+ 
       
  <pre lang="ABAP">
    METHOD if_oo_adt_classrun~main.
-    CALL FUNCTION 'POPUP_TO_CONFIRM'.
-
-    SELECT SINGLE * FROM bnka WHERE banks = 'DE' INTO @DATA(bank_info).
-
+    
+   "... the code with the EML statement
+  
     DATA bank_address  TYPE bapi1011_address.
     DATA bank_ctry  TYPE banks  .
 
@@ -292,16 +291,12 @@ We will reuse this code in the implementation of the behavior definition class o
 *       bankkey      =
       .
 
-    SELECT * FROM I_Bank_2
-    WHERE BankCountry = 'DE'
-    INTO TABLE @DATA(bank_data_from_bnka).
+
 
   ENDMETHOD.
  </pre>
 
       The ABAP class `zcl_test_abap_cloud_###` in the screenshot underneath uses the ABAP Cloud development model (ABAP language version “ABAP for Cloud development”). The class cannot be compiled because of several ABAP statements containing syntax-errors:
-
-      - Line 19: The SAP function module `POPUP_TO_CONFIRM` is used in the classic Dynpro/SAP GUI world and is no public SAP API in the ABAP Cloud development model.  
   
       - Line 21: Direct access to SAP table `BNKA` is also not allowed. Here (in Steampunk) the devloper already gets a hint to use the public CDS view `I_BANK_2` instead.
   
@@ -338,10 +333,8 @@ We will reuse this code in the implementation of the behavior definition class o
 [^Top of page](#)
 
 Now that you've...   
-- have learned about the restrictions of *ABAP Cloud*,   
-- and have implemented a simple test class for the released API **I_BankTP** , 
- 
-you can continue with the next exercise - **[Exercise 2](../ex2/#readme)**.
+
+have learned about how to use the released API **I_BankTP** in *ABAP Cloud* you can continue with the next exercise - **[Exercise 2](../ex2/#readme)**.
 
 
 
