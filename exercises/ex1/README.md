@@ -267,24 +267,24 @@ These code templates have been used to create the test class that calls the API 
       
    <pre lang="ABAP">
     
-   "... the code with the EML statement
-  
+    "... the code with the EML statement
+
     DATA bank_address  TYPE bapi1011_address.
     DATA bank_ctry  TYPE banks  .
 
     CALL FUNCTION 'BAPI_BANK_CREATE'
-       EXPORTING
+      EXPORTING
         bank_ctry    = bank_ctry
         bank_address = bank_address
-   *  IMPORTING
-   *       return       =
-   *       bankcountry  =
-   *       bankkey      =
+    "  IMPORTING
+    "       return       =
+    "       bankcountry  =
+    "       bankkey      =
       .
 
-  SELECT * FROM BNKA WHERE banfn = '0010001516' INTO TABLE @DATA(purchase_req_data_from_eban).
+    SELECT * FROM bnka WHERE bankl = '0010001516' INTO TABLE @DATA(my_banks).
   
-</pre>
+   </pre>
 
 
 Since your class **`zcl_test_abap_cloud_###`** uses the ABAP Cloud development model (ABAP language version “ABAP for Cloud development”) the source code now cannot be compiled anymore because of several ABAP statements containing syntax-errors:
