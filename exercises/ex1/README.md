@@ -265,7 +265,7 @@ These code templates have been used to create the test class that calls the API 
  
  
       
- <pre lang="ABAP">
+<pre lang="ABAP">
    METHOD if_oo_adt_classrun~main.
     
    "... the code with the EML statement
@@ -298,10 +298,11 @@ These code templates have been used to create the test class that calls the API 
 SELECT * FROM BNKA WHERE banfn = '0010001516' INTO TABLE @DATA(purchase_req_data_from_eban).
 
   ENDMETHOD.
- </pre>
+  
+</pre>
 
-    Since your class **`zcl_test_abap_cloud_###`** uses the ABAP Cloud development model (ABAP language version “ABAP for Cloud development”). 
-    the source code now cannot be compiled anymore because of several ABAP statements containing syntax-errors:
+
+Since your class **`zcl_test_abap_cloud_###`** uses the ABAP Cloud development model (ABAP language version “ABAP for Cloud development”) the source code now cannot be compiled anymore because of several ABAP statements containing syntax-errors:
   
       - Line 21: Direct access to SAP table `BNKA` is also not allowed. Here (in Steampunk) the devloper already gets a hint to use the public CDS view `I_BANK_2` instead.
   
