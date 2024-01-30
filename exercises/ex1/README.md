@@ -4,15 +4,15 @@
 
 ## Introduction
 
-In this exercise, you will search for a released RAP business object to create a bank. For this we will use the *Released Objects* part of the *Project Explorer* in ADT.
+In this exercise, you will build a test class to call the released API **I_BankTP** to create a bank via EML since this API is based on a RAP BO.
 
-We will continue to create a simple class to investigate 
+We will also show you how you can search for a released RAP business object. For this we will use the *Released Objects* part of the *Project Explorer* in ADT.
 
-- How ABAP cloud restricts the use of not released APIs
+Finally we will investigate 
+
+- How ABAP cloud restricts the use of not released APIs  
 - How ABAP cloud restricts the use of outdated ABAP statements that are not part of the ABAP language version *ABAP for Cloud Development*   
 
-We will then use this class to build a test class to call the released API **I_BankTP**.  
- 
 > **Reminder:**   
 > Don't forget to replace all occurences of the placeholder **`###`** with your group ID in the exercise steps below.  
 > You can use the ADT function **Replace All** (**Ctrl+F**) for the purpose.   
@@ -227,13 +227,14 @@ The documentation for a released RAP business object can be found in so called *
   <summary>Click to expand!</summary>
 
   1. You can find the **Knowledge Transfer Document** of a realeased API in the folder **Documentation** underneath the business object in the Project Explorer.
-  It can also be opened from within the source code editor of your behavior definition. Here you find the link at the top of the source code of the behavior definition.
+  
+     It can also be opened from within the source code editor of your behavior definition. Here you find the link at the top of the source code of the behavior definition.
 
-  ![KTD](images/02_20_rap630.png) 
+     ![KTD](images/02_20_rap630.png) 
 
   2. The **Knowledge Transfer Document** can also be opened directly via the **Open Development Object** dialogu that can be opened via the menu or via the short cut **Ctrl+Shift+A**.  
 
-  ![KTD](images/02_30_rap630.png) 
+     ![KTD](images/02_30_rap630.png) 
 
   3. When you have opened the **Knowledge Transfer Document** you should change from the **Source** tab to the more appealing visualization of the **Output** tab.  
 
@@ -241,21 +242,19 @@ The documentation for a released RAP business object can be found in so called *
 
   4. The **Knowledge Transfer Document** provides you with code snippets that help you to write code to perform the operation (e.g. *create* as shown below) or an action which is supported by this business object.  
 
-  ![KTD](images/02_50_rap630.png)     
+     ![KTD](images/02_50_rap630.png)     
 
 
-We will use these code templates to create a test class that calls the API **I_BankTP** in order to create purchase requisitions in the following Excercise.
+These code templates have been used to create the test class that calls the API **I_BankTP** in order to create purchase requisitions in the last excercise.
 
-We will reuse this code in the implementation of the behavior definition class of our sample RAP business object **OnlineShop**. 
-
- </details> 
+</details> 
 
 
 
 ## Exercise 1.3: Find the released RAP BO I_BankTP as a successor I_BankTP
 [^Top of page](#)
 
-<---
+<!---
 
    5. Copy the code snippet provided below and add it in the implementation section of the methode `main`. 
  
@@ -291,7 +290,7 @@ We will reuse this code in the implementation of the behavior definition class o
 *       bankkey      =
       .
 
-
+SELECT * FROM BNKA WHERE banfn = '0010001516' INTO TABLE @DATA(purchase_req_data_from_eban).
 
   ENDMETHOD.
  </pre>
@@ -321,7 +320,7 @@ We will reuse this code in the implementation of the behavior definition class o
 
 </details>
 
---->
+---!>
 
         
 
