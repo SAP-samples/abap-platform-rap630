@@ -29,11 +29,11 @@ We will then use this class to build a test class to call the released API **I_B
  <details>
   <summary>Click to expand!</summary>
 
-   1. Right-click on your ABAP package **`ZRAP630_###_EXT`** and select **New** > **ABAP Class** from the context menu.
+  1. Right-click on your ABAP package **`ZRAP630_###_EXT`** and select **New** > **ABAP Class** from the context menu.
 
       ![package](images/01_010_rap630.png). 
   
-   3. Maintain the required information (`###` is your group ID).
+  3. Maintain the required information (`###` is your group ID).
       - Name: **`zcl_test_abap_cloud_###`**
       - Description: _**`Test ABAP Cloud Governance`**_                  
 
@@ -43,13 +43,9 @@ We will then use this class to build a test class to call the released API **I_B
 
       ![package](images/01_020_rap630.png). 
 
-   4. Select or create a transport request, and click **Finish** to create the class.
+  4. Select or create a transport request, and click **Finish** to create the class.
 
-  5. Open the test class **zcl_test_abap_cloud_###** that you have created before by pressing **Ctrl+Shift+A**.    
-
-     ![test class](images/03_10_RAP630.png)  
-
-  6. Replace the code in the `if_oo_adt_classrun~main( )` method with the following code snippet.
+  5. Replace the code in the method  `if_oo_adt_classrun~main( )` with the following code snippet.
      
      > Tip
      > You have to replace the value for **'####'** with a string that only contains numbers.   
@@ -209,7 +205,8 @@ We will then use this class to build a test class to call the released API **I_B
 
      - `error Bank CZ 8888 already exists.`
   
-
+ </details>  
+ 
  ## Exercise 1.2: Check the documentation for I_BankTP
  
 [^Top of page](#)
