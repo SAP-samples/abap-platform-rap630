@@ -147,15 +147,9 @@ We will then use this class to build a test class to call the released API **I_B
      ![test class](images/04_10_ZRAP630.png)      
      
   9. Adding **PRIVILEGED** to the EML call
-
-     We will now check the behavior definition of the Bank RAP business object. To do so use Ctrl+Shift+A to open the behavior definition `R_BankTP`.
-     
-     In the source code (see below) we see that the BDEF `R_BankTP` defines two so called authorization contexts:
-
-       - _Own authorization context_ : Lists all authorization objects used by the RAP BO implementation.
-       - _NoCheckWhenPrivileged_ : Lists authorization objects that can be skipped by a RAP BO consumer with privileged access.
-      
-     When we add the key word `PRIVILEGED` to our EML call the authorization checks for the authorization objects `F_BNKA_MAO` and `F_BNKA_INT` will basically be skipped.
+               
+     When we add the key word `PRIVILEGED` to our EML call the authorization checks for the authorization objects
+     `F_BNKA_MAO` and `F_BNKA_INT` will basically be skipped.
 
      <pre>
      MODIFY ENTITIES OF i_banktp
@@ -167,11 +161,27 @@ We will then use this class to build a test class to call the released API **I_B
                     ...
      </pre>    
      
-     When you now run the class again using F9 you will find that the creation of a new bank seem to have worked. However the select statement is not able to retrieve the newly created data.
+     When you now run the class again using F9 you will find that the creation of a new bank seem to have worked.
+
+     However the select statement is not able to retrieve the newly created data.
+
+     <details>
+        <summary>Click to learn more about the PRIVILEGED EML access</summary>
      
-     ![PRIVILEGED 1](images/06_010_RAP630.png)  
+
+       We will now check the behavior definition of the Bank RAP business object. To do so use Ctrl+Shift+A to open the behavior definition `R_BankTP`.
      
- 10. Adding **WITH PRIVILEGED ACCESS** to the ABAP SQL statement
+       In the source code (see below) we see that the BDEF `R_BankTP` defines two so called authorization contexts:
+
+         - _Own authorization context_ : Lists all authorization objects used by the RAP BO implementation.
+         - _NoCheckWhenPrivileged_ : Lists authorization objects that can be skipped by a RAP BO consumer with privileged access.
+
+
+       ![PRIVILEGED 1](images/06_010_RAP630.png)
+     
+     </details>  
+     
+ 11. Adding **WITH PRIVILEGED ACCESS** to the ABAP SQL statement
   
      Similar to enforce skipping the authorization checks when creating a new bank it is also possible to enforce skipping of the authorization check that is imposed by the underlying DCL which performs a check on the authorization object `F_BNKA_MAO` and the field `BBANKS` for displaying data.  
      
@@ -195,7 +205,7 @@ We will then use this class to build a test class to call the released API **I_B
      ![PRIVILEGED 1](images/06_040_RAP640.png)   
      
   
-  11. Other potential problems
+  12. Other potential problems
   
      The I_BankTP RAP BO checks whether the provided switft code fits to the ISO code of the region. 
   
