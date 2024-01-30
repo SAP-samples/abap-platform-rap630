@@ -303,13 +303,11 @@ SELECT * FROM BNKA WHERE banfn = '0010001516' INTO TABLE @DATA(purchase_req_data
 
 
 Since your class **`zcl_test_abap_cloud_###`** uses the ABAP Cloud development model (ABAP language version “ABAP for Cloud development”) the source code now cannot be compiled anymore because of several ABAP statements containing syntax-errors:
-  
-      - Line 21: Direct access to SAP table `BNKA` is also not allowed. Here (in Steampunk) the devloper already gets a hint to use the public CDS view `I_BANK_2` instead.
-  
-      - Line 22, 23: Use of the SAP structure `bapi1011_address` and the data element `banks` are also not allowed. 
- 
-      - Line 26: The use of the SAP function module `BAPI_BANK_CREATE` is also forbidden in the ABAP Cloud development model, but for this function module a successor is available, namely the Behavior Definition `I_BANKTP`.           
 
+- Line 103: The use of Table **BAPI1011_ADDRESS** is not permitted.	
+- Line 104: The use of Data Element **BANKS** is not permitted.	
+- Line 106: The use of Function Module **BAPI_BANK_CREATE** is not permitted, but for this function module a successor is available, namely the Behavior Definition **`I_BANKTP`**. 	
+- Line 116: The use of Table **BNKA** is not permitted. Use CDS Entity **I_BANK_2** instead.
              
      ![package](images/01_040_rap630.png). 
       
