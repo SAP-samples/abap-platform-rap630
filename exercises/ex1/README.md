@@ -254,6 +254,9 @@ These code templates have been used to create the test class that calls the API 
 ## Exercise 1.3: Find the released RAP BO I_BankTP as a successor I_BankTP
 [^Top of page](#)
 
+<details>
+  <summary>Click to expand!</summary>
+
   1. Open the test class **`zcl_test_abap_cloud_###`** that you have created in **Exercise 1.1.**.
 
   2. Copy the code snippet provided below and add it add the and in the implementation section of the methode `main`. 
@@ -315,6 +318,8 @@ SELECT * FROM BNKA WHERE banfn = '0010001516' INTO TABLE @DATA(purchase_req_data
  
   5. In order to activate your class again you would have to comment out or remove the forbidden statements. 
  
+
+</details>
 
 </details>
 
