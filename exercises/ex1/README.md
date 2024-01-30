@@ -257,16 +257,15 @@ These code templates have been used to create the test class that calls the API 
 <details>
   <summary>Click to expand!</summary>
 
-  1. Open the test class **`zcl_test_abap_cloud_###`** that you have created in **Exercise 1.1.**.
+1. Open the test class **`zcl_test_abap_cloud_###`** that you have created in **Exercise 1.1.**.
 
-  2. Copy the code snippet provided below and add it add the and in the implementation section of the methode `main`. 
+2. Copy the code snippet provided below and add it add the and in the implementation section of the methode `main`. 
  
-     > **Hint**: Hover the code snippet and choose the _Copy raw contents_ icon ![copy_raw_content](../../images/copyrawcontents.png) appearing in the upper-right corner to copy it. 
+   > **Hint**: Hover the code snippet and choose the _Copy raw contents_ icon ![copy_raw_content](../../images/copyrawcontents.png) appearing in the upper-right corner to copy it. 
  
  
       
-<pre lang="ABAP">
-   METHOD if_oo_adt_classrun~main.
+   <pre lang="ABAP">
     
    "... the code with the EML statement
   
@@ -274,30 +273,16 @@ These code templates have been used to create the test class that calls the API 
     DATA bank_ctry  TYPE banks  .
 
     CALL FUNCTION 'BAPI_BANK_CREATE'
-      EXPORTING
+       EXPORTING
         bank_ctry    = bank_ctry
-*       bank_key     =
         bank_address = bank_address
-*       bank_method  =
-*       bank_formatting              =
-*       bank_address1                =
-*       i_xupdate    = 'X'
-*       i_check_before_save          =
-*       bank_iban_rule               =
-*       bank_b2b_supported           =
-*       bank_cor1_supported          =
-*       bank_r_transaction_supported =
-*       bank_internal_bank           =
-*       i_no_overwrite               =
-*  IMPORTING
-*       return       =
-*       bankcountry  =
-*       bankkey      =
+   *  IMPORTING
+   *       return       =
+   *       bankcountry  =
+   *       bankkey      =
       .
 
-SELECT * FROM BNKA WHERE banfn = '0010001516' INTO TABLE @DATA(purchase_req_data_from_eban).
-
-  ENDMETHOD.
+  SELECT * FROM BNKA WHERE banfn = '0010001516' INTO TABLE @DATA(purchase_req_data_from_eban).
   
 </pre>
 
@@ -309,13 +294,15 @@ Since your class **`zcl_test_abap_cloud_###`** uses the ABAP Cloud development m
 - Line 106: The use of Function Module **BAPI_BANK_CREATE** is not permitted, but for this function module a successor is available, namely the Behavior Definition **`I_BANKTP`**. 	
 - Line 116: The use of Table **BNKA** is not permitted. Use CDS Entity **I_BANK_2** instead.
              
-     ![package](images/01_040_rap630.png). 
+    ![package](images/01_040_rap630.png).
+  
       
-  3. The effect of the release state **Not to Be Released** in combination with a successor is illustrated below for the table `BNKA`, which was replaced by the CDS view `I_BANK_2`. When you open an object such as `BNKA` for which a success is maintained you see this information also in the **Properties** in ADT where you have the option to conveniently navigate to the successor object.   
+3. The effect of the release state **Not to Be Released** in combination with a successor is illustrated below for the table `BNKA`, which was replaced by the CDS view `I_BANK_2`. When you open an object such as `BNKA` for which a success is maintained you see this information also in the **Properties** in ADT where you have the option to conveniently navigate to the successor object.   
    
      ![package](images/01_050_rap630.png). 
+
  
-  5. In order to activate your class again you would have to comment out or remove the forbidden statements. 
+4. In order to activate your class again you would have to comment out or remove the forbidden statements. 
  
 
 </details>
