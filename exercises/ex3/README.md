@@ -286,6 +286,10 @@ First we have to extend our extension include view `ZRAP630E_Shop_###` since the
    > Do **NOT** press finish, because on the following screen you have to select the template that shall be used.  
   
 5. Select the template **Extend View Entity**  and press **Finish**     
+
+C:\Users\D041615\OneDrive - SAP SE\Blog_Posts_in_Progress\Downscaling_Steampunk
+    
+  ![Extend View Entity template](images/ex3_Extend_view_entity_025.jpg) 
     
 4. The editor window opens. Here you have to enter the following code.
   
