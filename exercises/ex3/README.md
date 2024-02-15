@@ -125,7 +125,6 @@ First we have to extend our extension include view `ZRAP630E_Shop_###` since the
   
 5. Select the template **Extend View Entity**  and press **Finish**     
 
-C:\Users\D041615\OneDrive - SAP SE\Blog_Posts_in_Progress\Downscaling_Steampunk
     
   ![Extend View Entity template](images/ex3_Extend_view_entity_025.jpg) 
     
@@ -220,6 +219,8 @@ Shop.zz_feedback_zaa as zz_feedback_zaa
 ### Exercise 2.2.3 - Test the field extensibility
 
 After having extended all the objects in the hiearchy of your base RAP business object you can now leverage the additional field in the UI.
+
+![Overview extensions](images/ex3_Extensions_overview_055.jpg)
 
 <details>
   <summary>🔵 Click to expand!</summary>
