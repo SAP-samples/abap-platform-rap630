@@ -212,7 +212,7 @@ In a second step we will now add a determination `ZZ_setOverallStatus` to the be
 
     reported = CORRESPONDING #( DEEP update_reported ).
 
-  ENDMETHOD.
+    ENDMETHOD.
    
    </pre>
 
