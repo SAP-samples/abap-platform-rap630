@@ -23,8 +23,6 @@ For your convenience we have generated such an extensible RAP BO `ZRAP630R_ShopT
 ## Excercise 2.2.2 - Extend the data structure
 
 As shown in the schematic view above we have to extend the following objects of our extensible base BO.
-
-Since this is quite a lot of work we are currently developing a wizard that shall help to perform this tedious tasks more quickly.  
   
 Order of extension | Repository object name | Name           | Comment  
 -------- | ---------------------- | ------------------------ | -----------------------------------------------------   
