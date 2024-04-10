@@ -58,7 +58,7 @@ METHOD IF_RAP_QUERY_PROVIDER~SELECT.
     CATCH cx_root INTO DATA(exception).
     DATA(exception_message) = cl_message_helper=>get_latest_t100_exception( exception )->if_message~get_longtext( ).
     DATA(exception_t100_key) = cl_message_helper=>get_latest_t100_exception( exception )->t100key.
-    RAISE EXCEPTION TYPE zdmo_cx_rap_gen_custom_entity
+    RAISE EXCEPTION TYPE zrap630_cx_demo_exception
         EXPORTING
           textid   = VALUE scx_t100key( msgid = exception_t100_key-msgid
           msgno = exception_t100_key-msgno

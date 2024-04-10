@@ -6,7 +6,7 @@
     <METADATA>
      <NAME>ZRAP630UI_SHOP_O4_SOL</NAME>
      <TYPE>SRVB/SVB</TYPE>
-     <DESCRIPTION>Service binding for Shop</DESCRIPTION>
+     <DESCRIPTION>ZRAP630UI_SHOP_O4_SOL</DESCRIPTION>
      <LANGUAGE>EN</LANGUAGE>
      <LINKS>
       <item>
@@ -38,6 +38,12 @@
        <TYPE>application/vnd.sap.adt.businessservices.semanticversion.v1+xml</TYPE>
        <TITLE>SemanticVersion</TITLE>
       </item>
+      <item>
+       <HREF>./zrap630ui_shop_o4_sol</HREF>
+       <REL>http://www.sap.com/adt/relations/source</REL>
+       <TYPE>text/html</TYPE>
+       <TITLE>Landing Page (HTML)</TITLE>
+      </item>
      </LINKS>
      <MASTER_LANGUAGE>EN</MASTER_LANGUAGE>
      <ABAP_LANGU_VERSION>5</ABAP_LANGU_VERSION>
@@ -50,7 +56,7 @@
      <BIND_TYPE_VERSION>V4</BIND_TYPE_VERSION>
      <SERVICES>
       <item>
-       <SERVICE_NAME>ZRAP630UI_SHOP_O4_SOL</SERVICE_NAME>
+       <SERVICE_NAME>ZRAP630UI_SHOP_SOL</SERVICE_NAME>
        <SERVICE_CONTENT>
         <item>
          <SERVICE_VERSION>0001</SERVICE_VERSION>
