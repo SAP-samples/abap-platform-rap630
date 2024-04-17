@@ -33,7 +33,7 @@ Finally we will investigate
 
       ![package](images/01_010_rap630.png). 
   
-  3. Maintain the required information (`###` is your group ID).
+  2. Maintain the required information (`###` is your group ID).
       - Name: **`zcl_test_abap_cloud_###`**
       - Description: _**`Test ABAP Cloud Governance`**_                  
 
@@ -43,9 +43,9 @@ Finally we will investigate
 
       ![package](images/01_020_rap630.png). 
 
-  4. Select or create a transport request, and click **Finish** to create the class.
+  3. Select or create a transport request, and click **Finish** to create the class.
 
-  5. Replace the code in the method  `if_oo_adt_classrun~main( )` with the following code snippet.
+  4. Replace the code in the method  `if_oo_adt_classrun~main( )` with the following code snippet.
      
      > Tip
      > You have to replace the value for **'####'** with a string that only contains numbers.   
@@ -137,17 +137,17 @@ Finally we will investigate
      ENDMETHOD.
      </pre>   
 
-  7. Activate your changes by pressing **Ctrl+F3**
+  5. Activate your changes by pressing **Ctrl+F3**
 
-  8. Run the test class by pressing **F9**.  
+  6. Run the test class by pressing **F9**.  
 
      You will notice that an error message is thrown. Namely `error You are not authorized to create bank data for country/region CZ.` 
      Consequently also no new data is found. 
 
      ![test class](images/04_10_ZRAP630.png)      
      
-  9. Adding **PRIVILEGED** to the EML call
-               
+  7. Adding **PRIVILEGED** to the EML call
+
      When we add the key word `PRIVILEGED` to our EML call the authorization checks for the authorization objects
      `F_BNKA_MAO` and `F_BNKA_INT` will basically be skipped.
 
@@ -181,7 +181,7 @@ Finally we will investigate
      
      </details>  
      
- 11. Adding **WITH PRIVILEGED ACCESS** to the ABAP SQL statement
+  8. Adding **WITH PRIVILEGED ACCESS** to the ABAP SQL statement
   
      Similar to enforce skipping the authorization checks when creating a new bank it is also possible to enforce skipping of the authorization check that is imposed by the underlying DCL which performs a check on the authorization object `F_BNKA_MAO` and the field `BBANKS` for displaying data.  
      
@@ -205,15 +205,15 @@ Finally we will investigate
      ![PRIVILEGED 1](images/06_040_RAP640.png)   
      
   
-  12. Other potential problems
+   9. Other potential problems
   
-     The I_BankTP RAP BO checks whether the provided switft code fits to the ISO code of the region. 
+      The I_BankTP RAP BO checks whether the provided switft code fits to the ISO code of the region. 
   
-     - `error ISO code GB in the SWIFT code SABMGB2LACP is not correct for country/region US. Diagnosis Positions 5 and 6 of the SWIFT code do not correspond to the ISO code of country/region US. Procedure Check your entries. If necessary, check whether the ISO code of country/region US has been defined correctly.`  
+       - error ISO code GB in the SWIFT code SABMGB2LACP is not correct for country/region US. Diagnosis Positions 5 and 6 of the SWIFT code do not correspond to the ISO code of country/region US. Procedure Check your entries. If necessary, check whether the ISO code of country/region US has been defined correctly.  
        
-       When a bank with the ID that is provided already exists you will receive an error message as well.
+      When a bank with the ID that is provided already exists you will receive an error message as well.
 
-     - `error Bank CZ 8888 already exists.`
+       - error Bank CZ 8888 already exists.
   
  </details>  
  
@@ -238,7 +238,7 @@ The documentation for a released RAP business object can be found in so called *
 
   3. When you have opened the **Knowledge Transfer Document** you should change from the **Source** tab to the more appealing visualization of the **Output** tab.  
 
-  ![KTD](images/02_40_rap630.gif)  
+     ![KTD](images/02_40_rap630.gif)  
 
   4. The **Knowledge Transfer Document** provides you with code snippets that help you to write code to perform the operation (e.g. *create* as shown below) or an action which is supported by this business object.  
 
@@ -285,19 +285,20 @@ These code templates have been used to create the test class that calls the API 
    </pre>
 
 
-Since your class **`zcl_test_abap_cloud_###`** uses the ABAP Cloud development model (ABAP language version “ABAP for Cloud development”) the source code now cannot be compiled anymore because of several ABAP statements containing syntax-errors:
+   Since your class **`zcl_test_abap_cloud_###`** uses the ABAP Cloud development model (ABAP language version “ABAP for Cloud development”) the source code now 
+   cannot be compiled anymore because of several ABAP statements containing syntax-errors:
 
-- Line 103: The use of Table **BAPI1011_ADDRESS** is not permitted.	
-- Line 104: The use of Data Element **BANKS** is not permitted.	
-- Line 106: The use of Function Module **BAPI_BANK_CREATE** is not permitted, but for this function module a successor is available, namely the Behavior Definition **`I_BANKTP`**. 	
-- Line 116: The use of Table **BNKA** is not permitted. Use CDS Entity **I_BANK_2** instead.
+    - Line 103: The use of Table **BAPI1011_ADDRESS** is not permitted.	
+    - Line 104: The use of Data Element **BANKS** is not permitted.	
+    - Line 106: The use of Function Module **BAPI_BANK_CREATE** is not permitted, but for this function module a successor is available, namely the Behavior   Definition **`I_BANKTP`**. 	
+    - Line 116: The use of Table **BNKA** is not permitted. Use CDS Entity **I_BANK_2** instead.
              
     ![package](images/01_040_rap630.png).
   
       
 3. The effect of the release state **Not to Be Released** in combination with a successor is illustrated below for the table `BNKA`, which was replaced by the CDS view `I_BANK_2`. When you open an object such as `BNKA` for which a success is maintained you see this information also in the **Properties** in ADT where you have the option to conveniently navigate to the successor object.   
    
-     ![package](images/01_050_rap630.png). 
+    ![package](images/01_050_rap630.png). 
 
  
 4. In order to activate your class again you would have to comment out or remove the forbidden statements. 
