@@ -72,17 +72,17 @@ We start the extension of the base RAP BO by adding field to the _extension incl
       zz_feedback_zaa : abap.char(256);
    ```
 
-  So that your code should read as follows:
+   So that your code should read as follows:
   
-  <pre>
-  @EndUserText.label : 'Extend Extension Include Structure'
-  @AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
-  extend type zrap630sshop_### with zrap630extsshop_05a {
-  zz_feedback_zaa : abap.char(256);
-  }
-  </pre>
+   <pre lang="ABAP">
+   @EndUserText.label : 'Extend Extension Include Structure'
+   @AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+   extend type zrap630sshop_### with zrap630extsshop_05a {
+   zz_feedback_zaa : abap.char(256);
+   }
+   </pre>
 
-  ![Addappendstructure](images/ex3_03_030_RAP640.png)
+   ![Addappendstructure](images/ex3_03_030_RAP640.png)
   
  4. Activate your changes
  
@@ -103,11 +103,11 @@ First we have to extend our extension include view `ZRAP630E_Shop_###` since the
   
 1. Right click on the CDS view of the base RAP business object that has to be extended. In this case right click on ´ZRAP630E_Shop_###´.   
 
-![e-view](images/ex3_extension_for_ext_include_005.png) 
+    ![e-view](images/ex3_extension_for_ext_include_005.png) 
 
 2. Select **New Data Definition** from the context menu.
 
-![e-view](images/ex3_extension_for_ext_include_010.png) 
+    ![e-view](images/ex3_extension_for_ext_include_010.png) 
 
 3. In the **New Data Defintion** screen enter the following values:  
 
@@ -124,19 +124,18 @@ First we have to extend our extension include view `ZRAP630E_Shop_###` since the
    > Do **NOT** press finish, because on the following screen you have to select the template that shall be used.  
   
 5. Select the template **Extend View Entity**  and press **Finish**     
-
     
-  ![Extend View Entity template](images/ex3_Extend_view_entity_025.jpg) 
+    ![Extend View Entity template](images/ex3_Extend_view_entity_025.jpg) 
     
-4. The editor window opens. Here you have to enter the following code.
+6. The editor window opens. Here you have to enter the following code.
   
-   <pre>      
+   <pre lang="ABAP">      
      extend view entity ZRAP630E_Shop_### with {
          Shop.zz_feedback_zaa as zz_feedback_zaa
      } 
    </pre>
   
-![CDS view extenstion](images/ex3_extension_for_ext_include_030.png)
+    ![CDS view extenstion](images/ex3_extension_for_ext_include_030.png)
   
 </details>
 
@@ -157,7 +156,7 @@ Description: Extension for R-CDS view
 > The code extension of the R-CDS view reads from the `_Extension` association as the data source.
 > All other extensions read from the alias `Shop` as the data source.    
 
-<pre>
+<pre lang="ABAP">
 extend view entity ZRAP630R_ShopTP_### with {  
 _Extension.zz_feedback_zaa as zz_feedback_zaa  
 }
@@ -169,7 +168,7 @@ Name: `ZRAP630C_EXT_SHOPTP_###`
 Package: `ZRAP630_###_EXT`  
 Description: Extension for P-CDS view
   
-<pre>
+<pre lang="ABAP">
   extend view entity ZRAP630C_ShopTP_### with {  
   
   @UI.lineItem: [ {
@@ -192,7 +191,7 @@ Name: `ZRAP630I_Ext_ShopTP_###`
 Package: `ZRAP630_###_EXT`  
 Description: Extension for interface view
   
-<pre>
+<pre lang="ABAP">
 extend view entity ZRAP630I_ShopTP_### with {  
 Shop.zz_feedback_zaa as zz_feedback_zaa 
 }
@@ -205,7 +204,7 @@ Name: `ZRAP630R_Ext_Shop_D_###`
 Package: `ZRAP630_###_EXT`  
 Description: Extension for draft query view
   
-<pre>
+<pre lang="ABAP">
 extend view entity ZRAP630R_Shop_D_### with {  
 Shop.zz_feedback_zaa as zz_feedback_zaa 
 }
@@ -235,7 +234,7 @@ After having extended all the objects in the hiearchy of your base RAP business 
 
 3. Select one entry and use the **Edit** button
   
-  ![extended object page](images/ex3_new_field_feedback_020.png)   
+   ![extended object page](images/ex3_new_field_feedback_020.png)   
   
   
   > When no field is visible you should check the extension of your projection view `ZRAP630C_EXT_SHOPTP_###` and check the UI annotations.   
