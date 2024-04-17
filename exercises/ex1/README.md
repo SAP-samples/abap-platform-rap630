@@ -144,7 +144,7 @@ Finally we will investigate
      You will notice that an error message is thrown. Namely `error You are not authorized to create bank data for country/region CZ.` 
      Consequently also no new data is found. 
 
-     ![test class](images/04_10_ZRAP630.png)      
+     ![test class](images/error.png)      
      
   7. Adding **PRIVILEGED** to the EML call
 
