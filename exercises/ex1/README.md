@@ -338,13 +338,13 @@ An example would be the table `BNK2`.
      
      [S/4 HANA Cloud - Released objects for ATC Check (Cloudification Repository)](https://github.com/SAP/abap-atc-cr-cv-s4hc).
      
- When we check the **csv file** that is public available we can retrieve a list of successors for the table BNKA.  
+     When we check the **csv file** that is public available we can retrieve a list of successors for the table BNKA.  
  
- ![MARA](images/02_10_rap630.png)  
+     ![MARA](images/02_10_rap630.png)  
    
- While csv files are nice for human beings, computers prefer json files.  
+     While csv files are nice for human beings, computers prefer json files.  
  
- [Link to json sample file](https://raw.githubusercontent.com/SAP/abap-atc-cr-cv-s4hc/main/src/objectReleaseInfo_2208.json) 
+     [Link to json sample file](https://raw.githubusercontent.com/SAP/abap-atc-cr-cv-s4hc/main/src/objectReleaseInfo_2208.json) 
   
  </details>  
 
