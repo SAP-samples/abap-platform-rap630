@@ -151,7 +151,7 @@ Finally we will investigate
      When we add the key word `PRIVILEGED` to our EML call the authorization checks for the authorization objects
      `F_BNKA_MAO` and `F_BNKA_INT` will basically be skipped.
 
-     <pre>
+     <pre lang="ABAP">
      MODIFY ENTITIES OF i_banktp
      PRIVILEGED
      ENTITY bank
@@ -193,7 +193,7 @@ Finally we will investigate
      
      When we now change the ABAP SQL statement such that we add the key words ` WITH PRIVILEGED ACCESS` to it:   
      
-     <pre>
+     <pre lang="ABAP">
        SELECT SINGLE * FROM I_Bank_2
        WITH PRIVILEGED ACCESS
        WHERE BankInternalID = @bank_id_number INTO @DATA(my_bank).
@@ -262,9 +262,7 @@ These code templates have been used to create the test class that calls the API 
 2. Copy the code snippet provided below and add it add the and in the implementation section of the methode `main`. 
  
    > **Hint**: Hover the code snippet and choose the _Copy raw contents_ icon ![copy_raw_content](../../images/copyrawcontents.png) appearing in the upper-right corner to copy it. 
- 
- 
-      
+   
    <pre lang="ABAP">
     
     "... the code with the EML statement
@@ -306,16 +304,8 @@ Since your class **`zcl_test_abap_cloud_###`** uses the ABAP Cloud development m
  
 
 </details>
-
 </details>
-
-
-
-        
-
  </details> 
-
-
 
 ## Summary 
 [^Top of page](#)
@@ -324,11 +314,8 @@ Now that you've...
 
 have learned about how to use the released API **I_BankTP** in *ABAP Cloud* you can continue with the next exercise - **[Exercise 2](../ex2/#readme)**.
 
-
-
 ## Further Reading
 [^Top of page](#)
-
 
 
 ### No Information in your system ? --> Find information about Released API's in GitHub
