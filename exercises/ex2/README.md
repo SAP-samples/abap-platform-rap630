@@ -40,7 +40,7 @@ Since extending a RAP BO in parallel by several developers can cause severe prob
 4. Add a validation `zz_validateDeliverydate` to your behavior defintion that reacts on `create;` and the field `DeliveryDate;`  
    This validation must also be added to the `draft determine action Prepare` and activate your changes.
  
-   <pre>
+   <pre lang="ABAP">
    extension using interface zrap630i_shoptp_05c
    implementation in class zbp_zrap630r_shop_x_fbk_05c unique;
 
@@ -68,46 +68,45 @@ Since extending a RAP BO in parallel by several developers can cause severe prob
 
 8. Add the following code to the local class `lhc_shop` which implements the validation. 
 
-<pre>   
-CLASS lhc_shop DEFINITION INHERITING FROM cl_abap_behavior_handler.   
-
-  PUBLIC SECTION.  
-    CONSTANTS state_area_check_delivery_date       TYPE string VALUE 'CHECK_DELIVERYDATE'       ##NO_TEXT.   
-  PRIVATE SECTION.  
-    METHODS zz_validateDeliverydate               FOR VALIDATE ON SAVE  
-      IMPORTING keys FOR Shop~zz_validateDeliverydate.  
-
-ENDCLASS.  
-
-CLASS lhc_shop IMPLEMENTATION.  
-
-  METHOD zz_validateDeliverydate.  
-    READ ENTITIES OF ZRAP630i_ShopTP_### IN LOCAL MODE  
-            ENTITY Shop  
-            FIELDS ( DeliveryDate OverallStatus )  
-            WITH CORRESPONDING #( keys )  
-            RESULT DATA(onlineorders).  
-
-    LOOP AT onlineorders INTO DATA(onlineorder).  
-      APPEND VALUE #( %tky           = onlineorder-%tky  
-                      %state_area    = state_area_check_delivery_date )  
-             TO reported-shop.  
-      DATA(deliverydate)             =  onlineorder-DeliveryDate - cl_abap_context_info=>get_system_date(  ).  
-      IF onlineorder-deliverydate IS INITIAL  .  
-        APPEND VALUE #( %tky           = onlineorder-%tky ) TO failed-shop.  
-        APPEND VALUE #( %tky           = onlineorder-%tky  
-                        %state_area    = state_area_check_delivery_date  
-                        %msg           = new_message_with_text(  
-                                            severity = if_abap_behv_message=>severity-error  
-                                            text     = 'delivery period cannot be initial'  
-                       ) )  
+   <pre lang="ABAP">   
+   CLASS lhc_shop DEFINITION INHERITING FROM cl_abap_behavior_handler.   
+   
+     PUBLIC SECTION.  
+       CONSTANTS state_area_check_delivery_date       TYPE string VALUE 'CHECK_DELIVERYDATE'       ##NO_TEXT.   
+     PRIVATE SECTION.  
+       METHODS zz_validateDeliverydate               FOR VALIDATE ON SAVE  
+         IMPORTING keys FOR Shop~zz_validateDeliverydate.  
+   
+   ENDCLASS.  
+   
+   CLASS lhc_shop IMPLEMENTATION.  
+   
+     METHOD zz_validateDeliverydate.  
+       READ ENTITIES OF ZRAP630i_ShopTP_### IN LOCAL MODE  
+               ENTITY Shop  
+               FIELDS ( DeliveryDate OverallStatus )  
+               WITH CORRESPONDING #( keys )  
+               RESULT DATA(onlineorders).  
+   
+       LOOP AT onlineorders INTO DATA(onlineorder).  
+         APPEND VALUE #( %tky           = onlineorder-%tky  
+                         %state_area    = state_area_check_delivery_date )  
                 TO reported-shop.  
-      ENDIF.  
-    ENDLOOP.  
-  ENDMETHOD.  
-ENDCLASS.  
-
-</pre>  
+         DATA(deliverydate)             =  onlineorder-DeliveryDate - cl_abap_context_info=>get_system_date(  ).  
+         IF onlineorder-deliverydate IS INITIAL  .  
+           APPEND VALUE #( %tky           = onlineorder-%tky ) TO failed-shop.  
+           APPEND VALUE #( %tky           = onlineorder-%tky  
+                           %state_area    = state_area_check_delivery_date  
+                           %msg           = new_message_with_text(  
+                                               severity = if_abap_behv_message=>severity-error  
+                                               text     = 'delivery period cannot be initial'  
+                          ) )  
+                   TO reported-shop.  
+         ENDIF.  
+       ENDLOOP.  
+     ENDMETHOD.  
+   ENDCLASS.  
+   </pre>  
 
 9. Open the service binding `ZRAP630UI_SHOP_O4_###` of your RAP base BO.
 
@@ -132,27 +131,26 @@ In a second step we will now add a determination `ZZ_setOverallStatus` to the be
  
 1. Add the following statement to your behavior defintion extension `ZRAP630R_EXT_SHOPTP_###`.     
 
-   <pre>
+   <pre lang="ABAP">
      determination ZZ_setOverallStatus on modify {  field OrderedItem; }
    </pre>
   
-  so that the code of your BDEF should now read as follows:   
-  <pre>   
-  extension using interface zrap630i_shoptp_###
-    implementation in class zbp_rap630r_ext_shoptp_### unique;
-
-  extend behavior for Shop
-  {
-    validation zz_validateDeliverydate on save { create; field DeliveryDate; }
-
-    extend draft determine action Prepare
-     {
-       validation zz_validateDeliveryDate;
-      }
-    determination ZZ_setOverallStatus on modify { field OrderedItem; }
-   }
-  </pre>
-
+   so that the code of your BDEF should now read as follows:   
+   <pre lang="ABAP">   
+   extension using interface zrap630i_shoptp_###
+     implementation in class zbp_rap630r_ext_shoptp_### unique;
+ 
+   extend behavior for Shop
+   {
+     validation zz_validateDeliverydate on save { create; field DeliveryDate; }
+ 
+     extend draft determine action Prepare
+      {
+        validation zz_validateDeliveryDate;
+       }
+     determination ZZ_setOverallStatus on modify { field OrderedItem; }
+    }
+   </pre>
 
 2. Press **Ctrl+1** to start the content assist and double-click on the proposal to add the appropriate code in the behavior implementation class `zbp_rap630r_ext_shoptp_###`. 
 
@@ -163,7 +161,7 @@ In a second step we will now add a determination `ZZ_setOverallStatus` to the be
    > either autmatically approved or is awaiting an approval.   
    > The price for a product is read from an CDS view and the instance of the RAP BO is modified accordingly.    
  
-   <pre>
+   <pre lang="ABAP">
    METHOD ZZ_setOverallStatus.
 
     DATA update_bo      TYPE TABLE FOR UPDATE     ZRAP630i_ShopTP_###\\Shop.
@@ -243,41 +241,39 @@ In this exercise we will show how side effect can be added to an extensible base
    This statement has to be added to the base business object is because the statement cannot be added by the extension 
    but has to be part of the base business object.  
  
-   <pre>
+   <pre lang="ABAP">
      use side effects;
    </pre>   
 
 2. The code of the generated projection behavior definition should now read as follows.    
 
-<pre>
-projection;
-strict ( 2 );
-extensible;
-use draft;
-use side effects;
-define behavior for ZRAP630C_ShopTP_### alias Shop
-extensible
-use etag
+   <pre lang="ABAP">
+   projection;
+   strict ( 2 );
+   extensible;
+   use draft;
+   use side effects;
+   define behavior for ZRAP630C_ShopTP_### alias Shop
+   extensible
+   use etag
+   
+   {
+     use create;
+     use update;
+     use delete;
+   
+     use action Edit;
+     use action Activate;
+     use action Discard;
+     use action Resume;
+     use action Prepare;
+   }   
+   </pre>
 
-{
-  use create;
-  use update;
-  use delete;
-
-  use action Edit;
-  use action Activate;
-  use action Discard;
-  use action Resume;
-  use action Prepare;
-}   
-</pre>
-
-When you now try out the extended RAP business object you should notice that the price is automatically updated once the user has selected a new object.
+   When you now try out the extended RAP business object you should notice that the price is automatically updated once the user has selected a new object.
  
-![BDEF Extension](images/ex2_02_040_RAP630.png)
+    ![BDEF Extension](images/ex2_02_040_RAP630.png)
 
-
- 
 Now you can continue and add side effects via your behavior defintion extension ...
 
 <details>
@@ -286,27 +282,27 @@ Now you can continue and add side effects via your behavior defintion extension 
 1. Open the behavior extension `ZRAP630R_Ext_ShopTP_###` by pressing **Ctrl+Shift+A**.
 2. Add the following code snippet  
    
-   <pre>side effects { field OrderedItem affects field OrderItemPrice , field CurrencyCode ; }</pre>  
+   <pre lang="ABAP">side effects { field OrderedItem affects field OrderItemPrice , field CurrencyCode ; }</pre>  
 
    to your behavior extension right after the determination. 
  
    Your BDEF extension code should now read as follows:  
 
-  <pre>
-    extension using interface zrap630i_shoptp_###
-      implementation in class zbp_rap630r_ext_shoptp_### unique;
-
-      extend behavior for Shop
-   {
-     validation zz_validateDeliverydate on save { create; field DeliveryDate; }
-     extend draft determine action Prepare
-     {
-       validation zz_validateDeliveryDate;
-      }
-    determination ZZ_setOverallStatus on modify { field OrderedItem; }
-    side effects { field OrderedItem affects field OrderItemPrice , field CurrencyCode ; }
-    }
-   </pre>
+   <pre lang="ABAP">
+     extension using interface zrap630i_shoptp_###
+       implementation in class zbp_rap630r_ext_shoptp_### unique;
+ 
+       extend behavior for Shop
+    {
+      validation zz_validateDeliverydate on save { create; field DeliveryDate; }
+      extend draft determine action Prepare
+      {
+        validation zz_validateDeliveryDate;
+       }
+     determination ZZ_setOverallStatus on modify { field OrderedItem; }
+     side effects { field OrderedItem affects field OrderItemPrice , field CurrencyCode ; }
+     }
+    </pre>
 
 3. Create a new order, specify a delivery data or open an existing order and switch to the edit mode and then select a (new) product. 
    
@@ -316,7 +312,7 @@ Now you can continue and add side effects via your behavior defintion extension 
 
    you will see that even a browser refresh not updated will be visible. Only after you use the refresh of the UI the changes will bekome visble
    
-  ![BDEF Extension](images/ex2_02_030_RAP630.png)
+   ![BDEF Extension](images/ex2_02_030_RAP630.png)
  
  
 </pre> 
