@@ -1,4 +1,4 @@
-[Home - RAP630](../../README.md#Excercises)
+[Home - RAP630](../../README.md#-exercises)
 
 # Getting started
 
