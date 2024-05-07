@@ -323,6 +323,6 @@ Now you can continue and add side effects via your behavior defintion extension 
 
 You've now extended the behavior of the base RAP business object. For this you only had to create an extension of the BDEF of the base BO on the R-layer.
 
-Continue to - [Exercise 3 - Extend the data model ](../ex3/README.md)
+Continue to - [Exercise 2.2 - Extend the data model ](../ex3/README.md)
 
 
