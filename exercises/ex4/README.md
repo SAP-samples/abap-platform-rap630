@@ -106,7 +106,7 @@ Now we can define the action with the parameter that has just been created.
 
 In order to make the action visible an appropriate `use action` statement has to added to the projection level of the BDEF of the extensible root BO.
 
-1. Right click on the projection behavior definition `ZRAP630_C--` within the package `ZRAP630_###` and select **New Behavior Extension**  
+1. Right click on the projection behavior definition `ZRAP630_C_ShopTP_###` within the package `ZRAP630_###` and select **New Behavior Extension**  
    
    ![add p-bdef](images/ex4_add_p_bdef_extension_020.png)   
 
