@@ -251,7 +251,7 @@ These code templates have been used to create the test class that calls the API 
 
 
 
-## Exercise 1.3: Find the released RAP BO I_BankTP as a successor I_BankTP
+## Exercise 1.3: Find the released RAP BO I_BankTP as a successor of table BNKA
 [^Top of page](#)
 
 <details>
