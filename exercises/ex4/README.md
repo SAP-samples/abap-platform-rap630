@@ -166,3 +166,7 @@ You should now see an action button that allows you to enter feedback.
 ## Summary
 
 You've now finished.
+
+[^Top of page](#)
+[Home - RAP630](../../../../#exercises)   
+
