@@ -313,20 +313,19 @@ These code templates have been used to create the test class that calls the API 
 
 Now that you've...   
 
-have learned about how to use the released API **I_BankTP** in *ABAP Cloud* you can continue with the next exercise - **[Exercise 2](../ex2/#readme)**.
+have learned about how to use the released API **I_BankTP** in *ABAP Cloud* you can continue with the next exercise - **[Exercise 2.1](../ex2/#readme)**.
 
 ## Further Reading
 [^Top of page](#)
 
+<details>
+  <summary>Click to expand!</summary>
 
 ### No Information in your system ? --> Find information about Released API's in GitHub
 
 While developing an ABAP Application for _S/4HANA on premise_ or _S/4HANA private cloud edition_ , you do get the following error message: "Use of <Object Type> <Object Name> is not permitted". 
  
 But the error message does not provide a hint which API or object to use instead. The reason is that the successor information in on premise system does not contain the latest updates such as in SAP S/4HANA Cloud, ABAP Environment system or SAP BTP, ABAP Environment.   
-
-<details>
-  <summary>Click to expand!</summary>
 
 An example would be the table `BNK2`.  
 
@@ -345,6 +344,9 @@ An example would be the table `BNK2`.
      While csv files are nice for human beings, computers prefer json files.  
  
      [Link to json sample file](https://raw.githubusercontent.com/SAP/abap-atc-cr-cv-s4hc/main/src/objectReleaseInfo_2208.json) 
+
+
+ You can continue with the next exercise - **[Exercise 2.1](../ex2/#readme)**.
   
  </details>  
 
