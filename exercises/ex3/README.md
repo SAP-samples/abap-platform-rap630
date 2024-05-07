@@ -209,7 +209,12 @@ extend view entity ZRAP630R_Shop_D_### with {
 Shop.zz_feedback_zaa as zz_feedback_zaa 
 }
 </pre>
-  
+
+#### Result
+
+The extension project should now look like as follows:   
+
+![Overview extensions](images/ex3_Extensions_overview_055.jpg)
   
 </details>
 
@@ -218,8 +223,6 @@ Shop.zz_feedback_zaa as zz_feedback_zaa
 ### Exercise 2.2.3 - Test the field extensibility
 
 After having extended all the objects in the hiearchy of your base RAP business object you can now leverage the additional field in the UI.
-
-![Overview extensions](images/ex3_Extensions_overview_055.jpg)
 
 <details>
   <summary>🔵 Click to expand!</summary>
