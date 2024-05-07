@@ -4,11 +4,11 @@
 
 In this exercise, you will start a helper class that will generate several artefacts needed for the remaining exercises.
 
+<!--  
 > For **⚠  SAP lead events** users   
 > Please skip the following step, because the packages have been pre-generated for convenience in the dedicated workshop system.   
- 
- <details>
-  <summary>🔵 Click to expand!</summary>
+-->   
+
 
 ## Use class ZDMO_GEN_RAP630_SINGLE to generate your starter project
 
@@ -28,7 +28,6 @@ Now that you have created your ABAP Cloud project you will use class `ZDMO_GEN_R
 6. In the "Project Explorer" right click on **Favorite Packages** and click on **Add Package...**.   
    Enter `ZRAP630_###` and and select **both** packages and click OK. 
 
- </details>
  
 ## Summary
 
