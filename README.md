@@ -54,26 +54,40 @@ The requirements to follow the exercises in this repository are:
 ## 🛠 Exercises
 [^Top of page](#)
 
+## Exercises
+
 In the _Getting Started_ section you will generate 
 - two exercise packages and
 - an extensible managed Business Object (BO) with one entity _Shop_ with generic transactional behavior - i.e. CRUD: Create, Read, Update, and Delete. 
 
-In _Exercise 1_ you will learn how to leverage the released RAP BO `I_BankTP` in your own code. 
+The first aspect of developer extensibility is how to use RAP business objects that have been C1-released by SAP or SAP partners for the use in ABAP Cloud development.   
 
-In _Exercise 2.1_ you will _extend the behavior_ of the base RAP business object that has been generated at the end of the Getting Started section. You will learn how extend the behavior of the base RAP BEO by validations, determinations and side effects. 
+In _Exercise 1_ you will learn how you can leverage the released RAP business object `I_BankTP`. You will learn how you can use a new wizard in ADT that lets you generate a custom UI on top of a released RAP business object without having to write a single line of code. An additional (optional) task is to call the same released RAP business object from within a class which shows how released RAP business objects can also be used in application jobs.
 
-In _Exercise 2.2_ you will then continue to _extend the data model_ with additional fields. This requires you to perform several steps and you have to create quite a lot of repository objects. (There is a plan to provide a Generator for that.)  
+The second aspect of developer extensibility is the option to extend an extensible RAP business object that has been delivered by SAP or a SAP partner.  
 
-In _Exercise 2.3_ you will continue to _extend the behavior_ of the base RAP business object by adding an action. Since actions can only added via an extension to fields that have been added via an extension as well, adding an action via an extension must be performed after Exercise 2.2.   
+In _Exercise 2_ you will _extend the behavior_ of the base RAP business object that has been generated in the _Getting Started_ section. You will learn how extend the behavior of the base RAP BEO by validations, determinations and side effects. 
+
+In _Exercise 3_ you will then continue to _extend the data model_ with additional fields. This requires you to perform several steps and you have to create quite a lot of repository objects.  
+
+> Planned wizard support:  
+> With the next upcoming release 2408 it is planned to deliver an **_Extension Field Wizard_**. 
+
+In _Exercise 4_ you will continue to _extend the behavior_ of the base RAP business object by adding an action. Since actions can only added via an extension to fields that have been added itself via an extension, adding an action via an extension must be performed after Exercise 3.   
 
 So let us start and have a look at the _Getting Started_ section.
 
 - [Getting Started - Generate starter package](exercises/ex0/)
-- [Exercise 1 - Consume a released RAP BO](exercises/ex1/)
-- Exercies 2 - Extend a RAP Business object
-  - [Exercise 2.1 - Extend the behavior (determinations, validations, side-effects)](exercises/ex2/)
-  - [Exercise 2.2 - Extend the data model (add additional fields)](exercises/ex3/)
-  - [Exercise 2.3 - Extend the behavior (add an action)](exercises/ex4/)
+
+You can the continue and build custom code that leverages released API's
+
+   -  [Exercise 1 - Build a custom UI on top of a released RAP BO](exercises/ex1/)
+
+Finally you will learn how to extend a RAP Business object   
+
+   - [Exercise 2 - Extend the behavior of a RAP business object (determinations, validations, side-effects)](exercises/ex2/)
+   - [Exercise 3 - Extend the data model of a RAP business object (add additional fields)](exercises/ex3/)
+   - [Exercise 4 - Extend the behavior of a RAP business object (add an action)](exercises/ex4/)
 
 ## Online Help
 
