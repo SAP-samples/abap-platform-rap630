@@ -5,7 +5,7 @@ https://github.com/SAP-samples/abap-platform-rap630/tree/main
 
 ## Description
 
-This repository contains the material for the RAP hands-on workshop called _RAP630 - Use ABAP Cloud for developer extensibility_.  
+This repository contains the material for the RAP hands-on workshop called _RAP630 - Use ABAP Cloud for developer extensibility_ where _Developer Extensibility_ is used.  
 
 Developer extensibility as defined by SAP basically encompasses two activities 
 
