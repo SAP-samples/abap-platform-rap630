@@ -27,11 +27,10 @@ This session introduces attendees to the ABAP Cloud programming model and how th
 ## 📋Requirements for attending this workshop 
 [^Top of page](#)
 
-> You need the latest version of the ABAP Development Tools for Eclipse (ADT) on your laptop or PC as well as the access to an appropriate ABAP system* to carry out the practical exercises of this workshop.
->
-> (*) The supported ABAP systems are SAP BTP ABAP Environment, SAP S/4HANA Cloud, Public Edition.
-> In order to run the workshop on an on prem system use the [on-prem](../tree/on-prem) branch.
-> The [openSource RAP Generator](https://github.com/SAP-samples/cloud-abap-rap) must be imported into the relevant system.
+> You need the latest version of the ABAP Development Tools for Eclipse (ADT) on your laptop or PC as well as the access to an appropriate ABAP system* to carry out the practical exercises of this workshop.  
+>   (*) The supported ABAP systems are SAP BTP ABAP Environment, SAP S/4HANA Cloud, Public Edition.   
+> In order to run the workshop on an on prem system use the [on-prem]([https://github.com/SAP-samples/abap-platform-rap630/tree/on-prem) branch.  
+> The [openSource RAP Generator](https://github.com/SAP-samples/cloud-abap-rap) must be imported into the relevant system.   
 > 
 > **In the SAP ABAP Environment Trial systems the RAP Generator has already been imported for your convenience.**  
 
