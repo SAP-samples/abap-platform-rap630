@@ -49,7 +49,7 @@ The requirements to follow the exercises in this repository are:
 
 
 ## Slides
-[Presentation](https://github.com/SAP-samples/teched2023-DT182v/blob/5468676ccceadbda6e9b16432f12194a7de3eb39/slides/AD182v%40SAP_TechEd_2023_final_RAP_Extensibility_JS.pdf) 
+[Presentation](https://github.com/SAP-samples/abap-platform-rap630/blob/main/slides/RAP630_RAP_Extensibility_2405.pdf) 
 
 ## 🛠 Exercises
 [^Top of page](#)
