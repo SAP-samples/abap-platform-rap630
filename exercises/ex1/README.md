@@ -1,6 +1,6 @@
 [Home - Cloud ERP Extensibility](../../../../#exercises)
 
-# Exercise 1: Find, examine and use a released RAP BO in a custom application (Developer Extensibility)
+# Exercise 1: Build a custom UI on top of a released RAP BO (Developer Extensibility)
 
 ## Introduction
 
