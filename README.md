@@ -81,7 +81,7 @@ So let us start and have a look at the _Getting Started_ section.
 
 You can the continue and build custom code that leverages released API's
 
-   -  [Exercise 1 - Build a custom UI on top of a released RAP BO](exercises/ex1/)
+   -  [Exercise 1 - New App on stack (Developer Extensibility)](exercises/ex1/)
 
 Finally you will learn how to extend a RAP Business object   
 
