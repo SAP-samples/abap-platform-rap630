@@ -46,8 +46,8 @@ Since extending a RAP BO in parallel by several developers can cause severe prob
    This validation must also be added to the `draft determine action Prepare` and activate your changes.
  
    <pre lang="ABAP">
-   extension using interface zrap630i_shoptp_05c
-   implementation in class zbp_zrap630r_shop_x_fbk_05c unique;
+   extension using interface zrap630i_shoptp_###
+   implementation in class zbp_rap630r_ext_shoptp_### unique;
 
    extend behavior for Shop
    {     
