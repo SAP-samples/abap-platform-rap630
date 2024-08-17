@@ -227,6 +227,7 @@ In a second step we will now add a determination `ZZ_setOverallStatus` to the be
    **but don't save your changes** so that only the draft is affected.   
 
    > You will notice that the draft data for the item name is updated, but the price is NOT updated in the draft.
+   > Also the approval status does not change in the draft if the product price becomes larger than 1000 Euro.  
    > The data will only be updated in the UI once you save your data.  
    > This we will change in the following step of our excerise by using side effects.
 
@@ -272,7 +273,8 @@ Now you can continue and add side effects via your behavior defintion extension.
 
 3. Create a new order, specify a delivery data or open an existing order and switch to the edit mode and then select a (new) product. 
    
-   You will notice that the data that you have selected in the SAP Fiori UI is being updated automatically. 
+   You will notice that the data for the product that you have selected in the SAP Fiori UI is being updated automatically.  
+   Also the approval status changes if the price changes from below 1000 Euro to a value that is larger than 1000 Euro and vice versa.    
    
    ![BDEF Extension](images/ex2_02_030_RAP630.png)
  
