@@ -12,6 +12,10 @@ Compared to the activities for adding additional behavior this is a larger amoun
 
 
 
+Replace `ZZ<Field Name>ZAA` with `zz_feedback_zaa` 
+
+
+
 ## Exercise 3.1 - Check (and adapt) the CDS data model (of the extensible base RAP BO)
 
 In order to extend the data model of a RAP BO the base RAP BO must be enabled to support extensibility as described in the Online Help.  
