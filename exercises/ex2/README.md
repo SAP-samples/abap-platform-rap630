@@ -187,18 +187,18 @@ In a second step we will now add a determination `ZZ_setOverallStatus` to the be
 
       update_bo_line-%tky = onlineorder-%tky.
 
-      IF onlineorder-OrderItemPrice > 1000.
-        update_bo_line-OverallStatus = 'Awaiting approval'.
-      ELSE.
-        update_bo_line-OverallStatus = 'Automatically approved'.
-      ENDIF.
-
       SELECT SINGLE * FROM @products as hugo
          WHERE Product = @onlineorder-OrderedItem  INTO @data(product).
 
       update_bo_line-OrderItemPrice = product-Price.
       update_bo_line-CurrencyCode = product-Currency.
 
+      IF product-Price > 1000.
+        update_bo_line-OverallStatus = 'Awaiting approval'.
+      ELSE.
+        update_bo_line-OverallStatus = 'Automatically approved'.
+      ENDIF.
+    
       APPEND update_bo_line TO update_bo.
     ENDLOOP.
 
@@ -266,7 +266,7 @@ Now you can continue and add side effects via your behavior defintion extension.
         validation zz_validateDeliveryDate;
        }
      determination ZZ_setOverallStatus on modify { field OrderedItem; }
-     side effects { field OrderedItem affects field OrderItemPrice , field CurrencyCode ; }
+     side effects { field OrderedItem affects field OrderItemPrice , field CurrencyCode , field OverallStatus ; }
      }
     </pre>
 
