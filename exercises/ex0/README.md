@@ -23,8 +23,13 @@ You will use the second package `ZRAP630_###_EXT` to store the objects that you 
 
    ![Run_via_f 9](images/run_via_f9_0020.png)
 
-4. Now your packages `ZRAP630_###` and `ZRAP630_###_EXT` are created (where the suffix `###` denotes your group number and will contain everything you need. 
-   Stay tuned and check the ABAP console. 
+4. Now your packages `ZRAP630_###` and `ZRAP630_###_EXT` will now be created   
+   (where the suffix `###` denotes your group number and will contain everythin g you need).   
+
+   > ! **The generation process will take a few minutes.** 
+   > So, stay tuned and check the ABAP console.   
+
+   ![Console tab result](images/Console_result.png)
 
 5. **⚠Note down the suffix `###` for later use.**
 
