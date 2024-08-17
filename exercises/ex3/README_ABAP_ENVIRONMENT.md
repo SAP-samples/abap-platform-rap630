@@ -1,6 +1,6 @@
 [Home - Cloud ERP Extensibility](../../../../#exercises)  
 
-# Exercise 3 - Extend the CDS data model of the extensible RAP base business object  
+# Exercise 3 - Extend the CDS data model using the field extension wizard 
 
 In the preceeding exercise we have extended the _behavior_ of the based RAP BO by adding a determination, a validation and a side effect. 
 
@@ -9,6 +9,8 @@ We will now adapt the _CDS data model_, that means we will add new fields to the
 Compared to the activities for adding additional behavior this is a larger amount of work since the complete stack of CDS views has be extended rather than only extensing the behavior definition (BDEF).
 
 ![Overview](images/ex3_01_overview_RAP630.png)
+
+
 
 ## Exercise 3.1 - Check (and adapt) the CDS data model (of the extensible base RAP BO)
 
