@@ -8,6 +8,8 @@ We will now adapt the _CDS data model_, that means we will add new fields to the
 
 Compared to the activities for adding additional behavior this is a larger amount of work since the complete stack of CDS views has be extended rather than only extensing the behavior definition (BDEF).
 
+Fortunately there is now for the ABAP Environments in SAP BTP and SAP S/4HANA an [extension field wizard](https://help.sap.com/docs/abap-cloud/abap-development-tools-user-guide/generating-extension-fields) available which can be used to add extension fields to existing RAP business objects.
+
 ![Overview](images/ex3_01_overview_RAP630.png)
 
 
@@ -18,38 +20,85 @@ In order to extend the data model of a RAP BO the base RAP BO must be enabled to
 
 For your convenience we have generated such an extensible RAP BO `ZRAP630R_ShopTP_###` for you.
 
-![Overview](images/ex3_02_040_show_objects_to_be_extended.png)  
+![Overview](images/ex3_02_040_show_objects_to_be_extended.png)   
 
+## Exercise 3.2 - How to start the wizard
+
+The extension field wizard can be started from the consumption (c-view) or interface projection view (i-view) or from the underlying restricted base view (r-view).  
+
+Depending on which view was used as the entry point certain options are pre-set in the wizard. When using the C-view as the entry point the wizard will suggest to extend the C-view by default.
+
+![Start options for the extension field wizard](images/ex3_with_wizard_010.png)   
 
 ## Excercise 3.2 - Extend the data structure with the extension field wizard
 
-
-1. right click on the C-TP view (the one with the statement `provider contract TRANSACTIONAL_QUERY` )  
+1. Right click on the consumption projection view `ZRAP630C_ShopTP_###` (the one with the statement `provider contract TRANSACTIONAL_QUERY` )  
    and choose **Generate ABAP Repository Objects ..**.
 
-2. In Select Generator screen choose **ABAP Cloud: Extensibility** and then **Extension Fields**. Press **Next**.
+   ![Start extension field wizard](images/ex3_with_wizard_030.png)   
 
-3. In Enter Package enter the name `ZRAP630_###_EXT`
+2. In the **Select Generator** screen choose **ABAP Cloud: Extensibility** and then **Extension Fields**. Press **Next**.
 
-Press **Add**
+   ![Select Generator](images/ex3_with_wizard_020.png) 
+  
+3. In the **Enter Package** screen enter the name of the package `ZRAP630_###_EXT` and press **Next**.
 
-In **Add Field** dialogue enter the following values to add a field to enter feedback
+   ![Select Generator](images/ex3_with_wizard_025.png) 
 
-4. Name `ZZFEEDBACKZAA`
-5. Label: `Feedback`
-6. Data Elemeent: `TEXT100`
-7. Activate check box **Generate UI annotations**
+4. In the **Configure Generator** screen press **Add** (1).
+   
+5. In **Add Field** (2) dialogue enter the following values to add a field to enter feedback
 
-8. Press **Add**
+   - Name `ZZFEEDBACKZAA`  
+   - Label: `Feedback`  
+   - Data Elemeent: `TEXT100`  
+   - Activate the check box **Generate UI annotations**   (3)
+   - Press **Add** (4)
 
-Check the **Business Service Layer Extensions** taht **Extend Object** is checked.
+   ![Select Generator](images/ex3_with_wizard_100.png)  
+ 
+6. Expand the section **Business Service Layer Extensions** and verify that the option **Extend Object ?** is checked.
 
-Press **Next**
+   ![Select Generator](images/ex3_with_wizard_110.png)  
+  
+7. Press **Next**
 
-The wizard now shows the list of ABAP Artifacts that are going to be created / modified.
 
-Checkout the code for all artifacts
+8. The wizard now shows the list of ABAP Artifacts that are going to be created / modified.
 
+   ![Select Generator](images/ex3_with_wizard_120.png)
+
+   You can check out the code for also for the other artifacts that are going to be generated
+
+   <details>
+     <summary>🔵 Click to expand!</summary>
+
+     ### Extension include structure 
+ 
+     ![Extension include structure](images/ex3_with_wizard_120.png)
+
+     ### Extension include view
+ 
+     ![Extension include structure](images/ex3_with_wizard_130.png)
+
+
+     ### Extension for draft query view
+    
+     ![Extension include structure](images/ex3_with_wizard_140.png)
+
+     ### Extension for base restricted view 
+    
+     ![Extension include structure](images/ex3_with_wizard_150.png)
+
+     ### Extension for tranactional interface view
+    
+     ![Extension include structure](images/ex3_with_wizard_160.png)
+
+     ### Extension for tranactional consumption view 
+    
+     ![Extension include structure](images/ex3_with_wizard_160.png)
+
+<!--
 120
 
 ```abap
@@ -120,9 +169,13 @@ extend view entity ZRAP630C_SHOPTP_05A with
 }
 ```
 
-Press  **Next** to continue
+-->
 
-Select a transport request
+  </ details>
+
+9. Press  **Next** to continue
+
+10. Select a transport request
 
 
 
