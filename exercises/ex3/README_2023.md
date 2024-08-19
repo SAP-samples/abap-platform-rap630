@@ -55,9 +55,8 @@ We start the extension of the base RAP BO by adding field to the _extension incl
     zzfeedbackzaa : text100;
    }
    </pre>
-
-   ![Addappendstructure](images/ex3_03_030_RAP640.png)
   
+ 
  4. Activate your changes
  
 </details>
