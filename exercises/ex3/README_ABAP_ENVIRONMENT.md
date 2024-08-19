@@ -22,7 +22,7 @@ For your convenience we have generated such an extensible RAP BO `ZRAP630R_ShopT
 
 The **extension field wizard** can be started from the consumption (c-view) or interface projection view (i-view) or from the underlying restricted base view (r-view).  
 
-Depending on which view was used as the entry point certain options are pre-set in the wizard. When using the C-view as the entry point the wizard will suggest to extend the C-view by default.
+Depending on which view is used as the starting point certain options are pre-set in the wizard. When for example using the C-view as the entry point the wizard will suggest to extend the C-view by default.
 
 ![Start options for the extension field wizard](images/ex3_with_wizard_010.png)   
 
