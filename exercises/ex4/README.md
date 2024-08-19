@@ -2,8 +2,16 @@
 
 # Exercise 4 - Extend the business object with an action 
 
-After having added a field we will add an action to the base RAP BO. This action will be used to update comments. We will make the new field read-only 
+After having added a field we will add an action to the base RAP BO. 
+
+> ⚠ Please note:  
+> Actions can only be added using extensibility to fields that have been added via extensibility themselves.
+> This is why we have added this exercise as the fourth exercise after a field for adding feedback has been added to our Shop RAP business object.   
+
+This action will be used to create/ update comments. 
+We will thus make the new field that has been added to enter a comment read-only 
 and add the required extensions to the 
+
 - BDEF (add the action)
 - Projection BDEF (add a use statement)
 - Projection view (add UI annotations to make the button of the action visible)
