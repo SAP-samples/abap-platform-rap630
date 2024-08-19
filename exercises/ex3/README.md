@@ -10,9 +10,16 @@ Compared to the activities for adding additional behavior this is a larger amoun
 
 While for the ABAP Environments for SAP BTP and SAP S/4HANA Cloud there is an extension field wizard is available, in SAP S/4HANA 2023 you have to create a bunch of objects manually.
 
-Continue in ABAP Environment [Exercise 3 - Add a field with the field extensibility wizard ](../ex4/README_ABAP_ENVIRONMENT.md)
 
-Continue in SAP S/4HANA 2023 [Exercise 3 - Add a field manually ](../ex4/README_2023.md)
+Continue in **ABAP Environment** :
+
+[Exercise 3 - Add a field with the field extensibility wizard ](../ex4/README_ABAP_ENVIRONMENT.md)
+
+
+Continue in **SAP S/4HANA 2023** :
+
+[Exercise 3 - Add a field manually ](../ex4/README_2023.md)
+
 
 ## Summary
 
