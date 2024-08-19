@@ -161,9 +161,7 @@ extend view entity ZRAP630C_SHOPTP_05A with
 }
 ```
 
--->
-
-  </ details>
+--> 
 
 8. Press  **Next** to continue
 
