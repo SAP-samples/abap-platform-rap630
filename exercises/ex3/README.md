@@ -33,7 +33,9 @@ Order of extension | Repository object name | Name           | Comment
 
 ## Step-by-Step guide
 
-While for **SAP BTP ABAP Environment** and for **SAP S/4HANA Cloud ABAP Environment** there is an **extension field wizard** available, in **SAP S/4HANA 2023** you have to create a bunch of objects **manually**.  
+While for **SAP BTP ABAP Environment** and for **SAP S/4HANA Cloud ABAP Environment** there is an [extension field wizard](https://help.sap.com/docs/abap-cloud/abap-development-tools-user-guide/generating-extension-fields) available.
+
+In **SAP S/4HANA 2023** you have to create the extension objects for the objects mentioned above **manually**.  
 
 Therefore we have to different how-to-guides depending on the type of ABAP system you are working on.
 
