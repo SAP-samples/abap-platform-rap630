@@ -155,15 +155,16 @@ extend view entity ZRAP630C_SHOPTP_05A with
 ## Excercise 3.2 - Check the data structure extension
 
 The wizard has generated the following repository objects:   
+
   
-Order of extension | Repository object name | Name           | Comment  
+No.      | Extension repository object | Extended repository object       | Comment  
 -------- | ------------------------- | ------------------------ | -----------------------------------------------------   
-1        | `ZAPD_ZRAP630SSHOP_###`   | Extension include        | extends active and draft table with additional fields    
-2        | `ZX_ZRAP630E_SHOP_###`    | Extension include view   | selects from (extended) active table   
-3        | `ZX_ZRAP630R_SHOPTP_###`  | Restricted base view     | selects from (2)   
-4        | `ZX_ZRAP630C_SHOPTP_###`  | CDS projection view      | selects from (3)   
-5        | `ZX_ZRAP630I_SHOPTP_###`  | Interface view           | selects from (3)   
-6        | `ZX_ZRAP630R_SHOP_D_###`  | Draft query view         | selects from (extended) draft table   
+1        | `ZAPD_ZRAP630SSHOP_###`   | `ZRAP630SSHOP_###`       | extends extension include structure 
+2        | `ZX_ZRAP630E_SHOP_###`    | `ZRAP630E_Shop_###`      | extends extension inlcude view   
+3        | `ZX_ZRAP630R_SHOPTP_###`  | `ZRAP630R_ShopTP_###`    | extends restricted transcational base view   
+4        | `ZX_ZRAP630C_SHOPTP_###`  | `ZRAP630C_ShopTP_###`    | extends transactional projection view
+5        | `ZX_ZRAP630I_SHOPTP_###`  | `ZRAP630I_ShopTP_###`    | extends transactional interface view 
+6        | `ZX_ZRAP630R_SHOP_D_###`  | `ZRAP630R_Shop_D_###`    | extends draft query view
 
 The extension project should now look like as follows:   
 
