@@ -36,13 +36,10 @@ When for example using the C-view as the entry point the wizard will suggest to 
 
    ![Start options for the extension field wizard](images/ex3_with_wizard_020.png) 
 
-    
-
-   ![Start extension field wizard](images/ex3_with_wizard_030.png)   
 
 3. In the **Select Generator** screen choose **ABAP Cloud: Extensibility** and then **Extension Fields**. Press **Next**.
 
-   ![Select Generator](images/ex3_with_wizard_020.png) 
+   ![Start extension field wizard](images/ex3_with_wizard_030.png)   
   
 4. In the **Enter Package** screen enter the name of the package `ZRAP630_###_EXT` and press **Next**.
 
