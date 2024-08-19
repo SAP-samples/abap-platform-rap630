@@ -96,9 +96,9 @@ Now we can define the action with the parameter that has just been created.
        MODIFY ENTITIES OF ZRAP630I_ShopTP_### IN LOCAL MODE
      ENTITY Shop
    
-     UPDATE FIELDS ( zz_feedback_zaa )
+     UPDATE FIELDS ( zzfeedbackzaa )
      WITH VALUE #( FOR key IN keys ( %tky              = key-%tky
-                                      zz_feedback_zaa  = key-%param-feedback  ) ).
+                                      zzfeedbackzaa  = key-%param-feedback  ) ).
    
        "Read the changed data for action result
        READ ENTITIES OF ZRAP630I_ShopTP_### IN LOCAL MODE
