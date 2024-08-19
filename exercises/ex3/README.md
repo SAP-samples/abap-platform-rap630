@@ -13,12 +13,12 @@ While for the ABAP Environments for SAP BTP and SAP S/4HANA Cloud there is an ex
 
 Continue in **ABAP Environment** :
 
-[Exercise 3 - Add a field with the field extensibility wizard ](../ex4/README_ABAP_ENVIRONMENT.md)
+[Exercise 3 - Add a field with the field extensibility wizard ](../ex3/README_ABAP_ENVIRONMENT.md)
 
 
 Continue in **SAP S/4HANA 2023** :
 
-[Exercise 3 - Add a field manually ](../ex4/README_2023.md)
+[Exercise 3 - Add a field manually ](../ex3/README_2023.md)
 
 
 ## Summary
