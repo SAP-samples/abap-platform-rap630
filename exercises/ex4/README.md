@@ -146,21 +146,22 @@ In order to make the action visible an appropriate `use action` statement has to
 
 UI annotations have to be added to make the action button visible. This is done in the C-View Extension `ZRAP630C_EXT_SHOPTP_###`.   
 
-For this you have to add the following code snippet to the UI annotatoins.
+For this you have to add the following code snippet to the `UI.identification` and `UI.lineitem annotations`.
 
 <pre>, { type: #FOR_ACTION, dataAction: 'ZZ_ProvideFeedback', label: 'Update feedback' } </pre>
 
 so that the code of `ZRAP630C_EXT_SHOPTP_###` now reads
 
    <pre lang="ABAP">
-    extend view entity ZRAP630C_ShopTP_05A with
+  extend view entity ZRAP630C_ShopTP_### with
   {
-    @EndUserText.label: 'Feedback'
-    @UI.dataFieldDefault: [{hidden: false}]
-    @UI.identification: [{hidden: false}]
-    @UI.lineItem: [{hidden: false},
-                   {type: #FOR_ACTION, dataAction: 'ZZ_ProvideFeedback', label: 'Update feedback' } ]
-    Shop.ZZFEEDBACKZAA as ZZFEEDBACKZAA
+  @EndUserText.label: 'Feedback'
+  @UI.dataFieldDefault: [{hidden: false}]
+  @UI.identification: [{hidden: false},
+                       {type: #FOR_ACTION, dataAction: 'ZZ_ProvideFeedback', label: 'Update feedback' } ]
+  @UI.lineItem: [{hidden: false},
+                 {type: #FOR_ACTION, dataAction: 'ZZ_ProvideFeedback', label: 'Update feedback' } ]
+  Shop.ZZFEEDBACKZAA as ZZFEEDBACKZAA
 
   }
    </pre>
