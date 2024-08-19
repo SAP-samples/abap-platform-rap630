@@ -28,26 +28,29 @@ Depending on which view is used as the starting point certain options are pre-se
 
 When for example using the C-view as the entry point the wizard will suggest to extend the C-view by default.
 
-![Start options for the extension field wizard](images/ex3_with_wizard_020.png) 
 
 ## Excercise 3.2 - Extend the data structure with the extension field wizard
 
 1. Right click on the consumption projection view `ZRAP630C_ShopTP_###` (the one with the statement `provider contract TRANSACTIONAL_QUERY` )  
    and choose **Generate ABAP Repository Objects ..**.
 
+   ![Start options for the extension field wizard](images/ex3_with_wizard_020.png) 
+
+    
+
    ![Start extension field wizard](images/ex3_with_wizard_030.png)   
 
-2. In the **Select Generator** screen choose **ABAP Cloud: Extensibility** and then **Extension Fields**. Press **Next**.
+3. In the **Select Generator** screen choose **ABAP Cloud: Extensibility** and then **Extension Fields**. Press **Next**.
 
    ![Select Generator](images/ex3_with_wizard_020.png) 
   
-3. In the **Enter Package** screen enter the name of the package `ZRAP630_###_EXT` and press **Next**.
+4. In the **Enter Package** screen enter the name of the package `ZRAP630_###_EXT` and press **Next**.
 
    ![Select Generator](images/ex3_with_wizard_025.png) 
 
-4. In the **Configure Generator** screen press **Add** (1).
+5. In the **Configure Generator** screen press **Add** (1).
    
-5. In **Add Field** (2) dialogue enter the following values to add a field to enter feedback
+6. In **Add Field** (2) dialogue enter the following values to add a field to enter feedback
 
    - Name `ZZFEEDBACKZAA`  
    - Label: `Feedback`  
@@ -57,14 +60,14 @@ When for example using the C-view as the entry point the wizard will suggest to 
 
    ![Select Generator](images/ex3_with_wizard_100.png)  
  
-6. Expand the section **Business Service Layer Extensions** and verify that the option **Extend Object ?** is checked.
+7. Expand the section **Business Service Layer Extensions** and verify that the option **Extend Object ?** is checked.
 
    ![Select Generator](images/ex3_with_wizard_110.png)  
   
-7. Press **Next**
+8. Press **Next**
 
 
-8. The wizard now shows the list of ABAP Artifacts that are going to be created / modified.
+9. The wizard now shows the list of ABAP Artifacts that are going to be created / modified.
 
    ![Select Generator](images/ex3_with_wizard_120.png)
 
