@@ -2,8 +2,6 @@
 
 # Exercise 3 - Extend the CDS data model of the extensible RAP base business object  
 
-## Excercise 3.2 - Extend the data structure
-
 As shown in the schematic view above we have to extend the following objects of our extensible base BO.
   
 Order of extension | Repository object name | Name           | Comment  
@@ -18,10 +16,8 @@ Order of extension | Repository object name | Name           | Comment
 
 ![objects_to_be_extended](images/ex3_03_040_overview_of_obj_to_be_extended.png)  
 
-<details>
-  <summary>🔵 Click to expand!</summary>
 
-### Exercise 3.2.1 - Extend the extension include with an append structure - Add a field
+## Exercise 3.2 - Extend the extension include with an append structure - Add a field
 
 We start the extension of the base RAP BO by adding field to the _extension include structure_ by creating an _append structure_ .
 
@@ -36,19 +32,15 @@ We start the extension of the base RAP BO by adding field to the _extension incl
 
    Be sure to change the package name to `ZRAP630_###_EXT` since the wizard in ADT by default propopses the package of the include structure of your base RAP BO.   
   
-   Package:     `ZRAP630_###_EXT` !!!  
-   Name:        `ZRAP630EXTSSHOP_###`  
+   Package:     `ZRAP630_###_EXT` ⚠️  
+   Name:        `ZAPD_ZRAP630SSHOP_###`  
    Description: Extend Extension Include Structure  
   
    and press **Next**.   
-  
-   ![Addappendstructure](images/ex3_03_020_RAP630.png)
 
 3. Select the transport request that has been created for your extension package and press **Finish**.  
-
-   ![Addappendstructure](images/ex3_03_030_RAP630.png)
   
-3. In the code editor enter the following code snippte  
+3. In the code editor enter the following code snippet   
   
    ```abap
       zzfeedbackzaa : text100;
@@ -70,7 +62,7 @@ We start the extension of the base RAP BO by adding field to the _extension incl
  
 </details>
 
-### Excercise 3.2.2 - Extend the remaining CDS view entities 
+## Excercise 3.3 - Extend the remaining CDS view entities 
 
 In the following we will explain how to extend the remaining 5 CDS view entities. Since the process (the wizard) is the same for each CDS view entity we will only show screen shots for doing this for the first CDS view that has to be extended, which is the extension of the _Extension Include View_ `ZRAP630E_Shop_###`.  
 
@@ -203,13 +195,13 @@ The extension project should now look like as follows:
 No.      | Extension repository object | Extended repository object       | Comment  
 -------- | ------------------------- | ------------------------ | -----------------------------------------------------   
 1        | `ZAPD_ZRAP630SSHOP_###`   | `ZRAP630SSHOP_###`       | extends extension include structure 
-2        | `ZX_ZRAP630E_SHOP_###`    | `ZRAP630E_Shop_###`      | extends extension inlcude view   
+2        | `ZX_ZRAP630E_SHOP_###`    | `ZRAP630E_Shop_###`      | extends extension include view   
 3        | `ZX_ZRAP630R_SHOPTP_###`  | `ZRAP630R_ShopTP_###`    | extends restricted transcational base view   
 4        | `ZX_ZRAP630C_SHOPTP_###`  | `ZRAP630C_ShopTP_###`    | extends transactional projection view
 5        | `ZX_ZRAP630I_SHOPTP_###`  | `ZRAP630I_ShopTP_###`    | extends transactional interface view 
 6        | `ZX_ZRAP630R_SHOP_D_###`  | `ZRAP630R_Shop_D_###`    | extends draft query view
   
-</details>
+
 
 </details>
 
