@@ -45,33 +45,32 @@ When for example using the C-view as the entry point the wizard will suggest to 
 
    ![Select Generator](images/ex3_with_wizard_025.png) 
 
-5. In the **Configure Generator** screen press **Add** (1).
-   
-6. In **Add Field** (2) dialogue enter the following values to add a field to enter feedback
+5. In the **Configure Generator** screen press **Add** (1). Then, in the **Add Field** (2) dialogue enter the following values to add a field to enter feedback:   
 
    - Name `ZZFEEDBACKZAA`  
    - Label: `Feedback`  
    - Data Elemeent: `TEXT100`  
    - Activate the check box **Generate UI annotations**   (3)
-   - Press **Add** (4)
+  
+   and press **Add** (4)
 
    ![Select Generator](images/ex3_with_wizard_100.png)  
  
-7. Expand the section **Business Service Layer Extensions** and verify that the option **Extend Object ?** is checked.
+6. Expand the section **Business Service Layer Extensions** and verify that the option **Extend Object ?** is checked.
 
    ![Select Generator](images/ex3_with_wizard_110.png)  
   
-8. Press **Next**
+7. Press **Next**
 
 
-9. The wizard now shows the list of ABAP Artifacts that are going to be created / modified.
+8. The wizard now shows the list of ABAP Artifacts that are going to be created / modified.
 
    ![Select Generator](images/ex3_with_wizard_120.png)
 
    You can check out the code for also for the other artifacts that are going to be generated
 
    <details>
-     <summary>🔵 Click to expand!</summary>
+     <summary>🔵 Click to show other artifacts</summary>
 
      ### Extension include structure 
  
