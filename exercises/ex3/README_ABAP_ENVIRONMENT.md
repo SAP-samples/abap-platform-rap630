@@ -2,32 +2,13 @@
 
 # Exercise 3 - Extend the CDS data model using the field extension wizard 
 
-In the preceeding exercise we have extended the _behavior_ of the based RAP BO by adding a determination, a validation and a side effect. 
-
-We will now adapt the _CDS data model_, that means we will add new fields to the _Shop_ entity. 
-
-Compared to the activities for adding additional behavior this is a larger amount of work since the complete stack of CDS views has be extended rather than only extensing the behavior definition (BDEF).
-
-Fortunately there is now for the ABAP Environments in SAP BTP and SAP S/4HANA an [extension field wizard](https://help.sap.com/docs/abap-cloud/abap-development-tools-user-guide/generating-extension-fields) available which can be used to add extension fields to existing RAP business objects.
-
-![Overview](images/ex3_01_overview_RAP630.png)
-
-
-## Exercise 3.1 - Check (and adapt) the CDS data model (of the extensible base RAP BO)
-
-In order to extend the data model of a RAP BO the base RAP BO must be enabled to support extensibility as described in the Online Help.  
-[RAP Extensibility-Enablement](https://help.sap.com/docs/abap-cloud/abap-rap/rap-extensibility-enablement)
-
-For your convenience we have generated such an extensible RAP BO `ZRAP630R_ShopTP_###` for you.
-
 The **extension field wizard** can be started from the consumption (c-view) or interface projection view (i-view) or from the underlying restricted base view (r-view). Depending on which view is used as the starting point certain options are pre-set in the wizard. 
 
 ![Start options for the extension field wizard](images/ex3_with_wizard_010.png)   
 
 When for example using the C-view as the entry point the wizard will suggest to extend the C-view by default.
 
-
-## Excercise 3.2 - Extend the data structure with the extension field wizard
+## Excercise 3.1 - Extend the data structure with the extension field wizard
 
 1. Right click on the consumption projection view `ZRAP630C_ShopTP_###` (the one with the statement `provider contract TRANSACTIONAL_QUERY` ) and choose **Generate ABAP Repository Objects ..**.
 
@@ -171,7 +152,7 @@ extend view entity ZRAP630C_SHOPTP_05A with
 
 
 
-## Excercise 3.3 - Check the data structure extension
+## Excercise 3.2 - Check the data structure extension
 
 The wizard has generated the following repository objects:   
   
@@ -188,7 +169,7 @@ The extension project should now look like as follows:
 
 ![Generated extension objects](images/ex3_with_wizard_190.png)
 
-### Exercise 3.4 - Test the field extensibility
+### Exercise 3.3 - Test the field extensibility
 
 After having extended all the objects in the hiearchy of your base RAP business object you can now leverage the additional field in the UI.
 
