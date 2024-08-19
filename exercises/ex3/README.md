@@ -12,11 +12,10 @@ Compared to the activities for adding additional behavior this is a larger amoun
 
 ![Overview](images/ex3_01_overview_RAP630.png)
 
-In order to extend the data model of a RAP BO the base RAP BO must be enabled to support extensibility as described in the Online Help.  
+> In order to extend the data model of a RAP BO the base RAP BO must be enabled to support extensibility as described in the Online Help.  
+> [RAP Extensibility-Enablement](https://help.sap.com/docs/abap-cloud/abap-rap/rap-extensibility-enablement)
 
-[RAP Extensibility-Enablement](https://help.sap.com/docs/abap-cloud/abap-rap/rap-extensibility-enablement)
-
-For your convenience we have generated such an extensible RAP BO `ZRAP630R_ShopTP_###` for you.
+For your convenience the generated RAP BO `ZRAP630R_ShopTP_###` that has been prepared for your convenience supports the extensibility of the data model.  
 
 ![objects_to_be_extended](images/ex3_03_040_overview_of_obj_to_be_extended.png)   
 
