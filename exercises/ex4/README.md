@@ -26,7 +26,8 @@ Parameters are passed to the action using abstract entites.
    - Package: `ZRAP630_###_EXT`  
    - Name: `ZRAP630_A_Feedback_###`   
    - Description: `Pass feedback as a parameter`  
-   and press **Next**   
+   and press **Next**
+5. Select a transport   
 5. Select the template **Define abstract entity with parameters** and press **Finish**  
 6. Enter the following coding
 
