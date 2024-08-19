@@ -52,14 +52,11 @@ When for example using the C-view as the entry point the wizard will suggest to 
 
    ![Select Generator](images/ex3_with_wizard_100.png)  
  
-6. Expand the section **Business Service Layer Extensions** and verify that the option **Extend Object ?** is checked.
+6. Expand the section **Business Service Layer Extensions** and verify that the option **Extend Object ?** is checked and press **Next**.   
 
    ![Select Generator](images/ex3_with_wizard_110.png)  
   
-7. Press **Next**
-
-
-8. The wizard now shows the list of ABAP Artifacts that are going to be created / modified.
+7. The wizard now shows the list of ABAP Artifacts that are going to be created / modified.
 
    ![Select Generator](images/ex3_with_wizard_120.png)
 
@@ -168,9 +165,9 @@ extend view entity ZRAP630C_SHOPTP_05A with
 
   </ details>
 
-9. Press  **Next** to continue
+8. Press  **Next** to continue
 
-10. Select a transport request
+9. Select a transport request
 
 
 
