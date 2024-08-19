@@ -20,9 +20,7 @@ In order to extend the data model of a RAP BO the base RAP BO must be enabled to
 
 For your convenience we have generated such an extensible RAP BO `ZRAP630R_ShopTP_###` for you.
 
-The **extension field wizard** can be started from the consumption (c-view) or interface projection view (i-view) or from the underlying restricted base view (r-view).  
-
-Depending on which view is used as the starting point certain options are pre-set in the wizard. 
+The **extension field wizard** can be started from the consumption (c-view) or interface projection view (i-view) or from the underlying restricted base view (r-view). Depending on which view is used as the starting point certain options are pre-set in the wizard. 
 
 ![Start options for the extension field wizard](images/ex3_with_wizard_010.png)   
 
@@ -31,11 +29,9 @@ When for example using the C-view as the entry point the wizard will suggest to 
 
 ## Excercise 3.2 - Extend the data structure with the extension field wizard
 
-1. Right click on the consumption projection view `ZRAP630C_ShopTP_###` (the one with the statement `provider contract TRANSACTIONAL_QUERY` )  
-   and choose **Generate ABAP Repository Objects ..**.
+1. Right click on the consumption projection view `ZRAP630C_ShopTP_###` (the one with the statement `provider contract TRANSACTIONAL_QUERY` ) and choose **Generate ABAP Repository Objects ..**.
 
    ![Start options for the extension field wizard](images/ex3_with_wizard_020.png) 
-
 
 3. In the **Select Generator** screen choose **ABAP Cloud: Extensibility** and then **Extension Fields**. Press **Next**.
 
@@ -45,7 +41,7 @@ When for example using the C-view as the entry point the wizard will suggest to 
 
    ![Select Generator](images/ex3_with_wizard_025.png) 
 
-5. In the **Configure Generator** screen press **Add** (1). Then, in the **Add Field** (2) dialogue enter the following values to add a field to enter feedback:   
+5. In the **Configure Generator** screen press **Add** (1). Then, in the **Add Field** dialogue enter the following values (2) to add a field to enter feedback:   
 
    - Name `ZZFEEDBACKZAA`  
    - Label: `Feedback`  
