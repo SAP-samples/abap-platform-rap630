@@ -171,9 +171,9 @@ extend view entity ZRAP630C_SHOPTP_05A with
 
 
 
-## Excercise 3.2 - Extend the data structure
+## Excercise 3.3 - Check the data structure extension
 
-As shown in the schematic view above we have to extend the following objects of our extensible base BO.
+The wizard has generated the following repository objects:   
   
 Order of extension | Repository object name | Name           | Comment  
 -------- | ------------------------- | ------------------------ | -----------------------------------------------------   
@@ -184,27 +184,11 @@ Order of extension | Repository object name | Name           | Comment
 5        | `ZX_ZRAP630I_SHOPTP_###`  | Interface view           | selects from (3)   
 6        | `ZX_ZRAP630R_SHOP_D_###`  | Draft query view         | selects from (extended) draft table   
 
-
-![objects_to_be_extended](images/ex3_03_040_overview_of_obj_to_be_extended.png)  
-
-
-
-
-
-
-
-
-
-
-#### Result
-
 The extension project should now look like as follows:   
 
 ![Overview extensions](images/ex3_Extensions_overview_055.jpg)
-  
 
-
-### Exercise 3.3 - Test the field extensibility
+### Exercise 3.4 - Test the field extensibility
 
 After having extended all the objects in the hiearchy of your base RAP business object you can now leverage the additional field in the UI.
 
