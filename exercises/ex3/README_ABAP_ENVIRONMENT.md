@@ -20,11 +20,7 @@ In order to extend the data model of a RAP BO the base RAP BO must be enabled to
 
 For your convenience we have generated such an extensible RAP BO `ZRAP630R_ShopTP_###` for you.
 
-![Overview](images/ex3_02_040_show_objects_to_be_extended.png)   
-
-## Exercise 3.2 - How to start the wizard
-
-The extension field wizard can be started from the consumption (c-view) or interface projection view (i-view) or from the underlying restricted base view (r-view).  
+The **extension field wizard** can be started from the consumption (c-view) or interface projection view (i-view) or from the underlying restricted base view (r-view).  
 
 Depending on which view was used as the entry point certain options are pre-set in the wizard. When using the C-view as the entry point the wizard will suggest to extend the C-view by default.
 
