@@ -186,7 +186,7 @@ Order of extension | Repository object name | Name           | Comment
 
 The extension project should now look like as follows:   
 
-![Overview extensions](images/ex3_Extensions_overview_055.jpg)
+![Generated extension objects](images/ex3_Extensions_overview_190.jpg)
 
 ### Exercise 3.4 - Test the field extensibility
 
