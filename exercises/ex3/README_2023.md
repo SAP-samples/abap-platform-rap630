@@ -2,24 +2,6 @@
 
 # Exercise 3 - Extend the CDS data model of the extensible RAP base business object  
 
-In the preceeding exercise we have extended the _behavior_ of the based RAP BO by adding a determination, a validation and a side effect. 
-
-We will now adapt the _CDS data model_, that means we will add new fields to the _Shop_ entity. 
-
-Compared to the activities for adding additional behavior this is a larger amount of work since the complete stack of CDS views has be extended rather than only extensing the behavior definition (BDEF).
-
-![Overview](images/ex3_01_overview_RAP630.png)
-
-## Exercise 3.1 - Check (and adapt) the CDS data model (of the extensible base RAP BO)
-
-In order to extend the data model of a RAP BO the base RAP BO must be enabled to support extensibility as described in the Online Help.  
-[RAP Extensibility-Enablement](https://help.sap.com/docs/abap-cloud/abap-rap/rap-extensibility-enablement)
-
-For your convenience we have generated such an extensible RAP BO `ZRAP630R_ShopTP_###` for you.
-
-![Overview](images/ex3_02_040_show_objects_to_be_extended.png)  
-
-
 ## Excercise 3.2 - Extend the data structure
 
 As shown in the schematic view above we have to extend the following objects of our extensible base BO.
@@ -69,16 +51,16 @@ We start the extension of the base RAP BO by adding field to the _extension incl
 3. In the code editor enter the following code snippte  
   
    ```abap
-      zz_feedback_zaa : abap.char(256);
+      zzfeedbackzaa : text100;
    ```
 
    So that your code should read as follows:
   
-   <pre lang="ABAP">
-   @EndUserText.label : 'Extend Extension Include Structure'
+   <pre lang="ABAP">  
+   @EndUserText.label : 'extend ZRAP630SSHOP_###'
    @AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
-   extend type zrap630sshop_### with zrap630extsshop_05a {
-   zz_feedback_zaa : abap.char(256);
+   extend type zrap630sshop_05a with zapd_zrap630sshop_### {
+    zzfeedbackzaa : text100;
    }
    </pre>
 
@@ -88,7 +70,7 @@ We start the extension of the base RAP BO by adding field to the _extension incl
  
 </details>
 
-### Excercise 3.2.2 - Extend the CDS views 
+### Excercise 3.2.2 - Extend the remaining CDS view entities 
 
 In the following we will explain how to extend the remaining 5 CDS view entities. Since the process (the wizard) is the same for each CDS view entity we will only show screen shots for doing this for the first CDS view that has to be extended, which is the extension of the _Extension Include View_ `ZRAP630E_Shop_###`.  
 
@@ -113,7 +95,7 @@ First we have to extend our extension include view `ZRAP630E_Shop_###` since the
 
    Package: `ZRAP630_###_EXT` --> !!! Be sure to have changed the package name since ADT will propose the name of the package where your base RAP BO resides in
 
-   Name: `ZRAP630E_Ext_Shop_###`
+   Name: `ZX_ZRAP630E_SHOP_###`
    Description: `Extension for Extension Include View`
 
    and press **Next** .
@@ -148,7 +130,7 @@ You have now to extend the remaining 4 CDS views in the following order with the
 
 #### Extension for R-CDS view
 
-Name: `ZRAP630R_EXT_SHOPTP_###`   
+Name: `ZX_ZRAP630R_SHOPTP_###`   
 Package: `ZRAP630_###_EXT`  
 Description: Extension for R-CDS view
 
@@ -156,65 +138,76 @@ Description: Extension for R-CDS view
 > The code extension of the R-CDS view reads from the `_Extension` association as the data source.
 > All other extensions read from the alias `Shop` as the data source.    
 
-<pre lang="ABAP">
-extend view entity ZRAP630R_ShopTP_### with {  
-_Extension.zz_feedback_zaa as zz_feedback_zaa  
+```abap
+extend view entity ZRAP630R_SHOPTP_### with 
+{
+  @EndUserText.label: 'Feedback'
+  _EXTENSION.ZZFEEDBACKZAA as ZZFEEDBACKZAA
 }
-</pre> 
+```
   
 #### Extension for C-CDS view
 
-Name: `ZRAP630C_EXT_SHOPTP_###`   
+Name: `ZX_ZRAP630C_SHOPTP_###`   
 Package: `ZRAP630_###_EXT`  
 Description: Extension for P-CDS view
   
-<pre lang="ABAP">
-  extend view entity ZRAP630C_ShopTP_### with {  
-  
-  @UI.lineItem: [ {
-    position: 140 , 
-    importance: #MEDIUM, 
-    label: 'Feedback'
-    } ]
-    @UI.identification: [ {
-    position: 140 , 
-    label: 'Feedback'
-    } ]
-  
-   Shop.zz_feedback_zaa as zz_feedback_zaa  
-   }
-</pre>  
+```abap
+extend view entity ZRAP630C_SHOPTP_### with 
+{
+  @EndUserText.label: 'Feedback'
+  @UI.dataFieldDefault: [{hidden: false}]
+  @UI.identification: [{hidden: false}]
+  @UI.lineItem: [{hidden: false}]
+  SHOP.ZZFEEDBACKZAA as ZZFEEDBACKZAA
+
+}
+``` 
   
 #### Extension for I-CDS view  
 
-Name: `ZRAP630I_Ext_ShopTP_###`   
+Name: `ZX_ZRAP630I_SHOPTP_###`   
 Package: `ZRAP630_###_EXT`  
 Description: Extension for interface view
   
-<pre lang="ABAP">
-extend view entity ZRAP630I_ShopTP_### with {  
-Shop.zz_feedback_zaa as zz_feedback_zaa 
+```abap
+extend view entity ZRAP630I_SHOPTP_### with 
+{
+  @EndUserText.label: 'Feedback'
+  SHOP.ZZFEEDBACKZAA as ZZFEEDBACKZAA
+
 }
-</pre>
+```
   
     
 ####  Extension for draft query view
 
-Name: `ZRAP630R_Ext_Shop_D_###`   
+Name: `ZX_ZRAP630R_SHOP_D_###`   
 Package: `ZRAP630_###_EXT`  
 Description: Extension for draft query view
   
-<pre lang="ABAP">
-extend view entity ZRAP630R_Shop_D_### with {  
-Shop.zz_feedback_zaa as zz_feedback_zaa 
+```ABAP
+extend view entity ZRAP630R_SHOP_D_### with 
+{
+  SHOP.ZZFEEDBACKZAA as ZZFEEDBACKZAA
+
 }
-</pre>
+```
 
 #### Result
 
 The extension project should now look like as follows:   
 
 ![Overview extensions](images/ex3_Extensions_overview_055.jpg)
+
+No.      | Extension repository object | Extended repository object       | Comment  
+-------- | ------------------------- | ------------------------ | -----------------------------------------------------   
+1        | `ZAPD_ZRAP630SSHOP_###`   | `ZRAP630SSHOP_###`       | extends extension include structure 
+2        | `ZX_ZRAP630E_SHOP_###`    | `ZRAP630E_Shop_###`      | extends extension inlcude view   
+3        | `ZX_ZRAP630R_SHOPTP_###`  | `ZRAP630R_ShopTP_###`    | extends restricted transcational base view   
+4        | `ZX_ZRAP630C_SHOPTP_###`  | `ZRAP630C_ShopTP_###`    | extends transactional projection view
+5        | `ZX_ZRAP630I_SHOPTP_###`  | `ZRAP630I_ShopTP_###`    | extends transactional interface view 
+6        | `ZX_ZRAP630R_SHOP_D_###`  | `ZRAP630R_Shop_D_###`    | extends draft query view
   
 </details>
 
