@@ -77,6 +77,8 @@ Now we can define the action with the parameter that has just been created.
     }
    </pre>
 
+3. Activate your changes.     
+
 3. Use the code assist (Press Ctrl+1) on the **Shop** entity and let the framework generate the missing artefacts.
 
    ![Provide feedback via an action](images/ex4_implement_action_010.png)
