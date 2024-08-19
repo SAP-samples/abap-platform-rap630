@@ -17,7 +17,7 @@ Order of extension | Repository object name | Name           | Comment
 ![objects_to_be_extended](images/ex3_03_040_overview_of_obj_to_be_extended.png)  
 
 
-## Exercise 3.2 - Extend the extension include with an append structure - Add a field
+## Exercise 3.1 - Extend the extension include with an append structure - Add a field
 
 We start the extension of the base RAP BO by adding field to the _extension include structure_ by creating an _append structure_ .
 
@@ -62,7 +62,7 @@ We start the extension of the base RAP BO by adding field to the _extension incl
  
 </details>
 
-## Excercise 3.3 - Extend the remaining CDS view entities 
+## Excercise 3.2 - Extend the extenstion include view  
 
 In the following we will explain how to extend the remaining 5 CDS view entities. Since the process (the wizard) is the same for each CDS view entity we will only show screen shots for doing this for the first CDS view that has to be extended, which is the extension of the _Extension Include View_ `ZRAP630E_Shop_###`.  
 
@@ -70,8 +70,6 @@ For the remaining CDS views we will only provide the code snippets.
   
 <details>
   <summary>🔵 Click to expand!</summary>
-
-### Extend the extenstion include view 
 
 First we have to extend our extension include view `ZRAP630E_Shop_###` since the R-view reads from this view .
   
@@ -113,14 +111,14 @@ First we have to extend our extension include view `ZRAP630E_Shop_###` since the
   
 </details>
 
-### Extend the remaining CDS views 
+## Excercise 3.3 - Extend the remaining CDS views 
   
 You have now to extend the remaining 4 CDS views in the following order with the following code snippets as we have done this for the extension include view in Exercise 3.5.   
 
 <details>
   <summary>🔵 Click to expand!</summary>
 
-#### Extension for R-CDS view
+### Extension for R-CDS view
 
 Name: `ZX_ZRAP630R_SHOPTP_###`   
 Package: `ZRAP630_###_EXT`  
@@ -138,7 +136,7 @@ extend view entity ZRAP630R_SHOPTP_### with
 }
 ```
   
-#### Extension for C-CDS view
+### Extension for C-CDS view
 
 Name: `ZX_ZRAP630C_SHOPTP_###`   
 Package: `ZRAP630_###_EXT`  
@@ -156,7 +154,7 @@ extend view entity ZRAP630C_SHOPTP_### with
 }
 ``` 
   
-#### Extension for I-CDS view  
+### Extension for I-CDS view  
 
 Name: `ZX_ZRAP630I_SHOPTP_###`   
 Package: `ZRAP630_###_EXT`  
@@ -172,7 +170,7 @@ extend view entity ZRAP630I_SHOPTP_### with
 ```
   
     
-####  Extension for draft query view
+###  Extension for draft query view
 
 Name: `ZX_ZRAP630R_SHOP_D_###`   
 Package: `ZRAP630_###_EXT`  
@@ -185,6 +183,9 @@ extend view entity ZRAP630R_SHOP_D_### with
 
 }
 ```
+
+</details>
+
 
 #### Result
 
@@ -203,7 +204,6 @@ No.      | Extension repository object | Extended repository object       | Comm
   
 
 
-</details>
 
 ### Exercise 3.3 - Test the field extensibility
 
