@@ -68,10 +68,9 @@ The second aspect of developer extensibility is the option to extend an extensib
 
 In _Exercise 2_ you will _extend the behavior_ of the base RAP business object that has been generated in the _Getting Started_ section. You will learn how extend the behavior of the base RAP BEO by validations, determinations and side effects. 
 
-In _Exercise 3_ you will then continue to _extend the data model_ with additional fields. This requires you to perform several steps and you have to create quite a lot of repository objects.  
+In _Exercise 3_ you will then continue to _extend the data model_ with additional fields. 
 
-> Planned wizard support:  
-> With the next upcoming release 2408 it is planned to deliver an **_Extension Field Wizard_**. 
+> Since with the latest release 2408 an **_Extension Field Wizard_** has been delivered we have to different scripts for ABAP Environement systems and on premise systems (SAP S/4HANA 2023). 
 
 In _Exercise 4_ you will continue to _extend the behavior_ of the base RAP business object by adding an action. Since actions can only added via an extension to fields that have been added itself via an extension, adding an action via an extension must be performed after Exercise 3.   
 
