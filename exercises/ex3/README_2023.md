@@ -61,7 +61,7 @@ We start the extension of the base RAP BO by adding field to the _extension incl
  
 </details>
 
-## Excercise 3.2 - Extend the extenstion include view  
+## Excercise 3.2 - Extend the extension include view  
 
 In the following we will explain how to extend the remaining 5 CDS view entities. Since the process (the wizard) is the same for each CDS view entity we will only show screen shots for doing this for the first CDS view that has to be extended, which is the extension of the _Extension Include View_ `ZRAP630E_Shop_###`.  
 
