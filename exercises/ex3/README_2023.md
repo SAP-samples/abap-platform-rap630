@@ -78,7 +78,7 @@ First we have to extend our extension include view `ZRAP630E_Shop_###` since the
 
 2. Select **New Data Definition** from the context menu.
 
-    ![e-view](images/ex3_extension_for_ext_include_010.png) 
+    ![e-view](images/ex3_03_330_RAP630.png)   
 
 3. In the **New Data Defintion** screen enter the following values:  
 
