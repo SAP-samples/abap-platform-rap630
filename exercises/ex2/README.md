@@ -161,7 +161,7 @@ In a second step we will now add a determination `ZZ_setOverallStatus` to the be
 
 2. Press **Ctrl+1** to start the content assist and double-click on the proposal to add the appropriate code in the behavior implementation class `zbp_rap630r_ext_shoptp_###`. 
 
-3. Add the following code into the implementation of the method `ZZ_setOverallStatus`.
+3. Add the following code into the implementation of the method `ZZ_setOverallStatus`. Do not forget to replace all occurences of `###` with your group number.   
    
    > The code first performs a read request using EML using the key fields of our RAP BO that are provided by the framework an reads the data of all affected 
    > orders. In the following loop statement it is checked whether the price exceeds a certain threshould (1000 EUR) and depending on the price the order is 
