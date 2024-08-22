@@ -5,9 +5,8 @@
 ## Introduction
 
 In Exercise 1.1 you will build a custom UI on top of the released API **I_BankTP**. This application will allow you to create a bank.  
-As an additional (optional) Exercise 1.2 you can try out to consume this released API in a class via EML. 
 
-In the (optional) Exercise 1.2 we will show how you can use a released RAP BO in a custom application, e.g. a class.   
+As an additional (optional) Exercise 1.2 you can try out to consume this released API in a class via EML.   
 
 We will start by showing you how you can search for a released RAP business object. For this we will use the *Released Objects* part of the *Project Explorer* in ADT.
 
