@@ -287,15 +287,40 @@ A second typical use case where released API's in an SAP S/4HANA system are used
      
        In the source code (see below) we see that the BDEF `R_BankTP` defines two so called authorization contexts:
 
-         - _Own authorization context_ : Lists all authorization objects used by the RAP BO implementation.
-         - _NoCheckWhenPrivileged_ : Lists authorization objects that can be skipped by a RAP BO consumer with privileged access.
+        _Own authorization context_ : Lists all authorization objects used by the RAP BO implementation.   
+        _NoCheckWhenPrivileged_ : Lists authorization objects that can be skipped by a RAP BO consumer with privileged access.   
+
+       ```abap
+       managed with unmanaged save implementation in class bp_r_banktp unique;
+       strict ( 2 );
+       with draft;
+       extensible
+       {
+         with additional save;
+         with determinations on modify;
+         with determinations on save;
+         with validations on save;
+       }
+
+       with privileged mode disabling NoCheckWhenPrivileged;
+
+       //NoCheckWhenPrivileged
+       define authorization context NoCheckWhenPrivileged
+       {
+        'F_BNKA_MAO';
+        'F_BNKA_INT';
+        }
+
+       ```
+
+       
 
 
        ![PRIVILEGED 1](images/06_010_RAP630.png)
      
      </details>  
      
-  8. Adding **WITH PRIVILEGED ACCESS** to the ABAP SQL statement
+  9. Adding **WITH PRIVILEGED ACCESS** to the ABAP SQL statement
   
      Similar to enforce skipping the authorization checks when creating a new bank it is also possible to enforce skipping of the authorization check that is imposed by the underlying DCL which performs a check on the authorization object `F_BNKA_MAO` and the field `BBANKS` for displaying data.  
      
@@ -319,7 +344,7 @@ A second typical use case where released API's in an SAP S/4HANA system are used
      ![PRIVILEGED 1](images/06_040_RAP640.png)   
      
   
-   9. Other potential problems
+   10. Other potential problems
   
       The I_BankTP RAP BO checks whether the provided switft code fits to the ISO code of the region. 
   
