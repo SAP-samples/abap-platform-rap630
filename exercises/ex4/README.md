@@ -27,8 +27,12 @@ Parameters are passed to the action using abstract entites.
    - Name: `ZRAP630_A_Feedback_###`   
    - Description: `Pass feedback as a parameter`  
    and press **Next**
-5. Select a transport   
+3. Select a transport
+4. Expand the folder **Abstract Entity(creation)**   
 5. Select the template **Define abstract entity with parameters** and press **Finish**  
+
+   ![Select ddls template](images/ex4_select_ddls_template_010.png)   
+
 6. Enter the following coding
 
    <pre lang="ABAP">
@@ -49,7 +53,7 @@ Now we can define the action with the parameter that has just been created.
 2. Add the following code snippet in your behavior extension `ZRAP630R_EXT_SHOPTP_###`  
 
    <pre lang="ABAP">
-   field(readonly) zz_feedback_zaa;
+   field(readonly) zzfeedbackzaa;
    action(authorization : global, features : instance ) ZZ_ProvideFeedback  parameter ZRAP630_A_Feedback_### result[1] $self;
    </pre> 
   
@@ -117,7 +121,7 @@ Now we can define the action with the parameter that has just been created.
 
 In order to make the action visible an appropriate `use action` statement has to added to the projection level of the BDEF of the extensible root BO.
 
-1. Right click on the projection behavior definition `ZRAP630_C_ShopTP_###` within the package `ZRAP630_###` and select **New Behavior Extension**  
+1. Right click on the projection behavior definition `ZRAP630C_ShopTP_###` within the package `ZRAP630_###` and select **New Behavior Extension**  
    
    ![add p-bdef](images/ex4_add_p_bdef_extension_020.png)   
 
