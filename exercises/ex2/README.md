@@ -122,7 +122,7 @@ Since extending a RAP BO in parallel by several developers can cause severe prob
 10. Press the **Create** button on the list page.
 11. The **New : Shop** object page opens where you have to enter the data for a new order.      
 12. Select a product for the field **OrderedItem** but do **NOT** select a **Delivery Date**
-13. Press Create.   
+13. Press **Create**.   
 14. This shall raise the follwoing error message:   
 
     ![BDEF Extension](images/ex2_01_090_RAP630.png)   
