@@ -123,6 +123,10 @@ In Exercise 1.1 you will build a custom UI on top of the released API **I_BankTP
       ![result](images/021-check-own-context.png)
 
 
+> ⚠️  
+> The issue can only be resolved by creating an appropriate IAM app, assigning the same to a business catalog which in the end has to be assigned to a new or existing role that has to be assigned to your user.  
+> In the next (optional) exercise where the BO is called as an API we show a workaround how the API can be called in a so called priveliged mode.  
+
 </details>
 
 ## Exercise 1.2: Use a released RAP BO in a custom application (optional)
