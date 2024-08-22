@@ -316,22 +316,33 @@ A second typical use case where released API's in an SAP S/4HANA system are used
      
      </details>  
      
-  9. Adding **WITH PRIVILEGED ACCESS** to the ABAP SQL statement
+  8. Adding **WITH PRIVILEGED ACCESS** to the ABAP SQL statement
   
      Similar to enforce skipping the authorization checks when creating a new bank it is also possible to enforce skipping of the authorization check that is imposed by the underlying DCL which performs a check on the authorization object `F_BNKA_MAO` and the field `BBANKS` for displaying data.  
      
-     Open the DCL  and check its source code.        
+     Open the DCL  and check its source code. 
+
+     To do so press **Ctrl+Shift+A** and enter **I_Bank_2** to search for the DCL objects.          
      
      ![PRIVILEGED 1](images/06_020_RAP630.png)   
      
      ![PRIVILEGED 1](images/06_030_RAP630.png)   
      
-     When we now change the ABAP SQL statement such that we add the key words ` WITH PRIVILEGED ACCESS` to it:   
+     When we now change the ABAP SQL statement in class **`zcl_test_abap_cloud_###`** such that we add the key words ` WITH PRIVILEGED ACCESS` to it:   
      
      <pre lang="ABAP">
+
+       METHOD if_oo_adt_classrun~main.
+
+       ....
+       
        SELECT SINGLE * FROM I_Bank_2
        WITH PRIVILEGED ACCESS
        WHERE BankInternalID = @bank_id_number INTO @DATA(my_bank).
+
+       ....
+       
+       ENDMETHOD.
      </pre>
      
      we see that the data is now successfully been created and can also be read.  
