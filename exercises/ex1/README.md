@@ -312,11 +312,7 @@ A second typical use case where released API's in an SAP S/4HANA system are used
         }
 
        ```
-
-       
-
-
-       ![PRIVILEGED 1](images/06_010_RAP630.png)
+    
      
      </details>  
      
