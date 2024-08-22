@@ -90,7 +90,7 @@ In Exercise 1.1 you will build a custom UI on top of the released API **I_BankTP
 
       ![result](images/013-result-project-explorer.png)
 
-2. Select the entity set `ZC_BankTP` and click **Preview** or double-click on the entity set `ZC_BankTP`. This will start the SAP Fiori Elements preview.  
+2. Select the entity set `Bank` and click **Preview** or double-click on the entity set `Bank`. This will start the SAP Fiori Elements preview.  
 
       ![Fiori Elements Preview](images/014-start-fiori-elements-preview.png)
 
