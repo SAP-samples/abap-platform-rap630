@@ -4,6 +4,8 @@
 
 # Exercise 1: New App on stack (Developer Extensibility)
 
+⚠️ Be sure to have run the helper class as described in the **[Getting started section](../ex2/#readme)** that generates the packages and repository objects needed for this hands-on session.  
+
 ## Introduction
 
 In Exercise 1.1 you will build a custom UI on top of the released API **I_BankTP**. This application will allow you to create a bank.  
