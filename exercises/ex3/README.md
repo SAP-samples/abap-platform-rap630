@@ -10,7 +10,7 @@ We will now adapt the _CDS data model_, that means we will add new fields to the
 
 Compared to the activities for adding additional behavior this is a larger amount of work since the complete stack of CDS views has be extended rather than only extensing the behavior definition (BDEF).
 
-![Overview](images/ex3_01_overview_RAP630.png)
+![Overview](images/Extensibility_Extend_the_data_model.png)
 
 > In order to extend the data model of a RAP BO the base RAP BO must be enabled to support extensibility as described in the Online Help.  
 > [RAP Extensibility-Enablement](https://help.sap.com/docs/abap-cloud/abap-rap/rap-extensibility-enablement)
