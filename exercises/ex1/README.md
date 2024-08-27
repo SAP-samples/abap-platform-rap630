@@ -27,6 +27,7 @@ We will start by showing you how you can search for a released RAP business obje
 
 In Exercise 1.1 you will build a custom UI on top of the released API **I_BankTP**. 
 
+[!NOTE]
 <details>
   <summary>Click to expand!</summary>
 
