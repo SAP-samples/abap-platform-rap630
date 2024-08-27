@@ -2,16 +2,22 @@
 
 # Excercise 2 - Extend a RAP business object
 
+Since extending a RAP BO in parallel by several developers can cause severe problems every participant will work with his or her own base RAP BO. For your convenience an extensible RAP BO has thus been generated using the class `zdmo_gen_rap630_single` that you have run in the [Getting started](../ex0/README.md) section.
 
+In addition to the repository objects that are required for a normal RAP business object a RAP business object that has been enabled for extensibility requires three additional repository objects for each entity.   
+
+- Extension include  
+- Extension include view   
+- Draft query view
+    
+![A RAP BO enabled for extensibility](images/Extensibility_RAP_Business_Object_Enabled_For_Extensibility.png)   
 
 
 ## Exercise 2.1 - Behavior extension
 
-In this exercise, we will extend the behavior of an extensible RAP BO. That means we will add a validation, a determination and side-effects to the behavior of the RAP BO by using an extenstion.   
+In this exercise, we will extend the behavior of an extensible RAP BO. That means we will add a validation, a determination and side-effects to the behavior of the RAP BO by using an extenstion.    
 
-Since extending a RAP BO in parallel by several developers can cause severe problems every participant will work with his or her own base RAP BO. For your convenience an extensible RAP BO has thus been generated using the class `zdmo_gen_rap630_single` that you have run in the [Getting started](../ex0/README.md) section.  
-
-![BDEF Extension](images/ex2_01_overview_RAP630.png)
+![BDEF Extension](images/Extensibility_Extend_the_behavior.png)    
 
 ### Exercise 2.1.1 Extend the behavior definition with a validation
 
