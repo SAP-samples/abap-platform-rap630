@@ -21,3 +21,6 @@ In addition to the repository objects that are required for a normal RAP busines
    - [Exercise 4 - Extend the behavior of a RAP business object (add an action)](exercises/ex4/)
 
 
+ You can continue with the next exercise - **[Exercise 2.1](../ex2/#readme)**.  
+
+ 
