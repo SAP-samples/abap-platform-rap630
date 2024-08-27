@@ -1,10 +1,6 @@
 [Home - Cloud ERP Extensibility](../../../../#exercises)
 
-<style>
-r { color: Red }
-o { color: Orange }
-g { color: Green }
-</style>
+
 
 # Exercise 1: New App on stack (Developer Extensibility)
 
@@ -16,9 +12,6 @@ As an additional (optional) Exercise 1.2 you can try out to consume this release
 
 We will start by showing you how you can search for a released RAP business object. For this we will use the *Released Objects* part of the *Project Explorer* in ADT.   
 
-<r>  
-test   
-</r> 
 
 > **Reminder:**   
 > Don't forget to replace all occurences of the placeholder **`###`** with your group ID in the exercise steps below.  
