@@ -12,6 +12,8 @@ In Exercise 1.1 you will build a custom UI on top of the released API **I_BankTP
 
 As an additional (optional) Exercise 1.2 you can try out to consume this released API in a class via EML.   
 
+![New App on Stack](images/Scenario_New_App_on_stack.png)  
+
 We will start by showing you how you can search for a released RAP business object. For this we will use the *Released Objects* part of the *Project Explorer* in ADT.   
 
 
