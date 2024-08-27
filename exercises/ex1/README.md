@@ -55,13 +55,15 @@ In Exercise 1.1 you will build a custom UI on top of the released API **I_BankTP
 
      ![Service Projection Entities](images/005-configure-generator.png) 
       
-     When you want to change the names of the repository objects that will be generated you can do so by selecting the entries **Service Projection Entities**, **Service Projection Behavior**, **Service Definition** and **Service Binding**.  Since the generator will suggest unique names we will leave those default values unchanged.    
+     When you want to change the names of the repository objects that will be generated you can do so by selecting the entries **Service Projection Entities**, **Service Projection Behavior**, **Service Definition** and **Service Binding**.  Since the generator will suggest unique names we will leave those default values unchanged.
 
-  6. The wizard shows an overview of the repository objects that are going to be generated. Press **Next**.   
+      Press **Next** to continue.   
+
+  7. The wizard shows an overview of the repository objects that are going to be generated. Press **Next**.   
 
       ![eclipse](images/010-abap-artifacts-list.png)  
 
-  7. Select the transport that has been created for the package `ZRAP630_###_EXT` or create a new transport and press **Finish** to start the generation of the repository objects.   
+  8. Select the transport that has been created for the package `ZRAP630_###_EXT` or create a new transport and press **Finish** to start the generation of the repository objects.   
 
       ![eclipse](images/011-select-transport.png)  
     
