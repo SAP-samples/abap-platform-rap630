@@ -86,9 +86,7 @@ You can the continue and build custom code that leverages released API's
 
 Finally you will learn how to extend a RAP Business object   
 
-   - [Exercise 2 - Extend the behavior of a RAP business object (determinations, validations, side-effects)](exercises/ex2/)
-   - [Exercise 3 - Extend the data model of a RAP business object (add additional fields)](exercises/ex3/)
-   - [Exercise 4 - Extend the behavior of a RAP business object (add an action)](exercises/ex4/)
+   - [Exercise 2, 3 and 4 - Extend a RAP business object (behavior and data model)](exercises/ex2/README_235.md)
 
 ## Online Help
 
