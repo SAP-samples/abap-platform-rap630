@@ -55,38 +55,13 @@ In Exercise 1.1 you will build a custom UI on top of the released API **I_BankTP
 
      ![Service Projection Entities](images/005-configure-generator.png) 
       
-     When you want to change the names of the repository objects that will be generated you can do so by selecting the entries **Service Projection Entities**, **Service Projection Behavior**, **Service Definition** and **Service Binding**.   
+     When you want to change the names of the repository objects that will be generated you can do so by selecting the entries **Service Projection Entities**, **Service Projection Behavior**, **Service Definition** and **Service Binding**.  Since the generator will suggest unique names we will leave those default values unchanged.    
 
-     Though the generator will suggest unique names you should change the suggested names by adding your group number `###` so that it is easier to identify in a workshop the owner of a generated object.
-          
-  
-  6. When selecting **Service Projection Entities** you can change the suggested name of the CDS projection view(s). For this click on **Edit**, change the CDS Entity Name by adding your group number `###` and press **OK**.
-
-
-     > !!! Please note that you cannot change the name of the metadata extension.   
-     > !!! The name is not automatically be refreshed.   
-     > !!! The updated name will be shown at a later stage when all objects that are   
-     > !!! going to be generated will be shown.   
-     
-      ![Service Projection Entities](images/006-configure-generator.png)  
-
-  7. When selecting **Service Projection Behavior** you can change the suggested name of the **Behavior Implementation Class**. In addition you can decide whether your UI shall support draft as well when the underlying RAP business object provides draft, by checking **with draft**. Press **Next**.    
-
-      ![Service Projection Behavior](images/007-configure-generator.png)  
-
-  8. When selecting **Service Definition** you can change the suggested name of the **Service Definition Name**.  
-
-      ![Service Definition](images/008-configure-generator.png)  
-
-  9. When selecting **Service Binding** you can change the suggested name of the **Service Binding Name**. By pressing **Next** you can start the generation process.  
-                                      
-      ![Service Binding](images/009-configure-generator.png)   
-
-  10. The wizard shows an overview of the repository objects that are going to be generated. Press **Next**.   
+  6. The wizard shows an overview of the repository objects that are going to be generated. Press **Next**.   
 
       ![eclipse](images/010-abap-artifacts-list.png)  
 
-  11. Select the transport that has been created for the package `ZRAP630_###_EXT` or create a new transport and press **Finish** to start the generation of the repository objects.   
+  7. Select the transport that has been created for the package `ZRAP630_###_EXT` or create a new transport and press **Finish** to start the generation of the repository objects.   
 
       ![eclipse](images/011-select-transport.png)  
     
