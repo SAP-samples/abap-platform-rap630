@@ -1,29 +1,12 @@
 [Home - Cloud ERP Extensibility](../../../../#exercises)
 
-# Excercise 2 - Extend a RAP business object
-
-In the following three exercises 2,3 and 4 you will extend a RAP business object.  
-
-![Scenario extend an SAP app](images/Scenario_Extend_SAP_App.png)   
-
-Since extending a RAP business object in parallel by several developers can cause severe problems, every participant will work with his or her own base RAP business object. For your convenience an extensible RAP BO has thus been generated using the class `zdmo_gen_rap630_single` that you have run in the [Getting started](../ex0/README.md) section.
-
-In addition to the repository objects that are required for a normal RAP business object a RAP business object that has been enabled for extensibility requires three additional repository objects for each entity.   
-
-- Extension include  
-- Extension include view   
-- Draft query view
-    
-![A RAP BO enabled for extensibility](images/Extensibility_RAP_Business_Object_Enabled_For_Extensibility.png)   
-
-
-## Exercise 2.1 - Behavior extension
+# Exercise 2 - Behavior extension
 
 In this exercise, we will extend the behavior of an extensible RAP BO. That means we will add a validation, a determination and side-effects to the behavior of the RAP BO by using an extenstion.    
 
 ![BDEF Extension](images/Extensibility_Extend_the_behavior.png)    
 
-### Exercise 2.1.1 Extend the behavior definition with a validation
+## Exercise 2.1 Extend the behavior definition with a validation
 
 >  After completing these steps you will have created a validation to check the delivery date.  
 
@@ -139,7 +122,7 @@ In this exercise, we will extend the behavior of an extensible RAP BO. That mean
 
 </details>
 
-### Exercise 2.1.2 Extend the behavior definition with an determination
+## Exercise 2.2 Extend the behavior definition with an determination
 
 In a second step we will now add a determination `ZZ_setOverallStatus` to the behavior defintion extension. This shall be executed in case the content of the field `OrderedItem` is changed by the user.   
 
@@ -247,7 +230,7 @@ In a second step we will now add a determination `ZZ_setOverallStatus` to the be
 
 
 
-### Exercise 2.1.3 Extend the behavior definition with side effects
+## Exercise 2.3 Extend the behavior definition with side effects
 
 Now you can continue and add side effects via your behavior defintion extension.
 
