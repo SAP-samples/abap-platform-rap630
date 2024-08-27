@@ -18,6 +18,8 @@ Developer extensibility as defined by SAP basically encompasses two activities
    Such an extensible RAP business object will usually reside in another software components or it is an existing extensible RAP BO that has been delivered by SAP or a SAP partner.  
    By extending the funcitionality of an existing RAP Business object its functionality can be adapted to your specific business requirements.
 
+   ![S4 HANA Cloud Extensibility Options](images/Scenario_Overview.png)
+
 ## Overview
 
 This session introduces attendees to the ABAP Cloud programming model and how this can be leveraged how
