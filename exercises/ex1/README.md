@@ -8,8 +8,9 @@ In Exercise 1.1 you will build a custom UI on top of the released API **I_BankTP
 
 As an additional (optional) Exercise 1.2 you can try out to consume this released API in a class via EML.   
 
-We will start by showing you how you can search for a released RAP business object. For this we will use the *Released Objects* part of the *Project Explorer* in ADT.
-:::caution
+We will start by showing you how you can search for a released RAP business object. For this we will use the *Released Objects* part of the *Project Explorer* in ADT.   
+
+:::caution   
 > **Reminder:**   
 > Don't forget to replace all occurences of the placeholder **`###`** with your group ID in the exercise steps below.  
 > You can use the ADT function **Replace All** (**Ctrl+F**) for the purpose.   
@@ -18,6 +19,7 @@ We will start by showing you how you can search for a released RAP business obje
 >
 > ![GroupID](images/00_010_RAP630.png)
 :::
+
 
 ## Exercise 1.1: Generate a UI on top of a released Business Object Interface
 
