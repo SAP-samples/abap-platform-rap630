@@ -11,6 +11,9 @@ In this exercise, you will start a helper class that will generate several artef
 
 You will use class `ZDMO_GEN_RAP630_SINGLE` to generate two packages. 
 
+> ⚠️ Please note that if you don't find this class you have to import the openSource RAP Generator first as described in the 
+> section [Getting started](../../README.md#requirements-for-attending-this-workshop)  
+
 The first package `ZRAP630_###` will contain an extensible RAP business object which you will extend in exercise 2.
 
 You will use the second package `ZRAP630_###_EXT` to store the objects that you are going to create in Excerise 1 and Exercise 2.
