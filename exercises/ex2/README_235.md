@@ -16,9 +16,9 @@ In addition to the repository objects that are required for a normal RAP busines
     
 ![A RAP BO enabled for extensibility](images/Extensibility_RAP_Business_Object_Enabled_For_Extensibility.png)   
 
-   - [Exercise 2 - Extend the behavior of a RAP business object (determinations, validations, side-effects)](exercises/ex2/)
-   - [Exercise 3 - Extend the data model of a RAP business object (add additional fields)](exercises/ex3/)
-   - [Exercise 4 - Extend the behavior of a RAP business object (add an action)](exercises/ex4/)
+   - [Exercise 2 - Extend the behavior of a RAP business object (determinations, validations, side-effects)](../../exercises/ex2/)
+   - [Exercise 3 - Extend the data model of a RAP business object (add additional fields)](../../exercises/ex3/)
+   - [Exercise 4 - Extend the behavior of a RAP business object (add an action)](../../exercises/ex4/)
 
 
  You can continue with the next exercise - **[Exercise 2](../ex2/#readme)**.  
