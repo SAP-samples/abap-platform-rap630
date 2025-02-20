@@ -51,7 +51,7 @@ We start the extension of the base RAP BO by adding field to the _extension incl
    <pre lang="ABAP">  
    @EndUserText.label : 'extend ZRAP630SSHOP_###'
    @AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
-   extend type zrap630sshop_05a with zapd_zrap630sshop_### {
+   extend type zrap630sshop_### with zapd_zrap630sshop_### {
     zzfeedbackzaa : text100;
    }
    </pre>
