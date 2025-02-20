@@ -76,7 +76,7 @@ Now we can define the action with the parameter that has just been created.
    
      side effects { field OrderedItem affects field OrderItemPrice , field CurrencyCode ; }
    
-     field(readonly) zz_feedback_zaa;
+     field(readonly) zzfeedbackzaa;
      action(authorization : global, features : instance ) ZZ_ProvideFeedback  parameter ZRAP630_A_Feedback_### result[1] $self;
     }
    </pre>
