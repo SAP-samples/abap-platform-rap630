@@ -1,6 +1,6 @@
 [Home - Cloud ERP Extensibility](../../../../#exercises)
 
-# Excercise 2, 3 and 5 - Extend a RAP business object
+# Excercise 2, 3 and 4 - Extend a RAP business object
 
 In the following three exercises 2,3 and 4 you will extend a RAP business object.  
 
