@@ -22,9 +22,9 @@ Developer extensibility as defined by SAP basically encompasses two activities
 
 ## Overview
 
-This session introduces attendees to the ABAP Cloud programming model and how this can be leveraged how
-- to build extensions (own code) in SAP S/4HANA BTP, ABAP Environment and  
-- to extend an existing RAP Business Object using the ABAP Cloud programming model.   
+This session introduces attendees to the ABAP RESTful application programming model (RAP) and how this can be leveraged how
+- to build extensions (own code) in SAP S/4HANA BTP ABAP Environment and  
+- to extend an existing RAP Business Object.   
 
 ## 📋Requirements for attending this workshop 
 [^Top of page](#)
