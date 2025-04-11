@@ -244,7 +244,7 @@ Now you can continue and add side effects via your behavior defintion extension.
 1. Open the behavior extension `ZRAP630R_Ext_ShopTP_###` by pressing **Ctrl+Shift+A**.
 2. Add the following code snippet  
    
-   <pre lang="ABAP">side effects { field OrderedItem affects field OrderItemPrice , field CurrencyCode ; }</pre>  
+   <pre lang="ABAP">side effects { field OrderedItem affects field OrderItemPrice , field CurrencyCode  , field OverallStatus ; }</pre>  
 
    to your behavior extension right after the determination. 
  
