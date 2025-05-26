@@ -8,7 +8,6 @@ Option 1: You conduct these exercises at an SAP event where we provide you with 
 Option 2: You conduct these exercises on your own in one of the shared ABAP trial systems.
 Option 3: You condcut these exercises on your own SAP BTP ABAP Environment system.
 
-
 <details>   
         <summary>Option 1 - SAP led hands-on exercise</summary>  
 
