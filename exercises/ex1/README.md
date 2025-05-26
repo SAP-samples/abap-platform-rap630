@@ -33,7 +33,7 @@ In Exercise 1.1 you will build a custom UI on top of the released API **I_BankTP
 <details>
   <summary>Click to expand!</summary>
 
-  1. In the Project Explorer select the **Released Objects** tree and then the node **USE_IN_CLOUD_DEVELOPMENT**. Here you have to open the folder **Core Data Services** and then the folder **Behavior Definitions** where you find the C1-released Business Object Interface `I_BankTP`.
+  1. In the Project Explorer select the **Released Objects** tree and then the node **USE_IN_CLOUD_DEVELOPMENT**. Here you have to open the folder **Core Data Services** and then the folder **Behavior Definitions** where you find the C1-released Business Object Interface **`I_BankTP`**.
 
       ![interface](images/001-find-interface.png)
 
@@ -53,9 +53,14 @@ In Exercise 1.1 you will build a custom UI on top of the released API **I_BankTP
 
      ![Service Projection Entities](images/005-configure-generator.png) 
       
-     When you want to change the names of the repository objects that will be generated you can do so by selecting the entries **Service Projection Entities**, **Service Projection Behavior**, **Service Definition** and **Service Binding**.  Since the generator will suggest unique names we will leave those default values unchanged.
+     Artifacts Suffix: **###***
 
-      Press **Next** to continue.   
+     Enter your group number **###*** in the field **Artifacts Suffix**. 
+
+     > This will add the suffix to the names of the repository objects that will be generated. You can check the names that will be chosen by the generator by selecting the entries **Service Projection Entities**, **Service Projection Behavior**, **Service Definition** and **Service Binding**.    
+     > Since the generator will suggest unique names we will leave the suggested values unchanged.
+
+     Press **Next** to continue.   
 
   7. The wizard shows an overview of the repository objects that are going to be generated. Press **Next**.   
 
