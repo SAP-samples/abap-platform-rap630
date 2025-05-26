@@ -13,7 +13,7 @@ There are three options
 <details>   
         <summary>click to expand the exercise description</summary>  
 
-In case of an SAP led hands-on session we have prepared the followign for your convenience: 
+In case of an SAP led hands-on session we have prepared the following for your convenience: 
 
 - two exercise packages `ZRAP630_###` and `ZRAP630_###_EXT` and
 - an extensible managed Business Object (BO) with one entity _Shop_ with generic transactional behavior - i.e. CRUD: Create, Read, Update, and Delete. 
