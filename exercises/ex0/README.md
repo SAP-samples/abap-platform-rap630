@@ -30,7 +30,7 @@ In case of an SAP led hands-on session we have prepared the following for your c
 <details>   
         <summary>click to expand the exercise description</summary>  
 
-In this exercise, you will start a helper class that will generate several artefacts needed for the remaining exercises.
+If you run the exercises in SAP BTP ABAP Trial, you have to start a helper class that will generate the necessary artefacts needed for the remaining exercises.
 
 You will generate 
 - two exercise packages and
