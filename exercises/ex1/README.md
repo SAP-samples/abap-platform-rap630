@@ -53,9 +53,7 @@ In Exercise 1.1 you will build a custom UI on top of the released API **I_BankTP
 
      ![Service Projection Entities](images/005-configure-generator.png) 
       
-     Artifacts Suffix: **###***
-
-     Enter your group number **###*** in the field **Artifacts Suffix**. 
+     Enter your group number **###** in the field **Artifacts Suffix**. 
 
      > This will add the suffix to the names of the repository objects that will be generated. You can check the names that will be chosen by the generator by selecting the entries **Service Projection Entities**, **Service Projection Behavior**, **Service Definition** and **Service Binding**.    
      > Since the generator will suggest unique names we will leave the suggested values unchanged.
