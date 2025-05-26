@@ -8,7 +8,7 @@ There are three options
 - **Option 2**: You conduct these exercises on your own in one of the shared ABAP trial systems.   
 - **Option 3**: You condcut these exercises on your own in your own SAP BTP ABAP Environment system.   
 
-## Option 1 - SAP led hands-on exercise
+## Option 1 - SAP-led hands-on workshop (e.g. at SAP TechEd, SAP user group events, SAP CodeJams, ...)    
 
 <details>   
         <summary>click to expand the exercise description</summary>  
@@ -25,7 +25,7 @@ In case of an SAP led hands-on session we have prepared the following for your c
 
 </details>
 
-## Option 2 - Self study in SAP BTP Trial
+## Option 2 - Self-study in SAP BTP Trial
 
 <details>   
         <summary>click to expand the exercise description</summary>  
@@ -35,11 +35,6 @@ In this exercise, you will start a helper class that will generate several artef
 You will generate 
 - two exercise packages and
 - an extensible managed Business Object (BO) with one entity _Shop_ with generic transactional behavior - i.e. CRUD: Create, Read, Update, and Delete. 
-
-<!--  
-> For **⚠  SAP lead events** users   
-> Please skip the following step, because the packages have been pre-generated for convenience in the dedicated workshop system.   
--->   
 
 You will use class `ZDMO_GEN_RAP630_SINGLE` to generate two packages. 
 
@@ -76,7 +71,7 @@ You will use the second package `ZRAP630_###_EXT` to store the objects that you 
    
 </details>
 
-## Option 3 - Self study in your own SAP BTP ABAP Envrionment
+## Option 3 - Self-study in your own SAP BTP ABAP Envrionment
 
 <details>   
         <summary>click to expand the exercise description</summary>  
