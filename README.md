@@ -58,9 +58,7 @@ The requirements to follow the exercises in this repository are:
 
 ## Exercises
 
-In the _Getting Started_ section you will generate 
-- two exercise packages and
-- an extensible managed Business Object (BO) with one entity _Shop_ with generic transactional behavior - i.e. CRUD: Create, Read, Update, and Delete. 
+In the _Getting Started_ section you will learn what needs to be perpared in order to work through this script.
 
 The first aspect of developer extensibility is how to use RAP business objects that have been C1-released by SAP or SAP partners for the use in ABAP Cloud development.   
 
@@ -78,7 +76,7 @@ In _Exercise 4_ you will continue to _extend the behavior_ of the base RAP busin
 
 So let us start and have a look at the _Getting Started_ section.
 
-- [Getting Started - Generate starter package](exercises/ex0/)
+- [Getting Started - Mandatory, please check](exercises/ex0/)
 
 You can the continue and build custom code that leverages released API's
 
