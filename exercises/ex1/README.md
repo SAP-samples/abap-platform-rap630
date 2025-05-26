@@ -133,6 +133,9 @@ Here the user under which the job runs might not have appropriate application au
 
 ### Test EML call   
 
+<details>
+  <summary>Click to expand!</summary>
+
 Create a class ![class](images/adt_class.png) in the extension package `ZRAP630_###_EXT` to circumvent authorization problems with EML calls.   
 
   1. Right-click on your ABAP package **`ZRAP630_###_EXT`** and select **New** > **ABAP Class** from the context menu.
@@ -275,7 +278,12 @@ Create a class ![class](images/adt_class.png) in the extension package `ZRAP630_
 
      ![test class](images/200_iam_app.png)      
 
+</details>
+
 ### Test the use of **PRIVILEGED** calls
+
+<details>
+  <summary>Click to expand!</summary>
 
   1. Adding **PRIVILEGED** to the EML call
 
@@ -345,7 +353,7 @@ Create a class ![class](images/adt_class.png) in the extension package `ZRAP630_
 
      This means you are now able to create a new bank, but you can't retrieve the data via SQL.  
      
-  4. Adding **WITH PRIVILEGED ACCESS** to the ABAP SQL statement
+  3. Adding **WITH PRIVILEGED ACCESS** to the ABAP SQL statement
   
      Similar to enforce skipping the authorization checks when creating a new bank it is also possible to enforce skipping of the authorization check that is imposed by the underlying DCL which performs a check on the authorization object `F_BNKA_MAO` and the field `BBANKS` for displaying data.  
      
@@ -357,13 +365,13 @@ Create a class ![class](images/adt_class.png) in the extension package `ZRAP630_
      
      ![PRIVILEGED 1](images/06_030_RAP630.png)   
      
-     When we now change both ABAP SQL statements in class **`zcl_test_abap_cloud_###`** such that we add the key words ` WITH PRIVILEGED ACCESS` to them:   
+     When we now change both ABAP SQL statements in class **`zcl_test_abap_cloud_###`** such that we add the key words **`WITH PRIVILEGED ACCESS`** to them:   
      
-     <pre lang="ABAP">
+<pre lang="ABAP">
 
-       METHOD if_oo_adt_classrun~main.
+    METHOD if_oo_adt_classrun~main.
 
-....
+    "...
        
     SELECT SINGLE *
       FROM I_Bank_2
@@ -372,7 +380,7 @@ Create a class ![class](images/adt_class.png) in the extension package `ZRAP630_
       WHERE BankInternalID = @bank_id_number
       INTO @DATA(my_bank).
 
-...
+    "...
 
     SELECT SINGLE *
       FROM I_Bank_2
@@ -381,18 +389,19 @@ Create a class ![class](images/adt_class.png) in the extension package `ZRAP630_
       WHERE BankInternalID = @bank_id_number
       INTO @my_bank.
 
-....
+     "...
        
        ENDMETHOD.
-     </pre>
+</pre>
      
      we see that the data is now successfully been created and can also be read.  
      
   
      ![PRIVILEGED 1](images/06_040_RAP640.png)   
      
+  </details>
   
-   3. Other potential problems
+  ### Other potential problems
   
       The I_BankTP RAP BO checks whether the provided switft code fits to the ISO code of the region. 
   
