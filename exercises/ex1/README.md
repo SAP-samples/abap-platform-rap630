@@ -64,7 +64,7 @@ In Exercise 1.1 you will build a custom UI on top of the released API **I_BankTP
 
       ![eclipse](images/010-abap-artifacts-list.png)  
 
-  8. Select the transport that has been created for the package `ZRAP630_###_EXT` or create a new transport and press **Finish** to start the generation of the repository objects.   
+  8. Select an existing or create a new transport and press **Finish** to start the generation of the repository objects.   
 
       ![eclipse](images/011-select-transport.png)  
     
