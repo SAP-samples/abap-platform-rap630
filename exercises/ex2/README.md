@@ -36,7 +36,7 @@ In this exercise, we will extend the behavior of an extensible RAP BO. That mean
 3. Select a transport request and press **Finish**   <  
 
 4. Add a validation `zz_validateDeliverydate` to your behavior defintion that reacts on `create;` and the field `DeliveryDate;`  
-   This validation must also be added to the `draft determine action Prepare` and activate your changes.
+   This validation must also be added to the `draft determine action Prepare`. Do not forget to activate your changes.   
  
    <pre lang="ABAP">
    extension using interface zrap630i_shoptp_###
