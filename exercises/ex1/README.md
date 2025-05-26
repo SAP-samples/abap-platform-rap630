@@ -127,16 +127,13 @@ In Exercise 1.1 you will build a custom UI on top of the released API **I_BankTP
 ## Exercise 1.2: Use a released RAP BO in a custom application (optional)
 [^Top of page](#)
 
-A second typical use case where released API's in an SAP S/4HANA system are used for, is using such an API in your own code that might for example be consumed as part of an application job. 
+A second typical use case where released API's in an SAP S/4HANA system are used for, is using such an API in your own code that might for example be consumed as part of an application job.  
 
-<details>
-  <summary>This is an optional exercise.</summary>
+Here the user under which the job runs might not have appropriate application authorizations.   
 
+### Test EML call   
 
-> Create a class ![class](images/adt_class.png) in the extension package `ZRAP630_###_EXT` to test the effects of using the language version *ABAP for Cloud Development*.   
-
- <details>
-  <summary>Click to expand!</summary>
+Create a class ![class](images/adt_class.png) in the extension package `ZRAP630_###_EXT` to circumvent authorization problems with EML calls.   
 
   1. Right-click on your ABAP package **`ZRAP630_###_EXT`** and select **New** > **ABAP Class** from the context menu.
 
@@ -257,7 +254,9 @@ A second typical use case where released API's in an SAP S/4HANA system are used
 
      ![test class](images/200_iam_app.png)      
 
-  8. Adding **PRIVILEGED** to the EML call
+### Test the use of **PRIVILEGED** calls
+
+  1. Adding **PRIVILEGED** to the EML call
 
      When we add the key word `PRIVILEGED` to our EML call the authorization checks for the authorization objects
      `F_BNKA_MAO` and `F_BNKA_INT` will basically be skipped.
@@ -312,8 +311,12 @@ A second typical use case where released API's in an SAP S/4HANA system are used
     
      
      </details>  
+
+  2. Run your class again via F9.
+
+
      
-  9. Adding **WITH PRIVILEGED ACCESS** to the ABAP SQL statement
+  3. Adding **WITH PRIVILEGED ACCESS** to the ABAP SQL statement
   
      Similar to enforce skipping the authorization checks when creating a new bank it is also possible to enforce skipping of the authorization check that is imposed by the underlying DCL which performs a check on the authorization object `F_BNKA_MAO` and the field `BBANKS` for displaying data.  
      
@@ -348,7 +351,7 @@ A second typical use case where released API's in an SAP S/4HANA system are used
      ![PRIVILEGED 1](images/06_040_RAP640.png)   
      
   
-   10. Other potential problems
+   3. Other potential problems
   
       The I_BankTP RAP BO checks whether the provided switft code fits to the ISO code of the region. 
   
@@ -358,7 +361,7 @@ A second typical use case where released API's in an SAP S/4HANA system are used
 
        - error Bank CZ 8888 already exists.
   
- </details>  
+ 
  
  <!--- 
   
