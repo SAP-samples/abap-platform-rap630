@@ -249,18 +249,15 @@ A second typical use case where released API's in an SAP S/4HANA system are used
   5. Activate your changes by pressing **Ctrl+F3**
 
   6. Run the test class by pressing **F9**.  
+    
+     You should receive an error message such as:
+     `error You are not authorized to create bank data for country/region ZZ.`
 
-     ![test class](images/success.png) 
+     This is because your user only has the authorization to create banks with the following country/region codes:   
 
-     > ⚠️   
-     > If you had run into authorization problems with the generated Fiori UI, you will notice that also now an error message is thrown. Namely:
-     > `error You are not authorized to create bank data for country/region CZ.`
-     > Consequently also no new data is found.
-     > ![test class](images/error.png)      
-     
-          
+     ![test class](images/200_iam_app.png)      
 
-  7. Adding **PRIVILEGED** to the EML call
+  8. Adding **PRIVILEGED** to the EML call
 
      When we add the key word `PRIVILEGED` to our EML call the authorization checks for the authorization objects
      `F_BNKA_MAO` and `F_BNKA_INT` will basically be skipped.
@@ -316,7 +313,7 @@ A second typical use case where released API's in an SAP S/4HANA system are used
      
      </details>  
      
-  8. Adding **WITH PRIVILEGED ACCESS** to the ABAP SQL statement
+  9. Adding **WITH PRIVILEGED ACCESS** to the ABAP SQL statement
   
      Similar to enforce skipping the authorization checks when creating a new bank it is also possible to enforce skipping of the authorization check that is imposed by the underlying DCL which performs a check on the authorization object `F_BNKA_MAO` and the field `BBANKS` for displaying data.  
      
