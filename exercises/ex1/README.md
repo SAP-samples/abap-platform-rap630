@@ -401,15 +401,15 @@ Create a class ![class](images/adt_class.png) in the extension package `ZRAP630_
      
   </details>
   
-  ### Other potential problems
-  
-      The I_BankTP RAP BO checks whether the provided switft code fits to the ISO code of the region. 
-  
-       - error ISO code GB in the SWIFT code SABMGB2LACP is not correct for country/region US. Diagnosis Positions 5 and 6 of the SWIFT code do not correspond to the ISO code of country/region US. Procedure Check your entries. If necessary, check whether the ISO code of country/region US has been defined correctly.  
-       
-      When a bank with the ID that is provided already exists you will receive an error message as well.
+### Other potential problems
 
-       - error Bank CZ 8888 already exists.
+The I_BankTP RAP BO checks whether the provided switft code fits to the ISO code of the region. 
+  
+- error ISO code GB in the SWIFT code SABMGB2LACP is not correct for country/region US. Diagnosis Positions 5 and 6 of the SWIFT code do not correspond to the ISO code of country/region US. Procedure Check your entries. If necessary, check whether the ISO code of country/region US has been defined correctly.  
+       
+When a bank with the ID that is provided already exists you will receive an error message as well.
+
+- error Bank CZ 8888 already exists.
   
  
  
