@@ -4,7 +4,7 @@
 
 # Exercise 1: New App on stack (Developer Extensibility)
 
-⚠️ Be sure to have run the helper class **`ZDMO_GEN_RAP630_SINGLE`** as described in the **[Getting started section](../ex0/#readme)** that generates the packages and repository objects needed for this hands-on session.  
+⚠️ Be sure to have completed the steps described in the **[Getting started section](../ex0/#readme)**. Here you learn how to get access to the packages and repository objects needed for this hands-on session.  
 
 ## Introduction
 
