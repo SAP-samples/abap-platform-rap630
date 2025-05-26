@@ -269,7 +269,7 @@ Create a class ![class](images/adt_class.png) in the extension package `ZRAP630_
   6. Run the test class by pressing **F9**.  
     
      You should receive an error message such as:
-     `error You are not authorized to create bank data for country/region ZZ.`
+     `error You are not authorized to create bank data for country/region ZW.`
 
      This is because your user only has the authorization to create banks with the following country/region codes:   
 
@@ -283,6 +283,7 @@ Create a class ![class](images/adt_class.png) in the extension package `ZRAP630_
      `F_BNKA_MAO` and `F_BNKA_INT` will basically be skipped. Just uncomment the `PRIVILEGED` statement in the source code. 
 
      <pre lang="ABAP">
+       
      MODIFY ENTITIES OF i_banktp
      PRIVILEGED
      ENTITY bank
@@ -356,7 +357,7 @@ Create a class ![class](images/adt_class.png) in the extension package `ZRAP630_
      
      ![PRIVILEGED 1](images/06_030_RAP630.png)   
      
-     When we now change the ABAP SQL statement in class **`zcl_test_abap_cloud_###`** such that we add the key words ` WITH PRIVILEGED ACCESS` to it:   
+     When we now change both ABAP SQL statements in class **`zcl_test_abap_cloud_###`** such that we add the key words ` WITH PRIVILEGED ACCESS` to them:   
      
      <pre lang="ABAP">
 
@@ -366,8 +367,8 @@ Create a class ![class](images/adt_class.png) in the extension package `ZRAP630_
        
     SELECT SINGLE *
       FROM I_Bank_2
-*     WITH
-*      PRIVILEGED ACCESS
+      WITH
+       PRIVILEGED ACCESS
       WHERE BankInternalID = @bank_id_number
       INTO @DATA(my_bank).
 
@@ -375,8 +376,8 @@ Create a class ![class](images/adt_class.png) in the extension package `ZRAP630_
 
     SELECT SINGLE *
       FROM I_Bank_2
-*     WITH
-*      PRIVILEGED ACCESS
+      WITH
+       PRIVILEGED ACCESS
       WHERE BankInternalID = @bank_id_number
       INTO @my_bank.
 
