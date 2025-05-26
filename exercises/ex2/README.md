@@ -22,8 +22,8 @@ In this exercise, we will extend the behavior of an extensible RAP BO. That mean
     > **⚠⚠⚠ Caution**     
     > Be sure to change the name of the package from `ZRAP630_###` to `ZRAP630_###_EXT`.
     > By default the dialogue will propose the package name of the base RAP BO.  
-    > In case of a package delivered by SAP this won't be a problem, but here we want to build the extension in a different package
-    > in the customer namespace `Z`.
+    > In case of a package delivered by SAP an error message would be thrown since you are not allowed to create objects in the SAP namespace.
+    > But here we want to build the extension in a different package in the customer namespace `Z`.
     
     **Package**: ⚠`ZRAP630_###_EXT`⚠   
     **Name**: `ZRAP630R_EXT_SHOPTP_###`  
