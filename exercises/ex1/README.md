@@ -250,12 +250,15 @@ A second typical use case where released API's in an SAP S/4HANA system are used
 
   6. Run the test class by pressing **F9**.  
 
+     ![test class](images/success.png) 
+
+     > ⚠️   
      > If you had run into authorization problems with the generated Fiori UI, you will notice that also now an error message is thrown. Namely:
      > `error You are not authorized to create bank data for country/region CZ.`
      > Consequently also no new data is found.
      > ![test class](images/error.png)      
      
-     ![test class](images/success.png)      
+          
 
   7. Adding **PRIVILEGED** to the EML call
 
