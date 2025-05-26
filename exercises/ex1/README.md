@@ -314,9 +314,16 @@ Create a class ![class](images/adt_class.png) in the extension package `ZRAP630_
 
   2. Run your class again via F9.
 
+     You should receive a response if you such as:
 
+     ```
+     mapped key ####
+     my new bank  does not exist
+     ```
+
+     This means you are now able to create a new bank, but you can't retrieve the data via SQL.  
      
-  3. Adding **WITH PRIVILEGED ACCESS** to the ABAP SQL statement
+  4. Adding **WITH PRIVILEGED ACCESS** to the ABAP SQL statement
   
      Similar to enforce skipping the authorization checks when creating a new bank it is also possible to enforce skipping of the authorization check that is imposed by the underlying DCL which performs a check on the authorization object `F_BNKA_MAO` and the field `BBANKS` for displaying data.  
      
