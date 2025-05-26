@@ -58,7 +58,7 @@ The requirements to follow the exercises in this repository are:
 
 ## Exercises
 
-In the _Getting Started_ section you will learn what needs to be perpared in order to work through this script.
+In the _Getting Started_ section you will learn what needs to be prepared in order to work through this script.
 
 The first aspect of developer extensibility is how to use RAP business objects that have been C1-released by SAP or SAP partners for the use in ABAP Cloud development.   
 
