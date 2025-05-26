@@ -8,8 +8,10 @@ There are three options
 - **Option 2**: You conduct these exercises on your own in one of the shared ABAP trial systems.   
 - **Option 3**: You condcut these exercises on your own in your own SAP BTP ABAP Environment system.   
 
+## Option 1 - SAP led hands-on exercise
+
 <details>   
-        <summary>Option 1 - SAP led hands-on exercise</summary>  
+        <summary>click to expand the exercise description</summary>  
 
 In case of an SAP led hands-on session we have prepared the followign for your convenience: 
 
@@ -23,8 +25,10 @@ In case of an SAP led hands-on session we have prepared the followign for your c
 
 </details>
 
+## Option 2 - Self study in SAP BTP Trial
+
 <details>   
-        <summary>Option 2 - Self study in SAP BTP Trial</summary>  
+        <summary>click to expand the exercise description</summary>  
 
 In this exercise, you will start a helper class that will generate several artefacts needed for the remaining exercises.
 
@@ -71,6 +75,13 @@ You will use the second package `ZRAP630_###_EXT` to store the objects that you 
    ![Package](images/packages_0030.png)   
    
 </details>
+
+## Option 3 - Self study in your own SAP BTP ABAP Envrionment
+
+<details>   
+        <summary>click to expand the exercise description</summary>  
+
+</details>   
 
  
 ## Summary
