@@ -163,85 +163,106 @@ Create a class ![class](images/adt_class.png) in the extension package `ZRAP630_
      > - Key mapping information (MAPPED mapped_resp)   
      > - Returned error messages (REPORTED reported_resp)   
   
-     <pre lang="ABAP">  
-     METHOD if_oo_adt_classrun~main.
-     
-      DATA create_bank TYPE STRUCTURE FOR CREATE i_banktp.
-      DATA bank_id_number TYPE i_banktp-BankInternalID VALUE '####'.
+<pre lang="ABAP">  
 
-      create_bank = VALUE #( bankcountry = 'CZ'
-                           bankinternalid = bank_id_number
-                           longbankname = 'Bank name'
-                           longbankbranch = 'Bank branch'
-                           banknumber = bank_id_number
-                           bankcategory = ''
-                           banknetworkgrouping = ''
-                           swiftcode = 'SABMGB2LACP'
-                           ismarkedfordeletion = ''
-                    ).
+   METHOD if_oo_adt_classrun~main.
+    DATA create_bank    TYPE STRUCTURE FOR CREATE i_banktp.
+    DATA bank_id_number TYPE i_banktp-BankInternalID VALUE '8035'.
 
+    SELECT SINGLE *
+      FROM I_Bank_2
+*     WITH
+*      PRIVILEGED ACCESS
+      WHERE BankInternalID = @bank_id_number
+      INTO @DATA(my_bank).
 
+    IF sy-subrc = 0.
+      out->write( |my new bank { my_bank-BankName } { my_bank-BankInternalID } already exists.| ).
+      EXIT.
+    ENDIF.
 
-      MODIFY ENTITIES OF i_banktp
-      ENTITY bank
-      CREATE FIELDS ( bankcountry
-                    bankinternalid
-                    longbankname
-                    longbankbranch
-                    banknumber
-                    bankcategory
-                    banknetworkgrouping
-                    swiftcode
-                    IsMarkedForDeletion
-                 )
-       WITH VALUE #( (
-       %cid = 'cid1'
-         bankcountry         = create_bank-bankcountry
-         bankinternalid      = create_bank-bankinternalid
-         longbankname        = create_bank-longbankname
-         longbankbranch      = create_bank-longbankbranch
-         banknumber          = create_bank-banknumber
-         bankcategory        = create_bank-bankcategory
-         banknetworkgrouping = create_bank-banknetworkgrouping
-         SWIFTCode           = create_bank-SWIFTCode
-         IsMarkedForDeletion = create_bank-IsMarkedForDeletion
-         )  )
+    create_bank = VALUE #( BankCountry         = 'ZW'
+                           BankInternalID      = bank_id_number
+                           LongBankName        = 'Bank name'
+                           LongBankBranch      = 'Bank branch'
+                           BankNumber          = bank_id_number
+                           BankCategory        = ''
+                           BankNetworkGrouping = ''
+                           SWIFTCode           = 'SABMGB2LACP'
+                           IsMarkedForDeletion = '' ).
 
-       MAPPED DATA(mapped)
-       REPORTED DATA(reported)
-       FAILED DATA(failed).
+    MODIFY ENTITIES OF i_banktp
+*           PRIVILEGED
+           ENTITY bank
+           CREATE FIELDS ( bankcountry
+                         bankinternalid
+                         longbankname
+                         longbankbranch
+                         banknumber
+                         bankcategory
+                         banknetworkgrouping
+                         swiftcode
+                         IsMarkedForDeletion )
+           WITH VALUE #( ( %cid                = 'cid1'
+                           BankCountry         = create_bank-BankCountry
+                           BankInternalID      = create_bank-BankInternalID
+                           LongBankName        = create_bank-LongBankName
+                           LongBankBranch      = create_bank-LongBankBranch
+                           BankNumber          = create_bank-BankNumber
+                           BankCategory        = create_bank-BankCategory
+                           BankNetworkGrouping = create_bank-BankNetworkGrouping
+                           SWIFTCode           = create_bank-SWIFTCode
+                           IsMarkedForDeletion = create_bank-IsMarkedForDeletion ) )
 
-      LOOP AT reported-bank INTO DATA(reported_error_1).
-      DATA(exc_create_bank) = cl_message_helper=>get_longtext_for_message(
-        EXPORTING
-          text               = reported_error_1-%msg
-        ).
-        out->write( |error { exc_create_bank } |  ).
-      ENDLOOP.
+           MAPPED DATA(mapped)
+           REPORTED DATA(reported)
+           " TODO: variable is assigned but never used (ABAP cleaner)
+           FAILED DATA(failed).
 
+    LOOP AT mapped-bank INTO DATA(mapped_success).
+      out->write( |mapped key { mapped_success-%key-BankInternalID }|  ).
+    ENDLOOP.
 
-      COMMIT ENTITIES
-      RESPONSE OF i_banktp
-      FAILED DATA(failed_commit)
-      REPORTED DATA(reported_commit).
+    LOOP AT reported-bank INTO DATA(reported_error_1).
+      DATA(exc_create_bank) = cl_message_helper=>get_longtext_for_message( text = reported_error_1-%msg ).
+      out->write( |error EML { exc_create_bank } |  ).
+    ENDLOOP.
 
+    IF reported-bank IS NOT INITIAL.
+      EXIT.
+    ENDIF.
 
+    COMMIT ENTITIES
+           RESPONSE OF i_banktp
+           " TODO: variable is assigned but never used (ABAP cleaner)
+           FAILED DATA(failed_commit)
+           REPORTED DATA(reported_commit).
 
-      LOOP AT reported_commit-bank INTO DATA(reported_error_2).
-      DATA(exc_create_bank2) = cl_message_helper=>get_longtext_for_message(
-        EXPORTING
-          text               = reported_error_2-%msg
-      ).
-      out->write( |error { exc_create_bank2 } |  ).
-      ENDLOOP.
-      IF reported_commit-bank IS INITIAL.
-      COMMIT WORK.
+    LOOP AT reported_commit-bank INTO DATA(reported_error_2).
+      DATA(exc_create_bank2) = cl_message_helper=>get_longtext_for_message( text = reported_error_2-%msg ).
+      out->write( |error commit entities { exc_create_bank2 } |  ).
+    ENDLOOP.
 
-      SELECT SINGLE * FROM I_Bank_2 WHERE BankInternalID = @bank_id_number INTO @DATA(my_bank).
+    IF reported_commit-bank IS NOT INITIAL.
+      EXIT.
+    ENDIF.
+
+    COMMIT WORK.
+
+    SELECT SINGLE *
+      FROM I_Bank_2
+*     WITH
+*      PRIVILEGED ACCESS
+      WHERE BankInternalID = @bank_id_number
+      INTO @my_bank.
+
+    IF sy-subrc = 0.
       out->write( |my new bank { my_bank-BankName } { my_bank-BankInternalID }| ).
-      ENDIF.
-     ENDMETHOD.
-     </pre>   
+    ELSE.
+      out->write( |my new bank { my_bank-BankName } does not exist| ).
+    ENDIF.
+  ENDMETHOD.
+</pre>   
 
   5. Activate your changes by pressing **Ctrl+F3**
 
@@ -259,7 +280,7 @@ Create a class ![class](images/adt_class.png) in the extension package `ZRAP630_
   1. Adding **PRIVILEGED** to the EML call
 
      When we add the key word `PRIVILEGED` to our EML call the authorization checks for the authorization objects
-     `F_BNKA_MAO` and `F_BNKA_INT` will basically be skipped.
+     `F_BNKA_MAO` and `F_BNKA_INT` will basically be skipped. Just uncomment the `PRIVILEGED` statement in the source code. 
 
      <pre lang="ABAP">
      MODIFY ENTITIES OF i_banktp
@@ -341,13 +362,25 @@ Create a class ![class](images/adt_class.png) in the extension package `ZRAP630_
 
        METHOD if_oo_adt_classrun~main.
 
-       ....
+....
        
-       SELECT SINGLE * FROM I_Bank_2
-       WITH PRIVILEGED ACCESS
-       WHERE BankInternalID = @bank_id_number INTO @DATA(my_bank).
+    SELECT SINGLE *
+      FROM I_Bank_2
+*     WITH
+*      PRIVILEGED ACCESS
+      WHERE BankInternalID = @bank_id_number
+      INTO @DATA(my_bank).
 
-       ....
+...
+
+    SELECT SINGLE *
+      FROM I_Bank_2
+*     WITH
+*      PRIVILEGED ACCESS
+      WHERE BankInternalID = @bank_id_number
+      INTO @my_bank.
+
+....
        
        ENDMETHOD.
      </pre>
