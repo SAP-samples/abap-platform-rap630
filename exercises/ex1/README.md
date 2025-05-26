@@ -19,10 +19,8 @@ We will start by showing you how you can search for a released RAP business obje
 
 > **Reminder:**   
 > Don't forget to replace all occurences of the placeholder **`###`** with your group ID in the exercise steps below.  
-> You can use the ADT function **Replace All** (**Ctrl+F**) for the purpose.   
-> When you don't know your group number anymore you can check the transport that has been created when you repository objects have been generated. 
-> Here you can check for example the name of the generated package.
->
+> You can use the ADT function **Replace All** (**Ctrl+F**) for the purpose.
+> 
 > ![GroupID](images/00_010_RAP630.png)
 
 
