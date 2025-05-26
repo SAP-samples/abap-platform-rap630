@@ -2,7 +2,36 @@
 
 # Getting started
 
+There are three options 
+
+Option 1: You conduct these exercises at an SAP event where we provide you with a dedicated system and a dedicated demo user.
+Option 2: You conduct these exercises on your own in one of the shared ABAP trial systems.
+Option 3: You condcut these exercises on your own SAP BTP ABAP Environment system.
+
+
+<details>   
+        <summary>Option 1 - SAP led hands-on exercise</summary>  
+
+In case of an SAP led hands-on session we have prepared the followign for your convenience: 
+
+- two exercise packages `ZRAP630_###` and `ZRAP630_###_EXT` and
+- an extensible managed Business Object (BO) with one entity _Shop_ with generic transactional behavior - i.e. CRUD: Create, Read, Update, and Delete. 
+
+1. **⚠Check the suffix `###` of your demo user (e.g. developer-###@abapcloud.sap).**
+
+2. In the "Project Explorer" right click on **Favorite Packages** and click on **Add Package...**.   
+   Enter `ZRAP630_###` and and select **both** packages and click OK. 
+
+</details>
+
+<details>   
+        <summary>Option 2 - Self study in SAP BTP Trial</summary>  
+
 In this exercise, you will start a helper class that will generate several artefacts needed for the remaining exercises.
+
+You will generate 
+- two exercise packages and
+- an extensible managed Business Object (BO) with one entity _Shop_ with generic transactional behavior - i.e. CRUD: Create, Read, Update, and Delete. 
 
 <!--  
 > For **⚠  SAP lead events** users   
@@ -39,7 +68,11 @@ You will use the second package `ZRAP630_###_EXT` to store the objects that you 
 6. In the "Project Explorer" right click on **Favorite Packages** and click on **Add Package...**.   
    Enter `ZRAP630_###` and and select **both** packages and click OK. 
  
-   ![Package](images/packages_0030.png)
+
+   ![Package](images/packages_0030.png)   
+   
+</details>
+
  
 ## Summary
 
