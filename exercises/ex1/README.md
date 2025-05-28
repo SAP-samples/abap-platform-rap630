@@ -394,10 +394,10 @@ Create a class ![class](images/adt_class.png) in the extension package `ZRAP630_
        ENDMETHOD.
 </pre>
      
-     we see that the data is now successfully been created and can also be read.  
+   We see that the data is now successfully been created and can also be read.  
      
   
-     ![PRIVILEGED 1](images/06_040_RAP640.png)   
+   ![PRIVILEGED 1](images/06_040_RAP640.png)   
      
   </details>
   
