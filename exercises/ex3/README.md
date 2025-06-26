@@ -8,7 +8,7 @@ In the preceeding exercise we have extended the _behavior_ of the based RAP BO b
 
 We will now adapt the _CDS data model_, that means we will add new fields to the _Shop_ entity. 
 
-Compared to the activities for adding additional behavior this is a larger amount of work since the complete stack of CDS views has be extended rather than only extensing the behavior definition (BDEF).
+Compared to the activities for adding additional behavior this is a larger amount of work since the complete stack of CDS views has to be extended rather than only extending the behavior definition (BDEF).
 
 ![Overview](images/Extensibility_Extend_the_data_model.png)
 
