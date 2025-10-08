@@ -49,6 +49,13 @@ The requirements to follow the exercises in this repository are:
 >> → Access to the system details for this on-site workshop will be provided by the instructors during the session.    
 </details>
 
+## Code of solution
+
+The code of the source BO can be found in this repository
+[ZRAP630](https://github.com/SAP-samples/abap-platform-rap630/)
+
+while the code for the extension project can be found here
+[ZRAP630_EXT](https://github.com/SAP-samples/abap-platform-rap630-ext)
 
 ## Slides
 [Presentation](https://github.com/SAP-samples/abap-platform-rap630/blob/main/slides/RAP630_RAP_Extensibility_2405.pdf) 
